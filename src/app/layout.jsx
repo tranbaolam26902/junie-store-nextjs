@@ -2,6 +2,12 @@ import localFont from 'next/font/local';
 
 import './globals.scss';
 
+import Footer from './components/layout/Footer';
+import Header from './components/layout/Header';
+
+/**
+ * Font config
+ */
 const myriad = localFont({
     src: [
         {
@@ -44,6 +50,9 @@ const myriad = localFont({
     variable: '--font-myriad-pro',
 });
 
+/**
+ * Config title template
+ */
 export const metadata = {
     title: {
         default: 'Junie',
@@ -54,7 +63,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang='en' className={`${myriad.variable} font-sans`}>
-            <body className='text-secondary bg-primary'>{children}</body>
+            <body className='text-secondary bg-primary'>
+                <Header />
+                <main className='mt-[var(--header-height)] px-6 md:px-10'>{children}</main>
+                <Footer />
+            </body>
         </html>
     );
 }
