@@ -19,7 +19,7 @@ function Button({
     const accentStyle =
         'relative px-9 font-bold bg-accent uppercase tracking-wide leading-[48px] rounded-sm ease-in-out duration-300 hover:bg-[#edd501]';
     const secondaryStyle = 'px-9 font-bold text-white bg-black uppercase tracking-wide leading-[48px] rounded-sm';
-    const textStyle = 'p-2 pt-2 uppercase tracking-wide';
+    const textStyle = 'p-2 pt-3 uppercase tracking-wide';
     const iconStyle = 'flex items-center justify-center p-2 pt-2 gap-x-1';
     const props = {
         onClick,
