@@ -97,9 +97,7 @@ export default function Navbar() {
                                 key={index}
                                 href={page.path}
                                 text
-                                className={`flex justify-start pt-[20px] py-5 text-xl ${
-                                    page?.color ? `text-${page.color}` : null
-                                } font-bold leading-[1.2] capitalize border-b border-gray`}
+                                className={`flex justify-start pt-[20px] py-5 text-xl text-${page.color} font-bold leading-[1.2] capitalize border-b border-gray`}
                             >
                                 {page.name}
                             </Button>
@@ -114,7 +112,7 @@ export default function Navbar() {
                             key={index}
                             href={page.path}
                             text
-                            className={`${page?.color ? `text-${page.color}` : null} ${NAVIGATION_BUTTON_ANIMATION}`}
+                            className={`text-${page.color} ${NAVIGATION_BUTTON_ANIMATION}`}
                         >
                             {page.name}
                         </Button>
