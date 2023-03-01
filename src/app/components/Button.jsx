@@ -33,16 +33,16 @@ function Button({
 
     return (
         <Component
-            className={`inline-block pt-1 text-sm text-center font-semibold ${accent ? accentStyle : null} ${
-                secondary ? secondaryStyle : null
-            } ${text ? textStyle : null} ${leftIcon || rightIcon ? iconStyle : null} ${fluid ? 'w-full' : null} ${
-                className ? className : null
+            className={`inline-block pt-1 text-sm text-center font-semibold ${accent ? accentStyle : ''} ${
+                secondary ? secondaryStyle : ''
+            } ${text ? textStyle : ''} ${leftIcon || rightIcon ? iconStyle : ''} ${fluid ? 'w-full' : ''} ${
+                className ? className : ''
             }`}
             {...props}
         >
-            {leftIcon ? <Image src={leftIcon} width={iconSize} height={iconSize} alt='icon-button' /> : null}
+            {leftIcon ? <Image src={leftIcon} width={iconSize} height={iconSize} alt='icon-button' /> : ''}
             {children}
-            {rightIcon ? <Image src={rightIcon} width={iconSize} height={iconSize} alt='icon-button' /> : null}
+            {rightIcon ? <Image src={rightIcon} width={iconSize} height={iconSize} alt='icon-button' /> : ''}
         </Component>
     );
 }
