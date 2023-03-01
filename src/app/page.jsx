@@ -4,7 +4,7 @@ export const metadata = {
 
 export default function Home() {
     return (
-        <h1 className='font-semibold text-center'>
+        <h1 className='font-semibold text-justify'>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis officia excepturi rerum sint, aperiam vero
             nesciunt magni itaque dolore hic ullam pariatur ratione molestias reprehenderit cumque cupiditate officiis
             maiores neque praesentium cum. Ratione nesciunt autem suscipit hic atque dolor esse. Dolore soluta quam, ut
