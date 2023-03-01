@@ -5,6 +5,38 @@ import icons from '@/assets/icons';
 
 import Button from '../../Button';
 
+/**
+ * Temporary
+ */
+const pages = [
+    {
+        name: 'Mới',
+        path: '/',
+        color: 'green',
+    },
+    {
+        name: 'Bông tai',
+        path: '/',
+    },
+    {
+        name: 'Dây chuyền',
+        path: '/',
+    },
+    {
+        name: 'Vòng tay',
+        path: '/',
+    },
+    {
+        name: 'Nhẫn',
+        path: '/',
+    },
+    {
+        name: 'Sale',
+        path: '/',
+        color: 'red',
+    },
+];
+
 export default function Navbar() {
     /**
      * Component's constants
@@ -44,44 +76,52 @@ export default function Navbar() {
             {showMobileNavbar ? (
                 <>
                     <div
-                        className={`fixed top-0 left-0 w-screen h-screen bg-black/[.3] transition-all ${
+                        className={`fixed top-0 left-0 w-screen h-screen bg-black/[.3] cursor-pointer transition-all ${
                             isClosing ? 'animate-fade-out' : 'animate-fade-in'
                         }`}
-                        role='button'
                         onClick={handleCloseMobileNavbar}
                     ></div>
                     <div
-                        className={`fixed top-0 left-0 mr-12 max-w-[400px] h-screen bg-white opacity-100 cursor-auto ${
+                        className={`fixed flex flex-col top-0 left-0 p-4 md:px-8 w-[80vw] max-w-[400px] h-screen bg-white ${
                             isClosing ? 'animate-slide-out' : 'animate-slide-in'
                         } `}
                     >
-                        <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident, dolores!</h1>
+                        <Button
+                            leftIcon={icons.close}
+                            iconSize={32}
+                            className='w-8'
+                            onClick={handleCloseMobileNavbar}
+                        />
+                        {pages.map((page, index) => (
+                            <Button
+                                key={index}
+                                href={page.path}
+                                text
+                                className={`flex justify-start pt-[20px] py-5 text-xl ${
+                                    page?.color ? `text-${page.color}` : null
+                                } font-bold leading-[1.2] capitalize border-b border-gray`}
+                            >
+                                {page.name}
+                            </Button>
+                        ))}
                     </div>
                 </>
             ) : null}
             <>
-                <div className='hidden xl:flex flex-1 gap-x-4'>
-                    <Button text className={`text-green ${NAVIGATION_BUTTON_ANIMATION}`}>
-                        Mới
-                    </Button>
-                    <Button text className={NAVIGATION_BUTTON_ANIMATION}>
-                        Bông tai
-                    </Button>
-                    <Button text className={NAVIGATION_BUTTON_ANIMATION}>
-                        Dây chuyền
-                    </Button>
-                    <Button text className={NAVIGATION_BUTTON_ANIMATION}>
-                        Vòng tay
-                    </Button>
-                    <Button text className={NAVIGATION_BUTTON_ANIMATION}>
-                        Nhẫn
-                    </Button>
-                    <Button text className={`text-red ${NAVIGATION_BUTTON_ANIMATION}`}>
-                        Sale
-                    </Button>
+                <div className='hidden xl:flex flex-1 gap-x-4 ml-[-8px]'>
+                    {pages.map((page, index) => (
+                        <Button
+                            key={index}
+                            href={page.path}
+                            text
+                            className={`${page?.color ? `text-${page.color}` : null} ${NAVIGATION_BUTTON_ANIMATION}`}
+                        >
+                            {page.name}
+                        </Button>
+                    ))}
                 </div>
                 {/* Mobile hamburger button */}
-                <div className='flex xl:hidden flex-1 gap-x-4'>
+                <div className='flex xl:hidden flex-1 gap-x-4 ml-[-8px]'>
                     <Button leftIcon={icons.menu} onClick={handleOpenMobileNavbar} />
                 </div>
             </>
