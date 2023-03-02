@@ -65,7 +65,7 @@ export default function RootLayout({ children }) {
         <html lang='en' className={`${myriad.variable} font-sans`}>
             <body className='text-secondary bg-primary'>
                 <Header />
-                <main className='mx-auto mt-[var(--header-height)] px-6 md:px-10 max-w-screen-2xl'>{children}</main>
+                <main className='mt-[var(--header-height)]'>{children}</main>
                 <Footer />
             </body>
         </html>
