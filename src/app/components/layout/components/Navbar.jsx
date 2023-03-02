@@ -1,7 +1,9 @@
 'use client';
+
 import { useEffect, useState } from 'react';
 
-import icons from '@/assets/icons';
+import iconClose from '@/assets/icons/close.svg';
+import iconMenu from '@/assets/icons/menu.svg';
 
 import Button from '../../Button';
 
@@ -48,7 +50,7 @@ export default function Navbar() {
      * Component's states
      */
     const [showMobileNavbar, setShowMobileNavbar] = useState(false);
-    const [isClosing, setIsClosing] = useState(false);
+    const [isClosing, setIsClosing] = useState(false); // Use to toggle animations
 
     /**
      * Component's event handlers
@@ -86,12 +88,7 @@ export default function Navbar() {
                             isClosing ? 'animate-slide-out' : 'animate-slide-in'
                         } `}
                     >
-                        <Button
-                            leftIcon={icons.close}
-                            iconSize={32}
-                            className='w-8'
-                            onClick={handleCloseMobileNavbar}
-                        />
+                        <Button leftIcon={iconClose} iconSize={32} className='w-8' onClick={handleCloseMobileNavbar} />
                         {pages.map((page, index) => (
                             <Button
                                 key={index}
@@ -120,7 +117,7 @@ export default function Navbar() {
                 </div>
                 {/* Mobile hamburger button */}
                 <div className='flex xl:hidden flex-1 gap-x-4 ml-[-8px]'>
-                    <Button leftIcon={icons.menu} onClick={handleOpenMobileNavbar} />
+                    <Button leftIcon={iconMenu} onClick={handleOpenMobileNavbar} />
                 </div>
             </>
         </>
