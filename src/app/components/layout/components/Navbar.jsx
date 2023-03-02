@@ -84,7 +84,7 @@ export default function Navbar() {
                         onClick={handleCloseMobileNavbar}
                     ></div>
                     <div
-                        className={`fixed flex flex-col top-0 left-0 px-6 py-4 md:px-10 w-[80vw] max-w-[400px] h-screen bg-white ${
+                        className={`fixed top-0 left-0 z-50 flex flex-col px-6 py-4 md:px-10 w-[80vw] max-w-[400px] h-screen bg-white ${
                             isClosing ? 'animate-slide-out' : 'animate-slide-in'
                         } `}
                     >
