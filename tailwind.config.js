@@ -12,6 +12,7 @@ module.exports = {
                 accent: 'rgb(var(--color-accent))',
                 red: 'rgb(var(--color-red))',
                 green: 'rgb(var(--color-green))',
+                gray: 'rgb(var(--color-gray))',
             },
             keyframes: {
                 'slide-in': {
