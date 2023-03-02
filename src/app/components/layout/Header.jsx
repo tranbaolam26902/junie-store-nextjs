@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import images from '@/assets/images';
+import brandLogo from '@/assets/images/brand-logo.jpg';
 
 import Navbar from './components/Navbar';
 import UserActions from './components/UserActions';
@@ -12,7 +12,7 @@ export default function Header() {
             <div className='flex items-center mx-auto px-6 md:px-10 h-[var(--header-height)]'>
                 <Navbar />
                 <Link href='/'>
-                    <Image src={images.brandLogo} className='max-w-[80px]' alt='brand-logo' />
+                    <Image src={brandLogo} className='max-w-[80px]' alt='brand-logo' priority />
                 </Link>
                 <UserActions />
             </div>
