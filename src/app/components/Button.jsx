@@ -19,10 +19,10 @@ function Button({
 }) {
     let Component = 'button';
     const accentStyle =
-        'px-9 font-bold bg-accent uppercase tracking-[2px] leading-8 rounded transition ease-in-out duration-300 hover:bg-[#edd501]';
+        'px-9 font-bold text-center uppercase tracking-[2px] leading-8 bg-accent rounded transition ease-in-out duration-300 hover:bg-[#edd501]';
     const secondaryStyle =
-        'px-9 font-bold text-white bg-black uppercase tracking-[2px] leading-8 rounded transition ease-in-out duration-300 hover:bg-secondary';
-    const textStyle = 'uppercase tracking-wider';
+        'px-9 font-bold text-white text-center uppercase tracking-[2px] leading-8 bg-black rounded transition ease-in-out duration-300 hover:bg-secondary';
+    const textStyle = 'font-semibold uppercase tracking-wider';
     const iconStyle = 'flex items-center justify-center';
     const props = {
         onClick,
@@ -36,11 +36,9 @@ function Button({
 
     return (
         <Component
-            className={`p-2 w-fit text-sm font-semibold ${accent ? accentStyle : ''} ${
-                secondary ? secondaryStyle : ''
-            } ${text ? textStyle : ''} ${leftIcon || rightIcon ? iconStyle : ''} ${full ? 'w-full' : ''} ${
-                className ? className : ''
-            }`}
+            className={`p-2 w-fit text-sm ${accent ? accentStyle : ''} ${secondary ? secondaryStyle : ''} ${
+                text ? textStyle : ''
+            } ${leftIcon || rightIcon ? iconStyle : ''} ${full ? 'w-full' : ''} ${className ? className : ''}`}
             {...props}
         >
             {leftIcon ? <Image src={leftIcon} width={iconSize} height={iconSize} alt='icon-button' /> : ''}
