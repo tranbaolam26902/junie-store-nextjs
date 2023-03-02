@@ -84,17 +84,23 @@ export default function Navbar() {
                         onClick={handleCloseMobileNavbar}
                     ></div>
                     <div
-                        className={`fixed flex flex-col top-0 left-0 p-4 md:px-8 w-[80vw] max-w-[400px] h-screen bg-white ${
+                        className={`fixed flex flex-col top-0 left-0 px-6 py-4 md:px-10 w-[80vw] max-w-[400px] h-screen bg-white ${
                             isClosing ? 'animate-slide-out' : 'animate-slide-in'
                         } `}
                     >
-                        <Button leftIcon={iconClose} iconSize={32} className='w-8' onClick={handleCloseMobileNavbar} />
+                        <Button
+                            leftIcon={iconClose}
+                            iconSize={16}
+                            className='ml-[-8px]'
+                            onClick={handleCloseMobileNavbar}
+                        />
                         {pages.map((page, index) => (
                             <Button
                                 key={index}
                                 href={page.path}
                                 text
-                                className={`flex justify-start pt-[20px] py-5 text-xl text-${page.color} font-bold leading-[1.2] capitalize border-b border-gray`}
+                                full
+                                className={`px-0 py-5 text-xl text-${page.color} font-bold leading-[1.2] capitalize border-b border-gray`}
                             >
                                 {page.name}
                             </Button>

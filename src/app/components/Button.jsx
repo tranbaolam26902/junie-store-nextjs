@@ -11,7 +11,7 @@ function Button({
     accent,
     secondary,
     text,
-    fluid,
+    full,
     className,
     children,
     onClick,
@@ -19,10 +19,11 @@ function Button({
 }) {
     let Component = 'button';
     const accentStyle =
-        'relative px-9 font-bold bg-accent uppercase tracking-wide leading-[48px] rounded-sm ease-in-out duration-300 hover:bg-[#edd501]';
-    const secondaryStyle = 'px-9 font-bold text-white bg-black uppercase tracking-wide leading-[48px] rounded-sm';
-    const textStyle = 'p-2 pt-3 uppercase tracking-wide';
-    const iconStyle = 'flex items-center justify-center p-2 pt-2 gap-x-1';
+        'px-9 font-bold bg-accent uppercase tracking-[2px] leading-8 rounded transition ease-in-out duration-300 hover:bg-[#edd501]';
+    const secondaryStyle =
+        'px-9 font-bold text-white bg-black uppercase tracking-[2px] leading-8 rounded transition ease-in-out duration-300 hover:bg-secondary';
+    const textStyle = 'uppercase tracking-wider';
+    const iconStyle = 'flex items-center justify-center';
     const props = {
         onClick,
         ...passProps,
@@ -35,15 +36,15 @@ function Button({
 
     return (
         <Component
-            className={`inline-block pt-1 text-sm text-center font-semibold ${accent ? accentStyle : ''} ${
+            className={`p-2 w-fit text-sm font-semibold ${accent ? accentStyle : ''} ${
                 secondary ? secondaryStyle : ''
-            } ${text ? textStyle : ''} ${leftIcon || rightIcon ? iconStyle : ''} ${fluid ? 'w-full' : ''} ${
+            } ${text ? textStyle : ''} ${leftIcon || rightIcon ? iconStyle : ''} ${full ? 'w-full' : ''} ${
                 className ? className : ''
             }`}
             {...props}
         >
             {leftIcon ? <Image src={leftIcon} width={iconSize} height={iconSize} alt='icon-button' /> : ''}
-            {children}
+            <span className='inline-block pt-1'>{children}</span>
             {rightIcon ? <Image src={rightIcon} width={iconSize} height={iconSize} alt='icon-button' /> : ''}
         </Component>
     );
