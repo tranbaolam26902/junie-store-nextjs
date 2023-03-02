@@ -63,9 +63,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang='en' className={`${myriad.variable} font-sans`}>
-            <body className='mx-auto px-6 md:px-10 max-w-screen-2xl text-secondary bg-primary'>
+            <body className='text-secondary bg-primary'>
                 <Header />
-                <main className='mt-[var(--header-height)]'>{children}</main>
+                <main className='mx-auto mt-[var(--header-height)] px-6 md:px-10 max-w-screen-2xl'>{children}</main>
                 <Footer />
             </body>
         </html>
