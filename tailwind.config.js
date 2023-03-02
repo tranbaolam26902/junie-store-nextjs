@@ -7,11 +7,11 @@ module.exports = {
                 sans: ['var(--font-myriad-pro)'],
             },
             colors: {
-                primary: '#ffffff',
-                secondary: '#282828',
-                accent: '#ffe501',
-                red: '#b01a0b',
-                green: '#065f46',
+                primary: 'rgb(var(--color-primary))',
+                secondary: 'rgb(var(--color-secondary))',
+                accent: 'rgb(var(--color-accent))',
+                red: 'rgb(var(--color-red))',
+                green: 'rgb(var(--color-green))',
             },
             keyframes: {
                 'slide-in': {
