@@ -26,6 +26,7 @@ export default function Hero() {
                     </Button>
                 </div>
             </div>
+            <div className='absolute w-full h-full bg-white animate-slide-out-left-hidden'></div>
         </div>
     );
 }
