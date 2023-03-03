@@ -12,6 +12,17 @@
         --color-gray: 227 225 219;
     }
 }
+@layer utilities {
+    /* Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .no-scrollbar {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+}
 
 :root {
     --header-height: 64px;
