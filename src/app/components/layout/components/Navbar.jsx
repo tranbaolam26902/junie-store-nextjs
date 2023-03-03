@@ -7,38 +7,6 @@ import iconMenu from '@/assets/icons/menu.svg';
 
 import Button from '../../Button';
 
-/**
- * Temporary
- */
-const pages = [
-    {
-        name: 'Mới',
-        path: '/',
-        color: 'green',
-    },
-    {
-        name: 'Bông tai',
-        path: '/',
-    },
-    {
-        name: 'Dây chuyền',
-        path: '/',
-    },
-    {
-        name: 'Vòng tay',
-        path: '/',
-    },
-    {
-        name: 'Nhẫn',
-        path: '/',
-    },
-    {
-        name: 'Sale',
-        path: '/',
-        color: 'red',
-    },
-];
-
 export default function Navbar() {
     /**
      * Component's constants
@@ -61,7 +29,7 @@ export default function Navbar() {
     };
     const handleCloseMobileNavbar = () => {
         setIsClosing(true);
-        setTimeout(() => setShowMobileNavbar(false), 500);
+        setTimeout(() => setShowMobileNavbar(false), 200);
     };
 
     useEffect(() => {
@@ -85,7 +53,7 @@ export default function Navbar() {
                     ></div>
                     <div
                         className={`fixed top-0 left-0 z-50 flex flex-col px-6 py-4 md:px-10 w-[80vw] max-w-[400px] h-screen bg-white ${
-                            isClosing ? 'animate-slide-out' : 'animate-slide-in'
+                            isClosing ? 'animate-slide-out-left' : 'animate-slide-in-left'
                         } `}
                     >
                         <Button
@@ -94,32 +62,77 @@ export default function Navbar() {
                             className='ml-[-8px]'
                             onClick={handleCloseMobileNavbar}
                         />
-                        {pages.map((page, index) => (
-                            <Button
-                                key={index}
-                                href={page.path}
-                                text
-                                full
-                                className={`px-0 py-5 text-xl text-${page.color} font-bold leading-[1.2] capitalize border-b border-gray`}
-                            >
-                                {page.name}
-                            </Button>
-                        ))}
+                        <Button
+                            href='/'
+                            text
+                            full
+                            className='px-0 py-5 text-xl text-green font-bold leading-[1.2] capitalize border-b border-gray transition-transform animate-slide-fade-in-left-1'
+                        >
+                            Mới
+                        </Button>
+                        <Button
+                            href='/'
+                            text
+                            full
+                            className={`px-0 py-5 text-xl font-bold leading-[1.2] capitalize border-b border-gray transition-transform animate-slide-fade-in-left-2`}
+                        >
+                            Bông tai
+                        </Button>
+                        <Button
+                            href='/'
+                            text
+                            full
+                            className={`px-0 py-5 text-xl font-bold leading-[1.2] capitalize border-b border-gray transition-transform animate-slide-fade-in-left-3`}
+                        >
+                            Dây chuyền
+                        </Button>
+                        <Button
+                            href='/'
+                            text
+                            full
+                            className={`px-0 py-5 text-xl font-bold leading-[1.2] capitalize border-b border-gray transition-transform animate-slide-fade-in-left-4`}
+                        >
+                            Vòng tay
+                        </Button>
+                        <Button
+                            href='/'
+                            text
+                            full
+                            className={`px-0 py-5 text-xl font-bold leading-[1.2] capitalize border-b border-gray transition-transform animate-slide-fade-in-left-5`}
+                        >
+                            Nhẫn
+                        </Button>
+                        <Button
+                            href='/'
+                            text
+                            full
+                            className={`px-0 py-5 text-xl text-red font-bold leading-[1.2] capitalize border-b border-gray transition-transform animate-slide-fade-in-left-6`}
+                        >
+                            Sale
+                        </Button>
                     </div>
                 </>
             ) : null}
             <>
                 <div className='hidden xl:flex flex-1 gap-x-4 ml-[-8px]'>
-                    {pages.map((page, index) => (
-                        <Button
-                            key={index}
-                            href={page.path}
-                            text
-                            className={`text-${page.color} ${NAVIGATION_BUTTON_ANIMATION}`}
-                        >
-                            {page.name}
-                        </Button>
-                    ))}
+                    <Button href='/' text className={`${NAVIGATION_BUTTON_ANIMATION} text-green`}>
+                        Mới
+                    </Button>
+                    <Button href='/' text className={NAVIGATION_BUTTON_ANIMATION}>
+                        Bông tai
+                    </Button>
+                    <Button href='/' text className={NAVIGATION_BUTTON_ANIMATION}>
+                        Dây chuyền
+                    </Button>
+                    <Button href='/' text className={NAVIGATION_BUTTON_ANIMATION}>
+                        Vòng tay
+                    </Button>
+                    <Button href='/' text className={NAVIGATION_BUTTON_ANIMATION}>
+                        Nhẫn
+                    </Button>
+                    <Button href='/' text className={`${NAVIGATION_BUTTON_ANIMATION} text-red`}>
+                        Sale
+                    </Button>
                 </div>
                 {/* Mobile hamburger button */}
                 <div className='flex xl:hidden flex-1 gap-x-4 ml-[-8px]'>
