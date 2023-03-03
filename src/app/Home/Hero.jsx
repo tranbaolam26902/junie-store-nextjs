@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
-import bannerLeft from '@/assets/images/banner-left.webp';
-import bannerRight from '@/assets/images/banner-right.webp';
+import bannerLeft from '@/assets/images/Home/banner-left.webp';
+import bannerRight from '@/assets/images/Home/banner-right.webp';
 
 import Button from '../components/Button';
 
@@ -26,6 +26,7 @@ export default function Hero() {
                     </Button>
                 </div>
             </div>
+            <div className='absolute w-full h-full bg-white animate-slide-out-left-hidden'></div>
         </div>
     );
 }

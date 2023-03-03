@@ -1,3 +1,4 @@
+import Category from './Home/Category';
 import Hero from './Home/Hero';
 
 export const metadata = {
@@ -5,5 +6,13 @@ export const metadata = {
 };
 
 export default function Home() {
-    return <Hero />;
+    return (
+        <>
+            <Hero />
+            <div className='mx-auto px-6 md:px-10 max-w-screen-2xl'>
+                <Category />
+                <div className='mt-10'></div>
+            </div>
+        </>
+    );
 }
