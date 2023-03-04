@@ -9,10 +9,10 @@ export default function Hero() {
     return (
         <div className='relative flex min-h-[120vw] md:min-h-[70vw] lg:min-h-[38vw]'>
             <div className='absolute hidden lg:block w-6/12 h-full'>
-                <Image src={bannerLeft} className='h-full object-cover' alt='banner-image' priority />
+                <Image src={bannerLeft} className='w-full h-full object-cover' alt='banner-image' priority />
             </div>
             <div className='absolute right-0 w-full lg:w-6/12 h-full'>
-                <Image src={bannerRight} className='h-full object-cover' alt='banner-image' priority />
+                <Image src={bannerRight} className='w-full h-full object-cover' alt='banner-image' priority />
             </div>
             <div className='absolute flex flex-col items-center justify-center w-full h-full bg-secondary/30'>
                 <p className='text-xs md:text-sm text-white font-bold uppercase'>Táo bạo. Tỏa sáng.</p>
