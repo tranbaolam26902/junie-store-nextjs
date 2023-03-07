@@ -1,4 +1,4 @@
-import BestSeller from './home/BestSeller';
+import About from './home/About';
 import Category from './home/Category';
 import Hero from './home/Hero';
 
@@ -11,7 +11,7 @@ export default function Home() {
         <>
             <Hero />
             <Category />
-            <BestSeller />
+            <About />
             <div className='mt-10'></div>
         </>
     );
