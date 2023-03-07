@@ -23,11 +23,11 @@ export default function About() {
 
     return (
         <div className='relative mt-16'>
-            <div className='absolute top-0 left-0 bottom-0 aspect-square bg-[#f9f5f1]'></div>
             <div className='relative z-10 mx-auto px-6 md:px-10 max-w-screen-2xl'>
                 <div className='md:mx-4 md:px-16 py-8 md:py-12 lg:py-16 grid gap-x-32 lg:grid-cols-2'>
-                    <div className='overflow-hidden'>
-                        <Image src={about} alt='about-image' className='rounded' />
+                    <div className='relative'>
+                        <div className='absolute -top-8 md:-top-12 lg:-top-16 left-[-1000vw] right-0 -bottom-16 md:-bottom-20 lg:-bottom-16 translate-x-32 lg:-translate-x-32 bg-[#f9f5f1]'></div>
+                        <Image src={about} alt='about-image' className='relative z-10 rounded' />
                     </div>
                     <div className='about grid gap-y-4 lg:gap-y-6 mt-8 md:mt-12 lg:my-auto opacity-0'>
                         <p className='text-sm font-semibold tracking-wider uppercase'>Trải nghiệm khách hàng</p>
