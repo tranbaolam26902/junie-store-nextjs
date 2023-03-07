@@ -1,7 +1,7 @@
-import earrings from '@/assets/images/Home/earrings.webp';
-import necklace from '@/assets/images/Home/necklace.webp';
-import bracelet from '@/assets/images/Home/bracelet.webp';
-import hairClip from '@/assets/images/Home/hair-clip.webp';
+import earrings from '@/assets/images/home/earrings.webp';
+import necklace from '@/assets/images/home/necklace.webp';
+import bracelet from '@/assets/images/home/bracelet.webp';
+import hairClip from '@/assets/images/home/hair-clip.webp';
 
 import CategoryItem from './CategoryItem';
 import SectionHeader from './SectionHeader';
@@ -31,7 +31,7 @@ const categories = [
 
 export default function Category() {
     return (
-        <>
+        <div className='mx-auto px-6 md:px-10 max-w-screen-2xl'>
             <SectionHeader subtitle='Tham khảo' title='Danh mục' />
             <p className='mb-12 text-center'>Từ đôi bàn tay của nghệ nhân mang tới cho nàng sự lựa chọn đa dạng.</p>
             <div className='overflow-x-auto no-scrollbar'>
@@ -41,6 +41,6 @@ export default function Category() {
                     ))}
                 </div>
             </div>
-        </>
+        </div>
     );
 }

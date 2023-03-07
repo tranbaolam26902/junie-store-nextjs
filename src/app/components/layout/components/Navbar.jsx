@@ -66,7 +66,7 @@ export default function Navbar() {
                             href='/'
                             text
                             full
-                            className='px-0 py-5 text-xl text-green font-bold leading-[1.2] capitalize border-b border-gray transition-transform animate-slide-fade-in-left-1'
+                            className='px-0 py-5 text-xl text-green font-bold leading-[1.2] capitalize border-b border-gray transition-transform animate-[slide-fade-in-left_300ms_ease-in-out]'
                         >
                             Mới
                         </Button>
@@ -74,7 +74,7 @@ export default function Navbar() {
                             href='/'
                             text
                             full
-                            className={`px-0 py-5 text-xl font-bold leading-[1.2] capitalize border-b border-gray transition-transform animate-slide-fade-in-left-2`}
+                            className={`px-0 py-5 text-xl font-bold leading-[1.2] capitalize border-b border-gray transition-transform animate-[slide-fade-in-left_400ms_ease-in-out]`}
                         >
                             Bông tai
                         </Button>
@@ -82,7 +82,7 @@ export default function Navbar() {
                             href='/'
                             text
                             full
-                            className={`px-0 py-5 text-xl font-bold leading-[1.2] capitalize border-b border-gray transition-transform animate-slide-fade-in-left-3`}
+                            className={`px-0 py-5 text-xl font-bold leading-[1.2] capitalize border-b border-gray transition-transform animate-[slide-fade-in-left_500ms_ease-in-out]`}
                         >
                             Dây chuyền
                         </Button>
@@ -90,7 +90,7 @@ export default function Navbar() {
                             href='/'
                             text
                             full
-                            className={`px-0 py-5 text-xl font-bold leading-[1.2] capitalize border-b border-gray transition-transform animate-slide-fade-in-left-4`}
+                            className={`px-0 py-5 text-xl font-bold leading-[1.2] capitalize border-b border-gray transition-transform animate-[slide-fade-in-left_600ms_ease-in-out]`}
                         >
                             Vòng tay
                         </Button>
@@ -98,7 +98,7 @@ export default function Navbar() {
                             href='/'
                             text
                             full
-                            className={`px-0 py-5 text-xl font-bold leading-[1.2] capitalize border-b border-gray transition-transform animate-slide-fade-in-left-5`}
+                            className={`px-0 py-5 text-xl font-bold leading-[1.2] capitalize border-b border-gray transition-transform animate-[slide-fade-in-left_700ms_ease-in-out]`}
                         >
                             Nhẫn
                         </Button>
@@ -106,7 +106,7 @@ export default function Navbar() {
                             href='/'
                             text
                             full
-                            className={`px-0 py-5 text-xl text-red font-bold leading-[1.2] capitalize border-b border-gray transition-transform animate-slide-fade-in-left-6`}
+                            className={`px-0 py-5 text-xl text-red font-bold leading-[1.2] capitalize border-b border-gray transition-transform animate-[slide-fade-in-left_800ms_ease-in-out]`}
                         >
                             Sale
                         </Button>
