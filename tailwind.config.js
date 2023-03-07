@@ -37,12 +37,22 @@ module.exports = {
                 },
                 'slide-in-bottom': {
                     '0%': {
-                        transform: 'translateY(100%)',
+                        transform: 'translateY(25%)',
                         opacity: 0,
                     },
                     '100%': {
                         transform: 'translateY(0)',
                         opacity: 1,
+                    },
+                },
+                'slide-out-bottom': {
+                    '0%': {
+                        transform: 'translateY(0)',
+                        opacity: 1,
+                    },
+                    '100%': {
+                        transform: 'translateY(25%)',
+                        opacity: 0,
                     },
                 },
             },
