@@ -1,5 +1,6 @@
-import Category from './Home/Category';
-import Hero from './Home/Hero';
+import BestSeller from './home/BestSeller';
+import Category from './home/Category';
+import Hero from './home/Hero';
 
 export const metadata = {
     title: 'Junie | Thương Hiệu Phụ Kiện Thời Trang Bông Tai, Dây Chuyền Nữ',
@@ -9,10 +10,9 @@ export default function Home() {
     return (
         <>
             <Hero />
-            <div className='mx-auto px-6 md:px-10 max-w-screen-2xl'>
-                <Category />
-                <div className='mt-10'></div>
-            </div>
+            <Category />
+            <BestSeller />
+            <div className='mt-10'></div>
         </>
     );
 }
