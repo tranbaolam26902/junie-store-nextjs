@@ -8,7 +8,7 @@ import aboutSecond from '@/assets/images/home/about-second.webp';
 
 import Button from '../components/Button';
 
-export default function About() {
+export default function AboutSection() {
     /**
      * Component's states
      */

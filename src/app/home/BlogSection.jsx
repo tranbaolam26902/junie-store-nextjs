@@ -26,7 +26,7 @@ const posts = [
     },
 ];
 
-export default function Blog() {
+export default function BlogSection() {
     return (
         <div className='mx-auto px-6 md:px-10 max-w-screen-2xl'>
             <SectionHeader subtitle='Bắt kịp xu hướng' title="Junie's Blog" />

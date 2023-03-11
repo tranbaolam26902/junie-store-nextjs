@@ -5,7 +5,7 @@ import bannerRight from '@/assets/images/home/banner-right.webp';
 
 import Button from '../components/Button';
 
-export default function Hero() {
+export default function HeroSection() {
     return (
         <div className='relative flex min-h-[120vw] md:min-h-[70vw] lg:min-h-[38vw]'>
             <div className='absolute hidden lg:block w-6/12 h-full'>

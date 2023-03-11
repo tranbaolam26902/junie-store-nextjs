@@ -1,7 +1,7 @@
-import About from './home/About';
-import Category from './home/Category';
-import Hero from './home/Hero';
-import Blog from './home/Blog';
+import AboutSection from './home/AboutSection';
+import CategorySection from './home/CategorySection';
+import HeroSection from './home/HeroSection';
+import BlogSection from './home/BlogSection';
 
 export const metadata = {
     title: 'Junie | Thương Hiệu Phụ Kiện Thời Trang Bông Tai, Dây Chuyền Nữ',
@@ -10,10 +10,10 @@ export const metadata = {
 export default function Home() {
     return (
         <>
-            <Hero />
-            <Category />
-            <About />
-            <Blog />
+            <HeroSection />
+            <CategorySection />
+            <AboutSection />
+            <BlogSection />
             <div className='mt-10'></div>
         </>
     );
