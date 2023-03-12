@@ -8,20 +8,20 @@ import BlogItem from './BlogItem';
 const posts = [
     {
         path: '/',
-        tag: 'Hướng dẫn',
-        title: 'Cách làm sáng hạt đá đơn giản không phải ra hàng',
+        tag: 'Kiến thức',
+        title: 'Cách Vệ Sinh Ngọc Trai Lung Linh Như Mới Ngay Tại Nhà',
         image: blog1,
     },
     {
         path: '/',
-        tag: 'Hướng dẫn',
-        title: 'Những Điều Cần Lưu Ý Khi Đeo Trang Sức Bản To',
+        tag: 'Kiến thức',
+        title: 'Bạc Gồm Mấy Loại? Loại Bạc Nào Tốt Nhất Hiện Nay?',
         image: blog2,
     },
     {
         path: '/',
         tag: 'Hướng dẫn',
-        title: 'Tất Tần Tật Cách Đeo Nhẫn Cưới Các Cặp Đôi Cần Biết',
+        title: 'Hướng Dẫn Nàng Cách Tháo Khuyên Tai Bấm Nhanh Nhất',
         image: blog3,
     },
 ];
