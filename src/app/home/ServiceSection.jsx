@@ -48,9 +48,9 @@ export default function ServiceSection() {
                         {services.map((service, index) => (
                             <div key={index} onClick={() => setCurrentIndex(index)}>
                                 {index === currentIndex ? (
-                                    <span className='inline-block mx-2 w-4 h-4 bg-secondary rounded-sm'></span>
+                                    <span className='inline-block mx-2 w-4 h-4 bg-secondary rounded'></span>
                                 ) : (
-                                    <span className='inline-block mx-2 w-4 h-4 bg-gray rounded-sm'></span>
+                                    <span className='inline-block mx-2 w-4 h-4 bg-gray rounded'></span>
                                 )}
                             </div>
                         ))}
