@@ -23,6 +23,14 @@ module.exports = {
                     '0%': { transform: 'translateX(0)' },
                     '100%': { transform: 'translateX(-100%)' },
                 },
+                'slide-in-right': {
+                    '0%': { transform: 'translateX(100%)' },
+                    '100%': { transform: 'translateX(0)' },
+                },
+                'slide-out-right': {
+                    '0%': { transform: 'translateX(0)' },
+                    '100%': { transform: 'translateX(100%)' },
+                },
                 'fade-in': {
                     '0%': { opacity: 0 },
                     '100%': { opacity: 1 },
@@ -59,6 +67,8 @@ module.exports = {
             animation: {
                 'slide-in-left': 'slide-in-left 200ms ease-in-out',
                 'slide-out-left': 'slide-out-left 200ms ease-in-out',
+                'slide-in-right': 'slide-in-right 200ms ease-in-out',
+                'slide-out-right': 'slide-out-right 200ms ease-in-out',
                 'fade-in': 'fade-in 200ms ease-in-out',
                 'fade-out': 'fade-out 200ms ease-in-out',
             },
