@@ -29,7 +29,7 @@ const categories = [
     },
 ];
 
-export default function Category() {
+export default function CategorySection() {
     return (
         <div className='mx-auto px-6 md:px-10 max-w-screen-2xl'>
             <SectionHeader subtitle='Tham khảo' title='Danh mục' />
