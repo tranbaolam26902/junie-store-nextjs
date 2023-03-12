@@ -46,7 +46,7 @@ export default function Navbar() {
             {showMobileNavbar ? (
                 <>
                     <div
-                        className={`fixed top-0 left-0 w-screen h-screen bg-black/[.3] transition-all ${
+                        className={`fixed top-0 left-0 z-40 w-screen h-screen bg-black/[.3] transition-all ${
                             isClosing ? 'animate-fade-out' : 'animate-fade-in'
                         }`}
                         onClick={handleCloseMobileNavbar}
