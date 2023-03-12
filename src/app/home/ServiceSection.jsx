@@ -37,6 +37,7 @@ export default function ServiceSection() {
 
     return (
         <div className='mx-auto mt-16 px-6 md:px-10 max-w-screen-2xl group'>
+            <hr className='mb-10 text-gray' />
             <div className='lg:hidden relative'>
                 <div className='opacity-0 py-4'>
                     <ServiceItem service={services[2]} />
