@@ -17,7 +17,7 @@ export default function BlogItem({ post }) {
                 <Button
                     leftIcon={arrowRight}
                     iconSize={14}
-                    className='absolute right-6 bottom-6 w-10 h-10 bg-primary rounded-sm transition-transform scale-0 group-hover:scale-100 duration-300'
+                    className='absolute right-6 bottom-6 w-[40px] h-10 bg-primary rounded-sm transition-transform scale-0 group-hover:scale-100 duration-300'
                 />
             </div>
             <span className='inline-block mt-6 text-xs font-bold tracking-wider uppercase opacity-70'>{post.tag}</span>
