@@ -22,9 +22,6 @@ export default function FooterMain() {
                         Bông tai nụ
                     </Link>
                     <Link href='/' className='w-fit capitalize hover:opacity-70'>
-                        Lắc tay
-                    </Link>
-                    <Link href='/' className='w-fit capitalize hover:opacity-70'>
                         Nhẫn
                     </Link>
                     <Link href='/' className='w-fit capitalize hover:opacity-70'>
