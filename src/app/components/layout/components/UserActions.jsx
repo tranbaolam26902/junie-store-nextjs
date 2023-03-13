@@ -68,6 +68,7 @@ export default function UserActions() {
      * Component's states
      */
     const [showCart, setShowCart] = useState(false);
+    const [showSearch, setShowSearch] = useState(false);
     const [isClosing, setIsClosing] = useState(false); // Use to toggle animations
 
     /**
@@ -82,9 +83,18 @@ export default function UserActions() {
         setTimeout(() => setShowCart(false), 200);
     };
 
+    const handleOpenSearch = () => {
+        setIsClosing(false);
+        setShowSearch(true);
+    };
+    const handleCloseSearch = () => {
+        setIsClosing(true);
+        setTimeout(() => setShowSearch(false), 200);
+    };
+
     return (
         <div className='flex flex-1 justify-end gap-x-2 mr-[-8px]'>
-            <Button leftIcon={iconSearch} />
+            <Button leftIcon={iconSearch} onClick={handleOpenSearch} />
             <Button leftIcon={iconCart} className='relative' onClick={handleOpenCart}>
                 <div className='absolute top-0.5 right-[-6px] pt-px w-5 h-5 text-[12px] text-white bg-black rounded-full'>
                     {products.length}
@@ -197,6 +207,46 @@ export default function UserActions() {
                         {/* End: Cart body */}
                     </div>
                     {/* End: Cart */}
+                </>
+            ) : null}
+            {showSearch ? (
+                <>
+                    {/* Start: Search's overlay */}
+                    <div
+                        className={`fixed top-0 left-0 z-40 w-screen h-screen bg-black/[.3] transition-all ${
+                            isClosing ? 'animate-fade-out' : 'animate-fade-in'
+                        }`}
+                        onClick={handleCloseSearch}
+                    ></div>
+                    {/* End: Search's overlay */}
+                    {/* Start: Search */}
+                    <div
+                        className={`fixed top-0 right-0 bottom-0 z-50 overflow-y-auto no-scrollbar overscroll-contain flex flex-col w-[90vw] max-w-[500px] h-screen bg-white ${
+                            isClosing ? 'animate-slide-out-right' : 'animate-slide-in-right'
+                        } `}
+                    >
+                        {/* Start: Search header */}
+                        <div className='flex items-center justify-between px-6 md:px-10 py-4 border-b border-gray'>
+                            <div class='flex flex-1 items-center gap-2'>
+                                <span>
+                                    <Image src={iconSearch} alt='icon-search' />
+                                </span>
+                                <input
+                                    type='text'
+                                    autoFocus
+                                    placeholder='Bạn đang muốn tìm kiếm gì?'
+                                    className='flex-1 border-none outline-none'
+                                />
+                            </div>
+                            <Button
+                                leftIcon={iconClose}
+                                iconSize={16}
+                                className='mr-[-8px]'
+                                onClick={handleCloseSearch}
+                            />
+                        </div>
+                        {/* End: Search header */}
+                    </div>
                 </>
             ) : null}
         </div>
