@@ -63,50 +63,56 @@ export default function Navbar() {
                             onClick={handleCloseMobileNavbar}
                         />
                         <Button
-                            href='/'
+                            href='/collections/new-in'
                             text
                             full
                             className='px-0 py-5 text-xl text-green font-bold leading-[1.2] capitalize border-b border-gray transition-transform animate-[slide-fade-in-left_300ms_ease-in-out]'
+                            onClick={handleCloseMobileNavbar}
                         >
                             Mới
                         </Button>
                         <Button
-                            href='/'
+                            href='/collections/earrings'
                             text
                             full
                             className={`px-0 py-5 text-xl font-bold leading-[1.2] capitalize border-b border-gray transition-transform animate-[slide-fade-in-left_400ms_ease-in-out]`}
+                            onClick={handleCloseMobileNavbar}
                         >
                             Bông tai
                         </Button>
                         <Button
-                            href='/'
+                            href='/collections/necklace'
                             text
                             full
                             className={`px-0 py-5 text-xl font-bold leading-[1.2] capitalize border-b border-gray transition-transform animate-[slide-fade-in-left_500ms_ease-in-out]`}
+                            onClick={handleCloseMobileNavbar}
                         >
                             Dây chuyền
                         </Button>
                         <Button
-                            href='/'
+                            href='/collections/bracelet'
                             text
                             full
                             className={`px-0 py-5 text-xl font-bold leading-[1.2] capitalize border-b border-gray transition-transform animate-[slide-fade-in-left_600ms_ease-in-out]`}
+                            onClick={handleCloseMobileNavbar}
                         >
                             Vòng tay
                         </Button>
                         <Button
-                            href='/'
+                            href='/collections/ring'
                             text
                             full
                             className={`px-0 py-5 text-xl font-bold leading-[1.2] capitalize border-b border-gray transition-transform animate-[slide-fade-in-left_700ms_ease-in-out]`}
+                            onClick={handleCloseMobileNavbar}
                         >
                             Nhẫn
                         </Button>
                         <Button
-                            href='/'
+                            href='/collections/sale-outlet'
                             text
                             full
                             className={`px-0 py-5 text-xl text-red font-bold leading-[1.2] capitalize border-b border-gray transition-transform animate-[slide-fade-in-left_800ms_ease-in-out]`}
+                            onClick={handleCloseMobileNavbar}
                         >
                             Sale
                         </Button>
@@ -115,22 +121,22 @@ export default function Navbar() {
             ) : null}
             <>
                 <div className='hidden xl:flex flex-1 gap-x-4 ml-[-8px]'>
-                    <Button href='/' text className={`${NAVIGATION_BUTTON_ANIMATION} text-green`}>
+                    <Button href='/collections/new-in' text className={`${NAVIGATION_BUTTON_ANIMATION} text-green`}>
                         Mới
                     </Button>
-                    <Button href='/' text className={NAVIGATION_BUTTON_ANIMATION}>
+                    <Button href='/collections/earrings' text className={NAVIGATION_BUTTON_ANIMATION}>
                         Bông tai
                     </Button>
-                    <Button href='/' text className={NAVIGATION_BUTTON_ANIMATION}>
+                    <Button href='/collections/necklace' text className={NAVIGATION_BUTTON_ANIMATION}>
                         Dây chuyền
                     </Button>
-                    <Button href='/' text className={NAVIGATION_BUTTON_ANIMATION}>
+                    <Button href='/collections/bracelet' text className={NAVIGATION_BUTTON_ANIMATION}>
                         Vòng tay
                     </Button>
-                    <Button href='/' text className={NAVIGATION_BUTTON_ANIMATION}>
+                    <Button href='/collections/ring' text className={NAVIGATION_BUTTON_ANIMATION}>
                         Nhẫn
                     </Button>
-                    <Button href='/' text className={`${NAVIGATION_BUTTON_ANIMATION} text-red`}>
+                    <Button href='/collections/sale-outlet' text className={`${NAVIGATION_BUTTON_ANIMATION} text-red`}>
                         Sale
                     </Button>
                 </div>
