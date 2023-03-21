@@ -19,7 +19,7 @@ export default function HeroSection() {
                     Táo bạo. Tỏa sáng.
                 </p>
                 <p className='my-10 text-4xl md:text-5xl xl:text-[64px] text-white font-bold animate-[slide-in-bottom_400ms_ease-in-out_450ms_both]'>
-                    Junie's Specials
+                    Junie&apos;s Specials
                 </p>
                 <div className='flex gap-6 text-black'>
                     <Button
