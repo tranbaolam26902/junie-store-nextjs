@@ -42,7 +42,7 @@ function Button({
             {...props}
         >
             {leftIcon ? <Image src={leftIcon} width={iconSize} height={iconSize} alt='icon-button' /> : ''}
-            <span className='inline-block pt-1'>{children}</span>
+            <div className='inline-block pt-1'>{children}</div>
             {rightIcon ? <Image src={rightIcon} width={iconSize} height={iconSize} alt='icon-button' /> : ''}
         </Component>
     );
