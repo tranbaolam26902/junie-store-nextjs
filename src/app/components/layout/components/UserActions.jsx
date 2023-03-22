@@ -118,7 +118,7 @@ export default function UserActions() {
                     >
                         {/* Start: Cart header */}
                         <div className='flex items-center justify-between px-6 md:px-10 py-4 border-b border-gray'>
-                            <div class='flex items-center gap-2'>
+                            <div className='flex items-center gap-2'>
                                 <span>
                                     <Image src={iconCart} alt='icon-cart' />
                                 </span>
