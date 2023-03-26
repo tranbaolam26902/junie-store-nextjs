@@ -1,0 +1,60 @@
+{
+    "navbar-items": [
+        {
+            "id": 1,
+            "name": "Mới",
+            "slug": "/collections/new-in"
+        },
+        {
+            "id": 2,
+            "name": "Bông tai",
+            "slug": "/collections/earrings"
+        },
+        {
+            "id": 3,
+            "name": "Dây chuyền",
+            "slug": "/collections/necklace"
+        },
+        {
+            "id": 4,
+            "name": "Vòng tay",
+            "slug": "/collections/bracelet"
+        },
+        {
+            "id": 5,
+            "name": "Nhẫn",
+            "slug": "/collections/ring"
+        },
+        {
+            "id": 6,
+            "name": "Sale",
+            "slug": "/collections/sale-outlet"
+        }
+    ],
+    "categories": [
+        {
+            "id": 1,
+            "slug": "/collections/earrings",
+            "image": "/assets/images/home/earrings.webp",
+            "name": "Bông tai"
+        },
+        {
+            "id": 2,
+            "slug": "/collections/necklace",
+            "image": "/assets/images/home/necklace.webp",
+            "name": "Dây chuyền"
+        },
+        {
+            "id": 3,
+            "slug": "/collections/bracelet",
+            "image": "/assets/images/home/bracelet.webp",
+            "name": "Vòng tay"
+        },
+        {
+            "id": 4,
+            "slug": "/collections/hair-clip",
+            "image": "/assets/images/home/hair-clip.webp",
+            "name": "Phụ kiện tóc"
+        }
+    ]
+}
