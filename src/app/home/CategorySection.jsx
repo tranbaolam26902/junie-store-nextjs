@@ -13,12 +13,7 @@ export default async function CategorySection() {
             <div className='overflow-x-auto no-scrollbar'>
                 <div className='flex justify-center gap-4 md:gap-10 w-[160vw] md:w-[110vw] lg:w-full xl:w-10/12 mx-auto'>
                     {categories.map((category) => (
-                        <CategoryItem
-                            key={category.id}
-                            slug={category.slug}
-                            image={category.image}
-                            name={category.name}
-                        />
+                        <CategoryItem key={category.id} data={category} />
                     ))}
                 </div>
             </div>
