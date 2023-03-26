@@ -4,7 +4,7 @@ import CategoryItem from './CategoryItem';
 import SectionHeader from './SectionHeader';
 
 export default async function CategorySection() {
-    const categories = await getData('http://localhost:3001/categories');
+    const categories = await getData('https://junie-store-fake-api.vercel.app/categories');
 
     return (
         <div className='mx-auto px-6 md:px-10 max-w-screen-2xl'>
