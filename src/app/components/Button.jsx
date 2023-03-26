@@ -41,9 +41,9 @@ function Button({
             } ${leftIcon || rightIcon ? iconStyle : ''} ${full ? 'w-full' : ''} ${className ? className : ''}`}
             {...props}
         >
-            {leftIcon ? <Image src={leftIcon} width={iconSize} height={iconSize} alt='icon-button' /> : ''}
-            <span className='inline-block pt-1'>{children}</span>
-            {rightIcon ? <Image src={rightIcon} width={iconSize} height={iconSize} alt='icon-button' /> : ''}
+            {leftIcon ? <Image src={leftIcon} width={iconSize} height='auto' alt='icon-button' /> : null}
+            <div className='inline-block pt-1'>{children}</div>
+            {rightIcon ? <Image src={rightIcon} width={iconSize} height='auto' alt='icon-button' /> : null}
         </Component>
     );
 }
