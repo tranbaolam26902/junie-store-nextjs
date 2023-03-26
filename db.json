@@ -1,36 +1,4 @@
 {
-    "navbar-items": [
-        {
-            "id": 1,
-            "name": "Mới",
-            "slug": "/collections/new-in"
-        },
-        {
-            "id": 2,
-            "name": "Bông tai",
-            "slug": "/collections/earrings"
-        },
-        {
-            "id": 3,
-            "name": "Dây chuyền",
-            "slug": "/collections/necklace"
-        },
-        {
-            "id": 4,
-            "name": "Vòng tay",
-            "slug": "/collections/bracelet"
-        },
-        {
-            "id": 5,
-            "name": "Nhẫn",
-            "slug": "/collections/ring"
-        },
-        {
-            "id": 6,
-            "name": "Sale",
-            "slug": "/collections/sale-outlet"
-        }
-    ],
     "categories": [
         {
             "id": 1,
@@ -55,6 +23,29 @@
             "slug": "/collections/hair-clip",
             "image": "/assets/images/home/hair-clip.webp",
             "name": "Phụ kiện tóc"
+        }
+    ],
+    "featured-posts": [
+        {
+            "id": 1,
+            "slug": "/",
+            "tag": "Kiến thức",
+            "title": "Cách Vệ Sinh Ngọc Trai Lung Linh Như Mới Ngay Tại Nhà",
+            "image": "/assets/images/home/blog-01.webp"
+        },
+        {
+            "id": 2,
+            "slug": "/",
+            "tag": "Kiến thức",
+            "title": "Bạc Gồm Mấy Loại? Loại Bạc Nào Tốt Nhất Hiện Nay?",
+            "image": "/assets/images/home/blog-02.webp"
+        },
+        {
+            "id": 3,
+            "slug": "/",
+            "tag": "Hướng dẫn",
+            "title": "Hướng Dẫn Nàng Cách Tháo Khuyên Tai Bấm Nhanh Nhất",
+            "image": "/assets/images/home/blog-03.webp"
         }
     ]
 }
