@@ -4,7 +4,7 @@ import SectionHeader from './SectionHeader';
 import BlogItem from './BlogItem';
 
 export default async function BlogSection() {
-    const posts = await getData('http://localhost:3001/featured-posts');
+    const posts = await getData('https://junie-store-fake-api.vercel.app/featured-posts');
 
     return (
         <div className='mx-auto px-6 md:px-10 max-w-screen-2xl'>
