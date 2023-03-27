@@ -47,5 +47,109 @@
             "title": "Hướng Dẫn Nàng Cách Tháo Khuyên Tai Bấm Nhanh Nhất",
             "image": "/assets/images/home/blog-03.webp"
         }
-    ]
+    ],
+    "bracelet": {
+        "id": 1,
+        "title": "Vòng Tay Nữ",
+        "description": "Lắc tay xinh xắn, thể hiện chất riêng",
+        "image": "/assets/images/collections/bracelet/bracelet.webp",
+        "products": [
+            {
+                "id": 1,
+                "name": "Vòng tay Jenna",
+                "price": 230000,
+                "firstImage": "/assets/images/collections/bracelet/products/jenna-01.webp",
+                "secondImage": "/assets/images/collections/bracelet/products/jenna-02.webp",
+                "outOfStock": false
+            },
+            {
+                "id": 2,
+                "name": "Vòng tay Sunny",
+                "price": 280000,
+                "firstImage": "/assets/images/collections/bracelet/products/sunny-01.webp",
+                "secondImage": "/assets/images/collections/bracelet/products/sunny-02.webp",
+                "outOfStock": false
+            },
+            {
+                "id": 3,
+                "name": "Vòng tay Claire",
+                "price": 260000,
+                "firstImage": "/assets/images/collections/bracelet/products/claire-01.webp",
+                "secondImage": "/assets/images/collections/bracelet/products/claire-02.webp",
+                "outOfStock": false
+            },
+            {
+                "id": 4,
+                "name": "Vòng tay Lena",
+                "price": 175000,
+                "firstImage": "/assets/images/collections/bracelet/products/lena-01.webp",
+                "secondImage": "/assets/images/collections/bracelet/products/lena-02.webp",
+                "outOfStock": false
+            },
+            {
+                "id": 5,
+                "name": "Vòng tay Eden",
+                "price": 280000,
+                "firstImage": "/assets/images/collections/bracelet/products/eden-01.webp",
+                "secondImage": "/assets/images/collections/bracelet/products/eden-02.webp",
+                "outOfStock": false
+            },
+            {
+                "id": 6,
+                "name": "Vòng tay Taylor",
+                "price": 220000,
+                "firstImage": "/assets/images/collections/bracelet/products/taylor-01.webp",
+                "secondImage": "/assets/images/collections/bracelet/products/taylor-02.webp",
+                "outOfStock": false
+            },
+            {
+                "id": 7,
+                "name": "Vòng tay Penny",
+                "price": 380000,
+                "firstImage": "/assets/images/collections/bracelet/products/penny-01.webp",
+                "secondImage": "/assets/images/collections/bracelet/products/penny-02.webp",
+                "outOfStock": false
+            },
+            {
+                "id": 8,
+                "name": "Vòng tay Farrah",
+                "price": 330000,
+                "firstImage": "/assets/images/collections/bracelet/products/farrah-01.webp",
+                "secondImage": "/assets/images/collections/bracelet/products/farrah-02.webp",
+                "outOfStock": false
+            },
+            {
+                "id": 9,
+                "name": "Vòng tay Paloma",
+                "price": 295000,
+                "firstImage": "/assets/images/collections/bracelet/products/paloma-01.webp",
+                "secondImage": "/assets/images/collections/bracelet/products/paloma-02.webp",
+                "outOfStock": false
+            },
+            {
+                "id": 10,
+                "name": "Vòng tay Hani",
+                "price": 240000,
+                "firstImage": "/assets/images/collections/bracelet/products/hani-01.webp",
+                "secondImage": "/assets/images/collections/bracelet/products/hani-02.webp",
+                "outOfStock": false
+            },
+            {
+                "id": 11,
+                "name": "Vòng tay Phoenix",
+                "price": 220000,
+                "firstImage": "/assets/images/collections/bracelet/products/phoenix-01.webp",
+                "secondImage": "/assets/images/collections/bracelet/products/phoenix-02.webp",
+                "outOfStock": false
+            },
+            {
+                "id": 12,
+                "name": "Vòng tay Amira",
+                "price": 200000,
+                "firstImage": "/assets/images/collections/bracelet/products/amira-01.webp",
+                "secondImage": "/assets/images/collections/bracelet/products/amira-02.webp",
+                "outOfStock": false
+            }
+        ]
+    }
 }

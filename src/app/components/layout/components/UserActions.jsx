@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 
+import { MIN_PRICE_FOR_FREE_DELIVERY_FEE, DELIVERY_FEE } from '~/app/utils/constants';
 import iconSearch from '@/assets/icons/search.svg';
 import iconCart from '@/assets/icons/cart.svg';
 import iconClose from '@/assets/icons/close.svg';
@@ -14,11 +15,11 @@ import iconMomo from '@/assets/icons/momo.svg';
 import iconAmex from '@/assets/icons/amex.svg';
 import iconMasterCard from '@/assets/icons/mastercard.svg';
 import iconVisa from '@/assets/icons/visa.svg';
-import product1 from '@/assets/images/products/product-01.webp';
-import product2 from '@/assets/images/products/product-02.webp';
-import product3 from '@/assets/images/products/product-03.webp';
-import product4 from '@/assets/images/products/product-04.webp';
-import product5 from '@/assets/images/products/product-05.webp';
+import product1 from '@/assets/images/cart-items/product-01.webp';
+import product2 from '@/assets/images/cart-items/product-02.webp';
+import product3 from '@/assets/images/cart-items/product-03.webp';
+import product4 from '@/assets/images/cart-items/product-04.webp';
+import product5 from '@/assets/images/cart-items/product-05.webp';
 
 import Button from '../../Button';
 import CartItem from './CartItem';
@@ -60,8 +61,6 @@ const products = [
 const totalPrice = products.reduce((acc, curr) => {
     return curr.discount ? acc + curr.discount : acc + curr.price;
 }, 0);
-const MIN_PRICE_FOR_FREE_DELIVERY_FEE = 250000;
-const deliveryFee = 30000;
 
 export default function UserActions() {
     /**
@@ -152,14 +151,14 @@ export default function UserActions() {
                                         {totalPrice > MIN_PRICE_FOR_FREE_DELIVERY_FEE ? (
                                             <div className='flex gap-2'>
                                                 <span className='line-through opacity-70'>
-                                                    {new Intl.NumberFormat('vi-VN').format(deliveryFee)}
+                                                    {new Intl.NumberFormat('vi-VN').format(DELIVERY_FEE)}
                                                     <sup className='ml-0.5 underline'>đ</sup>
                                                 </span>
                                                 <span className='text-red uppercase'>Miễn phí</span>
                                             </div>
                                         ) : (
                                             <span>
-                                                {new Intl.NumberFormat('vi-VN').format(deliveryFee)}
+                                                {new Intl.NumberFormat('vi-VN').format(DELIVERY_FEE)}
                                                 <sup className='ml-0.5 underline'>đ</sup>
                                             </span>
                                         )}

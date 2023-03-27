@@ -8,7 +8,7 @@ import Button from '../../Button';
 export default function CartItem({ data }) {
     return (
         <div className='flex gap-6'>
-            <Image src={data.image} className='rounded' alt='cart-item-image' />
+            <Image src={data.image} className='w-20 md:w-24 rounded' alt='cart-item-image' />
             <div className='flex-1'>
                 <span>{data.name}</span>
                 <div className='flex md:hidden gap-4 mt-1'>

@@ -1,0 +1,2 @@
+export const MIN_PRICE_FOR_FREE_DELIVERY_FEE = 250000;
+export const DELIVERY_FEE = 30000;
