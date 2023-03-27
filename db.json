@@ -48,108 +48,320 @@
             "image": "/assets/images/home/blog-03.webp"
         }
     ],
-    "bracelet": {
-        "id": 1,
-        "title": "Vòng Tay Nữ",
-        "description": "Lắc tay xinh xắn, thể hiện chất riêng",
-        "image": "/assets/images/collections/bracelet/bracelet.webp",
-        "products": [
-            {
-                "id": 1,
-                "name": "Vòng tay Jenna",
-                "price": 230000,
-                "firstImage": "/assets/images/collections/bracelet/products/jenna-01.webp",
-                "secondImage": "/assets/images/collections/bracelet/products/jenna-02.webp",
-                "outOfStock": false
-            },
-            {
-                "id": 2,
-                "name": "Vòng tay Sunny",
-                "price": 280000,
-                "firstImage": "/assets/images/collections/bracelet/products/sunny-01.webp",
-                "secondImage": "/assets/images/collections/bracelet/products/sunny-02.webp",
-                "outOfStock": false
-            },
-            {
-                "id": 3,
-                "name": "Vòng tay Claire",
-                "price": 260000,
-                "firstImage": "/assets/images/collections/bracelet/products/claire-01.webp",
-                "secondImage": "/assets/images/collections/bracelet/products/claire-02.webp",
-                "outOfStock": false
-            },
-            {
-                "id": 4,
-                "name": "Vòng tay Lena",
-                "price": 175000,
-                "firstImage": "/assets/images/collections/bracelet/products/lena-01.webp",
-                "secondImage": "/assets/images/collections/bracelet/products/lena-02.webp",
-                "outOfStock": false
-            },
-            {
-                "id": 5,
-                "name": "Vòng tay Eden",
-                "price": 280000,
-                "firstImage": "/assets/images/collections/bracelet/products/eden-01.webp",
-                "secondImage": "/assets/images/collections/bracelet/products/eden-02.webp",
-                "outOfStock": false
-            },
-            {
-                "id": 6,
-                "name": "Vòng tay Taylor",
-                "price": 220000,
-                "firstImage": "/assets/images/collections/bracelet/products/taylor-01.webp",
-                "secondImage": "/assets/images/collections/bracelet/products/taylor-02.webp",
-                "outOfStock": false
-            },
-            {
-                "id": 7,
-                "name": "Vòng tay Penny",
-                "price": 380000,
-                "firstImage": "/assets/images/collections/bracelet/products/penny-01.webp",
-                "secondImage": "/assets/images/collections/bracelet/products/penny-02.webp",
-                "outOfStock": false
-            },
-            {
-                "id": 8,
-                "name": "Vòng tay Farrah",
-                "price": 330000,
-                "firstImage": "/assets/images/collections/bracelet/products/farrah-01.webp",
-                "secondImage": "/assets/images/collections/bracelet/products/farrah-02.webp",
-                "outOfStock": false
-            },
-            {
-                "id": 9,
-                "name": "Vòng tay Paloma",
-                "price": 295000,
-                "firstImage": "/assets/images/collections/bracelet/products/paloma-01.webp",
-                "secondImage": "/assets/images/collections/bracelet/products/paloma-02.webp",
-                "outOfStock": false
-            },
-            {
-                "id": 10,
-                "name": "Vòng tay Hani",
-                "price": 240000,
-                "firstImage": "/assets/images/collections/bracelet/products/hani-01.webp",
-                "secondImage": "/assets/images/collections/bracelet/products/hani-02.webp",
-                "outOfStock": false
-            },
-            {
-                "id": 11,
-                "name": "Vòng tay Phoenix",
-                "price": 220000,
-                "firstImage": "/assets/images/collections/bracelet/products/phoenix-01.webp",
-                "secondImage": "/assets/images/collections/bracelet/products/phoenix-02.webp",
-                "outOfStock": false
-            },
-            {
-                "id": 12,
-                "name": "Vòng tay Amira",
-                "price": 200000,
-                "firstImage": "/assets/images/collections/bracelet/products/amira-01.webp",
-                "secondImage": "/assets/images/collections/bracelet/products/amira-02.webp",
-                "outOfStock": false
-            }
-        ]
-    }
+    "collections": [
+        {
+            "id": "earrings",
+            "title": "Bông Tai Nữ",
+            "description": "Bông tai là phụ kiện thời trang không thể thiếu của những cô nàng dễ thương. Hãy tô điểm cho bản thân với bộ sưu tập đa dạng những khuyên tai nữ cá tính của Junie.",
+            "image": "/assets/images/collections/earrings/earrings.webp",
+            "products": [
+                {
+                    "id": 1,
+                    "name": "Bông tai Jane",
+                    "price": 230000,
+                    "firstImage": "/assets/images/collections/earrings/products/jane-01.webp",
+                    "secondImage": "/assets/images/collections/earrings/products/jane-02.webp",
+                    "outOfStock": false
+                },
+                {
+                    "id": 2,
+                    "name": "Bông tai Lumi",
+                    "price": 195000,
+                    "firstImage": "/assets/images/collections/earrings/products/lumi-01.webp",
+                    "secondImage": "/assets/images/collections/earrings/products/lumi-02.webp",
+                    "outOfStock": false
+                },
+                {
+                    "id": 3,
+                    "name": "Bông tai Lela",
+                    "price": 175000,
+                    "firstImage": "/assets/images/collections/earrings/products/lela-01.webp",
+                    "secondImage": "/assets/images/collections/earrings/products/lela-02.webp",
+                    "outOfStock": false
+                },
+                {
+                    "id": 4,
+                    "name": "Bông tai Gracie",
+                    "price": 220000,
+                    "firstImage": "/assets/images/collections/earrings/products/gracie-01.webp",
+                    "secondImage": "/assets/images/collections/earrings/products/gracie-02.webp",
+                    "outOfStock": false
+                },
+                {
+                    "id": 5,
+                    "name": "Bông tai Cilicia",
+                    "price": 190000,
+                    "discount": 0.3,
+                    "firstImage": "/assets/images/collections/earrings/products/cilicia-01.webp",
+                    "secondImage": "/assets/images/collections/earrings/products/cilicia-02.webp",
+                    "outOfStock": true
+                },
+                {
+                    "id": 6,
+                    "name": "Bông tai Fania",
+                    "price": 175000,
+                    "firstImage": "/assets/images/collections/earrings/products/fania-01.webp",
+                    "secondImage": "/assets/images/collections/earrings/products/fania-02.webp",
+                    "outOfStock": false
+                },
+                {
+                    "id": 7,
+                    "name": "Bông tai Sophia",
+                    "price": 220000,
+                    "firstImage": "/assets/images/collections/earrings/products/sophia-01.webp",
+                    "secondImage": "/assets/images/collections/earrings/products/sophia-02.webp",
+                    "outOfStock": false
+                },
+                {
+                    "id": 8,
+                    "name": "Bông tai Liko",
+                    "price": 180000,
+                    "firstImage": "/assets/images/collections/earrings/products/liko-01.webp",
+                    "secondImage": "/assets/images/collections/earrings/products/liko-02.webp",
+                    "outOfStock": false
+                },
+                {
+                    "id": 9,
+                    "name": "Bông tai Ava",
+                    "price": 125000,
+                    "firstImage": "/assets/images/collections/earrings/products/ava-01.webp",
+                    "secondImage": "/assets/images/collections/earrings/products/ava-02.webp",
+                    "outOfStock": false
+                },
+                {
+                    "id": 10,
+                    "name": "Bông tai Faustine",
+                    "price": 180000,
+                    "firstImage": "/assets/images/collections/earrings/products/faustine-01.webp",
+                    "secondImage": "/assets/images/collections/earrings/products/faustine-02.webp",
+                    "outOfStock": false
+                },
+                {
+                    "id": 11,
+                    "name": "Bông tai Noemi",
+                    "price": 220000,
+                    "discount": 0.5,
+                    "firstImage": "/assets/images/collections/earrings/products/noemi-01.webp",
+                    "secondImage": "/assets/images/collections/earrings/products/noemi-02.webp",
+                    "outOfStock": false
+                },
+                {
+                    "id": 12,
+                    "name": "Bông tai Quinn",
+                    "price": 250000,
+                    "firstImage": "/assets/images/collections/earrings/products/quinn-01.webp",
+                    "secondImage": "/assets/images/collections/earrings/products/quinn-02.webp",
+                    "outOfStock": false
+                }
+            ]
+        },
+        {
+            "id": "necklace",
+            "title": "Dây Chuyền Nữ",
+            "description": "Chọn dây chuyền nàng yêu, làm những điều nàng thích",
+            "image": "/assets/images/collections/necklace/necklace.webp",
+            "products": [
+                {
+                    "id": 1,
+                    "name": "Dây chuyền Katherine",
+                    "price": 320000,
+                    "firstImage": "/assets/images/collections/necklace/products/katherine-01.webp",
+                    "secondImage": "/assets/images/collections/necklace/products/katherine-02.webp",
+                    "outOfStock": false
+                },
+                {
+                    "id": 2,
+                    "name": "Dây chuyền Macy",
+                    "price": 280000,
+                    "firstImage": "/assets/images/collections/necklace/products/macy-01.webp",
+                    "secondImage": "/assets/images/collections/necklace/products/macy-02.webp",
+                    "outOfStock": false
+                },
+                {
+                    "id": 3,
+                    "name": "Dây chuyền Lily",
+                    "price": 280000,
+                    "firstImage": "/assets/images/collections/necklace/products/lily-01.webp",
+                    "secondImage": "/assets/images/collections/necklace/products/lily-02.webp",
+                    "outOfStock": false
+                },
+                {
+                    "id": 4,
+                    "name": "Dây chuyền Vida",
+                    "price": 275000,
+                    "firstImage": "/assets/images/collections/necklace/products/vida-01.webp",
+                    "secondImage": "/assets/images/collections/necklace/products/vida-02.webp",
+                    "outOfStock": false
+                },
+                {
+                    "id": 5,
+                    "name": "Dây chuyền Raya",
+                    "price": 350000,
+                    "firstImage": "/assets/images/collections/necklace/products/raya-01.webp",
+                    "secondImage": "/assets/images/collections/necklace/products/raya-02.webp",
+                    "outOfStock": false
+                },
+                {
+                    "id": 6,
+                    "name": "Dây chuyền Abby",
+                    "price": 340000,
+                    "firstImage": "/assets/images/collections/necklace/products/abby-01.webp",
+                    "secondImage": "/assets/images/collections/necklace/products/abby-02.webp",
+                    "outOfStock": false
+                },
+                {
+                    "id": 7,
+                    "name": "Dây chuyền Amari",
+                    "price": 210000,
+                    "firstImage": "/assets/images/collections/necklace/products/amari-01.webp",
+                    "secondImage": "/assets/images/collections/necklace/products/amari-02.webp",
+                    "outOfStock": false
+                },
+                {
+                    "id": 8,
+                    "name": "Dây chuyền Ariel",
+                    "price": 230000,
+                    "firstImage": "/assets/images/collections/necklace/products/ariel-01.webp",
+                    "secondImage": "/assets/images/collections/necklace/products/ariel-02.webp",
+                    "outOfStock": false
+                },
+                {
+                    "id": 9,
+                    "name": "Dây chuyền Rosette",
+                    "price": 320000,
+                    "firstImage": "/assets/images/collections/necklace/products/rosette-01.webp",
+                    "secondImage": "/assets/images/collections/necklace/products/rosette-02.webp",
+                    "outOfStock": false
+                },
+                {
+                    "id": 10,
+                    "name": "Dây chuyền Icelyn",
+                    "price": 290000,
+                    "firstImage": "/assets/images/collections/necklace/products/icelyn-01.webp",
+                    "secondImage": "/assets/images/collections/necklace/products/icelyn-02.webp",
+                    "outOfStock": false
+                },
+                {
+                    "id": 11,
+                    "name": "Dây chuyền Malia",
+                    "price": 280000,
+                    "firstImage": "/assets/images/collections/necklace/products/malia-01.webp",
+                    "secondImage": "/assets/images/collections/necklace/products/malia-02.webp",
+                    "outOfStock": false
+                },
+                {
+                    "id": 12,
+                    "name": "Dây chuyền Dallas",
+                    "price": 275000,
+                    "firstImage": "/assets/images/collections/necklace/products/dallas-01.webp",
+                    "secondImage": "/assets/images/collections/necklace/products/dallas-02.webp",
+                    "outOfStock": false
+                }
+            ]
+        },
+        {
+            "id": "bracelet",
+            "title": "Vòng Tay Nữ",
+            "description": "Lắc tay xinh xắn, thể hiện chất riêng",
+            "image": "/assets/images/collections/bracelet/bracelet.webp",
+            "products": [
+                {
+                    "id": 1,
+                    "name": "Vòng tay Jenna",
+                    "price": 230000,
+                    "firstImage": "/assets/images/collections/bracelet/products/jenna-01.webp",
+                    "secondImage": "/assets/images/collections/bracelet/products/jenna-02.webp",
+                    "outOfStock": false
+                },
+                {
+                    "id": 2,
+                    "name": "Vòng tay Sunny",
+                    "price": 280000,
+                    "firstImage": "/assets/images/collections/bracelet/products/sunny-01.webp",
+                    "secondImage": "/assets/images/collections/bracelet/products/sunny-02.webp",
+                    "outOfStock": false
+                },
+                {
+                    "id": 3,
+                    "name": "Vòng tay Claire",
+                    "price": 260000,
+                    "firstImage": "/assets/images/collections/bracelet/products/claire-01.webp",
+                    "secondImage": "/assets/images/collections/bracelet/products/claire-02.webp",
+                    "outOfStock": false
+                },
+                {
+                    "id": 4,
+                    "name": "Vòng tay Lena",
+                    "price": 175000,
+                    "firstImage": "/assets/images/collections/bracelet/products/lena-01.webp",
+                    "secondImage": "/assets/images/collections/bracelet/products/lena-02.webp",
+                    "outOfStock": false
+                },
+                {
+                    "id": 5,
+                    "name": "Vòng tay Eden",
+                    "price": 280000,
+                    "firstImage": "/assets/images/collections/bracelet/products/eden-01.webp",
+                    "secondImage": "/assets/images/collections/bracelet/products/eden-02.webp",
+                    "outOfStock": false
+                },
+                {
+                    "id": 6,
+                    "name": "Vòng tay Taylor",
+                    "price": 220000,
+                    "firstImage": "/assets/images/collections/bracelet/products/taylor-01.webp",
+                    "secondImage": "/assets/images/collections/bracelet/products/taylor-02.webp",
+                    "outOfStock": false
+                },
+                {
+                    "id": 7,
+                    "name": "Vòng tay Penny",
+                    "price": 380000,
+                    "firstImage": "/assets/images/collections/bracelet/products/penny-01.webp",
+                    "secondImage": "/assets/images/collections/bracelet/products/penny-02.webp",
+                    "outOfStock": false
+                },
+                {
+                    "id": 8,
+                    "name": "Vòng tay Farrah",
+                    "price": 330000,
+                    "firstImage": "/assets/images/collections/bracelet/products/farrah-01.webp",
+                    "secondImage": "/assets/images/collections/bracelet/products/farrah-02.webp",
+                    "outOfStock": false
+                },
+                {
+                    "id": 9,
+                    "name": "Vòng tay Paloma",
+                    "price": 295000,
+                    "firstImage": "/assets/images/collections/bracelet/products/paloma-01.webp",
+                    "secondImage": "/assets/images/collections/bracelet/products/paloma-02.webp",
+                    "outOfStock": false
+                },
+                {
+                    "id": 10,
+                    "name": "Vòng tay Hani",
+                    "price": 240000,
+                    "firstImage": "/assets/images/collections/bracelet/products/hani-01.webp",
+                    "secondImage": "/assets/images/collections/bracelet/products/hani-02.webp",
+                    "outOfStock": false
+                },
+                {
+                    "id": 11,
+                    "name": "Vòng tay Phoenix",
+                    "price": 220000,
+                    "firstImage": "/assets/images/collections/bracelet/products/phoenix-01.webp",
+                    "secondImage": "/assets/images/collections/bracelet/products/phoenix-02.webp",
+                    "outOfStock": false
+                },
+                {
+                    "id": 12,
+                    "name": "Vòng tay Amira",
+                    "price": 200000,
+                    "firstImage": "/assets/images/collections/bracelet/products/amira-01.webp",
+                    "secondImage": "/assets/images/collections/bracelet/products/amira-02.webp",
+                    "outOfStock": false
+                }
+            ]
+        }
+    ]
 }

@@ -55,7 +55,7 @@ export default function ProductItem({ data }) {
             {data.discount ? (
                 <div className='flex gap-3 justify-center'>
                     <span className='text-red'>
-                        {new Intl.NumberFormat('vi-VN').format(data.price * data.discount)}
+                        {new Intl.NumberFormat('vi-VN').format(data.price * (1 - data.discount))}
                         <sup className='ml-0.5 underline'>đ</sup>
                     </span>
                     <span className='line-through opacity-70'>
