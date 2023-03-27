@@ -14,11 +14,11 @@ import iconMomo from '@/assets/icons/momo.svg';
 import iconAmex from '@/assets/icons/amex.svg';
 import iconMasterCard from '@/assets/icons/mastercard.svg';
 import iconVisa from '@/assets/icons/visa.svg';
-import product1 from '@/assets/images/products/product-01.webp';
-import product2 from '@/assets/images/products/product-02.webp';
-import product3 from '@/assets/images/products/product-03.webp';
-import product4 from '@/assets/images/products/product-04.webp';
-import product5 from '@/assets/images/products/product-05.webp';
+import product1 from '@/assets/images/cart-items/product-01.webp';
+import product2 from '@/assets/images/cart-items/product-02.webp';
+import product3 from '@/assets/images/cart-items/product-03.webp';
+import product4 from '@/assets/images/cart-items/product-04.webp';
+import product5 from '@/assets/images/cart-items/product-05.webp';
 
 import Button from '../../Button';
 import CartItem from './CartItem';
