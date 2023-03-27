@@ -226,7 +226,7 @@ export default function UserActions() {
                     >
                         {/* Start: Search header */}
                         <div className='flex items-center justify-between px-6 md:px-10 py-4 border-b border-gray'>
-                            <div class='flex flex-1 items-center gap-2'>
+                            <div className='flex flex-1 items-center gap-2'>
                                 <span>
                                     <Image src={iconSearch} alt='icon-search' />
                                 </span>
