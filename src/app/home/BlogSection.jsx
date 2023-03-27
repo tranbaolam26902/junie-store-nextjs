@@ -1,10 +1,10 @@
-import getData from '../utils/getData';
+import getFeaturedPosts from '../utils/home/getFeaturedPosts';
 
 import SectionHeader from './SectionHeader';
 import BlogItem from './BlogItem';
 
 export default async function BlogSection() {
-    const posts = await getData('https://junie-store-fake-api.vercel.app/featured-posts');
+    const posts = await getFeaturedPosts();
 
     return (
         <div className='mx-auto px-6 md:px-10 max-w-screen-2xl'>
