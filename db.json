@@ -362,6 +362,110 @@
                     "outOfStock": false
                 }
             ]
+        },
+        {
+            "id": "ring",
+            "title": "Nhẫn Nữ",
+            "description": "Đeo nhẫn bạc, ngại gì tỏa sáng!",
+            "image": "/assets/images/collections/ring/ring.webp",
+            "products": [
+                {
+                    "id": 1,
+                    "name": "Nhẫn Sense",
+                    "price": 210000,
+                    "firstImage": "/assets/images/collections/ring/products/sense-01.webp",
+                    "secondImage": "/assets/images/collections/ring/products/sense-02.webp",
+                    "outOfStock": false
+                },
+                {
+                    "id": 2,
+                    "name": "Nhẫn Crossy",
+                    "price": 210000,
+                    "firstImage": "/assets/images/collections/ring/products/crossy-01.webp",
+                    "secondImage": "/assets/images/collections/ring/products/crossy-02.webp",
+                    "outOfStock": false
+                },
+                {
+                    "id": 3,
+                    "name": "Nhẫn Leaf",
+                    "price": 195000,
+                    "firstImage": "/assets/images/collections/ring/products/leaf-01.webp",
+                    "secondImage": "/assets/images/collections/ring/products/leaf-02.webp",
+                    "outOfStock": false
+                },
+                {
+                    "id": 4,
+                    "name": "Nhẫn Charlotte",
+                    "price": 230000,
+                    "firstImage": "/assets/images/collections/ring/products/charlotter-01.webp",
+                    "secondImage": "/assets/images/collections/ring/products/charlotter-02.webp",
+                    "outOfStock": false
+                },
+                {
+                    "id": 5,
+                    "name": "Nhẫn Lola",
+                    "price": 210000,
+                    "firstImage": "/assets/images/collections/ring/products/lola-01.webp",
+                    "secondImage": "/assets/images/collections/ring/products/lola-02.webp",
+                    "outOfStock": false
+                },
+                {
+                    "id": 6,
+                    "name": "Nhẫn Leona",
+                    "price": 195000,
+                    "firstImage": "/assets/images/collections/ring/products/leona-01.webp",
+                    "secondImage": "/assets/images/collections/ring/products/leona-02.webp",
+                    "outOfStock": false
+                },
+                {
+                    "id": 7,
+                    "name": "Nhẫn Infinity",
+                    "price": 230000,
+                    "firstImage": "/assets/images/collections/ring/products/infinity-01.webp",
+                    "secondImage": "/assets/images/collections/ring/products/infinity-02.webp",
+                    "outOfStock": false
+                },
+                {
+                    "id": 8,
+                    "name": "Nhẫn Catlyn",
+                    "price": 240000,
+                    "firstImage": "/assets/images/collections/ring/products/catlyn-01.webp",
+                    "secondImage": "/assets/images/collections/ring/products/catlyn-02.webp",
+                    "outOfStock": false
+                },
+                {
+                    "id": 9,
+                    "name": "Nhẫn Remi",
+                    "price": 200000,
+                    "firstImage": "/assets/images/collections/ring/products/remi-01.webp",
+                    "secondImage": "/assets/images/collections/ring/products/remi-02.webp",
+                    "outOfStock": false
+                },
+                {
+                    "id": 10,
+                    "name": "Nhẫn Onina",
+                    "price": 210000,
+                    "firstImage": "/assets/images/collections/ring/products/onina-01.webp",
+                    "secondImage": "/assets/images/collections/ring/products/onina-02.webp",
+                    "outOfStock": false
+                },
+                {
+                    "id": 11,
+                    "name": "Nhẫn Giselle",
+                    "price": 195000,
+                    "firstImage": "/assets/images/collections/ring/products/giselle-01.webp",
+                    "secondImage": "/assets/images/collections/ring/products/giselle-02.webp",
+                    "outOfStock": false
+                },
+                {
+                    "id": 12,
+                    "name": "Nhẫn Windy",
+                    "price": 220000,
+                    "firstImage": "/assets/images/collections/ring/products/windy-01.webp",
+                    "secondImage": "/assets/images/collections/ring/products/windy-02.webp",
+                    "outOfStock": true
+                }
+            ]
         }
     ]
 }
