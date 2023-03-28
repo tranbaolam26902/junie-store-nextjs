@@ -1,7 +1,9 @@
+import { Suspense } from 'react';
 import localFont from 'next/font/local';
 
 import './globals.scss';
 
+import Loading from './loading';
 import Footer from './components/layout/Footer';
 import Header from './components/layout/Header';
 
@@ -65,7 +67,9 @@ export default function RootLayout({ children }) {
         <html lang='en' className='scroll-smooth'>
             <body className={`${myriad.variable} font-sans text-secondary bg-primary`}>
                 <Header />
-                <main className='mt-[var(--header-height)]'>{children}</main>
+                <Suspense fallback={<Loading />}>
+                    <main className='mt-[var(--header-height)]'>{children}</main>
+                </Suspense>
                 <Footer />
             </body>
         </html>
