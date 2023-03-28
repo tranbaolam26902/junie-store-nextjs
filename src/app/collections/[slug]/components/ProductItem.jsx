@@ -36,7 +36,8 @@ export default function ProductItem({ data }) {
                     </span>
                 ) : data.discount && data.price * data.discount >= MIN_PRICE_FOR_FREE_DELIVERY_FEE ? (
                     <span className='absolute top-2.5 left-2.5 inline-block px-[5px] pt-[3px] text-xs tracking-wider text-white font-bold uppercase bg-green rounded-sm'>
-                        Freeship
+                        <Image src={truck} width={14} height={14} alt='freeship-icon' className='mb-0.5 mr-1' />
+                        <span>Freeship</span>
                     </span>
                 ) : data.discount ? (
                     <span className='absolute top-2.5 left-2.5 inline-block px-[5px] pt-[3px] text-xs tracking-wider text-white font-bold uppercase bg-red rounded-sm'>
@@ -44,8 +45,8 @@ export default function ProductItem({ data }) {
                     </span>
                 ) : data.price >= MIN_PRICE_FOR_FREE_DELIVERY_FEE ? (
                     <span className='absolute top-2.5 left-2.5 flex px-[5px] pt-[3px] text-xs tracking-wider text-white font-bold uppercase bg-green rounded-sm'>
-                        <Image src={truck} width={14} height={14} alt='freeship-icon' className='mb-0.5 mr-1' />{' '}
-                        Freeship
+                        <Image src={truck} width={14} height={14} alt='freeship-icon' className='mb-0.5 mr-1' />
+                        <span>Freeship</span>
                     </span>
                 ) : null}
                 {/* End: Tag */}
