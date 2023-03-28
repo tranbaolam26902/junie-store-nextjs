@@ -9,6 +9,7 @@ export default function HeroSection({ title, description, image }) {
                     src={image}
                     fill
                     size='100vw'
+                    priority
                     className='absolute left-0 w-full h-full object-cover object-center'
                 />
                 <div className='absolute top-0 z-20 py-6 hidden md:block text-sm'>
