@@ -1,16 +1,22 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { getPlaiceholder } from 'plaiceholder';
 
-export default function HeroSection({ title, description, image }) {
+export default async function HeroSection({ title, description, image }) {
+    const { base64, img } = await getPlaiceholder(image);
+
     return (
         <div className='relative overflow-hidden w-full h-[250px] md:h-[400px]'>
             <div className='mx-auto px-6 md:px-10 max-w-screen-2xl text-white'>
                 <Image
-                    src={image}
+                    src={img}
                     fill
                     size='100vw'
                     priority
+                    placeholder='blur'
+                    blurDataURL={base64}
                     className='absolute left-0 w-full h-full object-cover object-center'
+                    alt='banner-image'
                 />
                 <div className='absolute top-0 z-20 py-6 hidden md:block text-sm'>
                     <Link href='/' className='opacity-70 hover:opacity-100 transition'>

@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+const { withPlaiceholder } = require('@plaiceholder/next');
+
+module.exports = withPlaiceholder({
     experimental: {
         appDir: true,
     },
-};
-
-module.exports = nextConfig;
+});
