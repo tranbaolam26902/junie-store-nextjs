@@ -55,7 +55,7 @@ const myriad = localFont({
  */
 export const metadata = {
     title: {
-        default: 'Junie',
+        default: 'Junie | Thương Hiệu Phụ Kiện Thời Trang Bông Tai, Dây Chuyền Nữ',
         template: 'Junie | %s',
     },
 };
