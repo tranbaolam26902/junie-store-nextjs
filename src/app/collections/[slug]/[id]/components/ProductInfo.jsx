@@ -19,7 +19,7 @@ import Button from '~/app/components/Button';
 export default function ProductInfo({ data }) {
     return (
         <div>
-            <p className='mb-6 text-2xl md:text-3xl lg:text-4xl font-bold'>Dây chuyền Katherine</p>
+            <p className='mb-6 text-2xl md:text-3xl lg:text-4xl font-bold'>{data.name}</p>
             <div className='flex items-center gap-x-3 mb-4'>
                 {data.discount ? (
                     <>
