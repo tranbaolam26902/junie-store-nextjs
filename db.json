@@ -57,6 +57,7 @@
             "products": [
                 {
                     "id": 1,
+                    "collection": "earrings",
                     "name": "Bông tai Jane",
                     "price": 230000,
                     "firstImage": "/assets/images/collections/earrings/products/jane-01.webp",
@@ -65,6 +66,7 @@
                 },
                 {
                     "id": 2,
+                    "collection": "earrings",
                     "name": "Bông tai Lumi",
                     "price": 195000,
                     "firstImage": "/assets/images/collections/earrings/products/lumi-01.webp",
@@ -73,6 +75,7 @@
                 },
                 {
                     "id": 3,
+                    "collection": "earrings",
                     "name": "Bông tai Lela",
                     "price": 175000,
                     "firstImage": "/assets/images/collections/earrings/products/lela-01.webp",
@@ -81,6 +84,7 @@
                 },
                 {
                     "id": 4,
+                    "collection": "earrings",
                     "name": "Bông tai Gracie",
                     "price": 220000,
                     "firstImage": "/assets/images/collections/earrings/products/gracie-01.webp",
@@ -89,6 +93,7 @@
                 },
                 {
                     "id": 5,
+                    "collection": "earrings",
                     "name": "Bông tai Cilicia",
                     "price": 190000,
                     "discount": 0.3,
@@ -98,6 +103,7 @@
                 },
                 {
                     "id": 6,
+                    "collection": "earrings",
                     "name": "Bông tai Fania",
                     "price": 175000,
                     "firstImage": "/assets/images/collections/earrings/products/fania-01.webp",
@@ -106,6 +112,7 @@
                 },
                 {
                     "id": 7,
+                    "collection": "earrings",
                     "name": "Bông tai Sophia",
                     "price": 220000,
                     "firstImage": "/assets/images/collections/earrings/products/sophia-01.webp",
@@ -114,6 +121,7 @@
                 },
                 {
                     "id": 8,
+                    "collection": "earrings",
                     "name": "Bông tai Liko",
                     "price": 180000,
                     "firstImage": "/assets/images/collections/earrings/products/liko-01.webp",
@@ -122,6 +130,7 @@
                 },
                 {
                     "id": 9,
+                    "collection": "earrings",
                     "name": "Bông tai Ava",
                     "price": 125000,
                     "firstImage": "/assets/images/collections/earrings/products/ava-01.webp",
@@ -130,6 +139,7 @@
                 },
                 {
                     "id": 10,
+                    "collection": "earrings",
                     "name": "Bông tai Faustine",
                     "price": 180000,
                     "firstImage": "/assets/images/collections/earrings/products/faustine-01.webp",
@@ -138,6 +148,7 @@
                 },
                 {
                     "id": 11,
+                    "collection": "earrings",
                     "name": "Bông tai Noemi",
                     "price": 220000,
                     "discount": 0.5,
@@ -147,6 +158,7 @@
                 },
                 {
                     "id": 12,
+                    "collection": "earrings",
                     "name": "Bông tai Quinn",
                     "price": 250000,
                     "firstImage": "/assets/images/collections/earrings/products/quinn-01.webp",
@@ -163,6 +175,7 @@
             "products": [
                 {
                     "id": 1,
+                    "collection": "necklace",
                     "name": "Dây chuyền Katherine",
                     "price": 320000,
                     "firstImage": "/assets/images/collections/necklace/products/katherine-01.webp",
@@ -171,6 +184,7 @@
                 },
                 {
                     "id": 2,
+                    "collection": "necklace",
                     "name": "Dây chuyền Macy",
                     "price": 280000,
                     "firstImage": "/assets/images/collections/necklace/products/macy-01.webp",
@@ -179,6 +193,7 @@
                 },
                 {
                     "id": 3,
+                    "collection": "necklace",
                     "name": "Dây chuyền Lily",
                     "price": 280000,
                     "firstImage": "/assets/images/collections/necklace/products/lily-01.webp",
@@ -187,6 +202,7 @@
                 },
                 {
                     "id": 4,
+                    "collection": "necklace",
                     "name": "Dây chuyền Vida",
                     "price": 275000,
                     "firstImage": "/assets/images/collections/necklace/products/vida-01.webp",
@@ -195,6 +211,7 @@
                 },
                 {
                     "id": 5,
+                    "collection": "necklace",
                     "name": "Dây chuyền Raya",
                     "price": 350000,
                     "firstImage": "/assets/images/collections/necklace/products/raya-01.webp",
@@ -203,6 +220,7 @@
                 },
                 {
                     "id": 6,
+                    "collection": "necklace",
                     "name": "Dây chuyền Abby",
                     "price": 340000,
                     "firstImage": "/assets/images/collections/necklace/products/abby-01.webp",
@@ -211,6 +229,7 @@
                 },
                 {
                     "id": 7,
+                    "collection": "necklace",
                     "name": "Dây chuyền Amari",
                     "price": 210000,
                     "firstImage": "/assets/images/collections/necklace/products/amari-01.webp",
@@ -219,6 +238,7 @@
                 },
                 {
                     "id": 8,
+                    "collection": "necklace",
                     "name": "Dây chuyền Ariel",
                     "price": 230000,
                     "firstImage": "/assets/images/collections/necklace/products/ariel-01.webp",
@@ -227,6 +247,7 @@
                 },
                 {
                     "id": 9,
+                    "collection": "necklace",
                     "name": "Dây chuyền Rosette",
                     "price": 320000,
                     "firstImage": "/assets/images/collections/necklace/products/rosette-01.webp",
@@ -235,6 +256,7 @@
                 },
                 {
                     "id": 10,
+                    "collection": "necklace",
                     "name": "Dây chuyền Icelyn",
                     "price": 290000,
                     "firstImage": "/assets/images/collections/necklace/products/icelyn-01.webp",
@@ -243,6 +265,7 @@
                 },
                 {
                     "id": 11,
+                    "collection": "necklace",
                     "name": "Dây chuyền Malia",
                     "price": 280000,
                     "firstImage": "/assets/images/collections/necklace/products/malia-01.webp",
@@ -251,6 +274,7 @@
                 },
                 {
                     "id": 12,
+                    "collection": "necklace",
                     "name": "Dây chuyền Dallas",
                     "price": 275000,
                     "firstImage": "/assets/images/collections/necklace/products/dallas-01.webp",
@@ -267,6 +291,7 @@
             "products": [
                 {
                     "id": 1,
+                    "collection": "bracelet",
                     "name": "Vòng tay Jenna",
                     "price": 230000,
                     "firstImage": "/assets/images/collections/bracelet/products/jenna-01.webp",
@@ -275,6 +300,7 @@
                 },
                 {
                     "id": 2,
+                    "collection": "bracelet",
                     "name": "Vòng tay Sunny",
                     "price": 280000,
                     "firstImage": "/assets/images/collections/bracelet/products/sunny-01.webp",
@@ -283,6 +309,7 @@
                 },
                 {
                     "id": 3,
+                    "collection": "bracelet",
                     "name": "Vòng tay Claire",
                     "price": 260000,
                     "firstImage": "/assets/images/collections/bracelet/products/claire-01.webp",
@@ -291,6 +318,7 @@
                 },
                 {
                     "id": 4,
+                    "collection": "bracelet",
                     "name": "Vòng tay Lena",
                     "price": 175000,
                     "firstImage": "/assets/images/collections/bracelet/products/lena-01.webp",
@@ -299,6 +327,7 @@
                 },
                 {
                     "id": 5,
+                    "collection": "bracelet",
                     "name": "Vòng tay Eden",
                     "price": 280000,
                     "firstImage": "/assets/images/collections/bracelet/products/eden-01.webp",
@@ -307,6 +336,7 @@
                 },
                 {
                     "id": 6,
+                    "collection": "bracelet",
                     "name": "Vòng tay Taylor",
                     "price": 220000,
                     "firstImage": "/assets/images/collections/bracelet/products/taylor-01.webp",
@@ -315,6 +345,7 @@
                 },
                 {
                     "id": 7,
+                    "collection": "bracelet",
                     "name": "Vòng tay Penny",
                     "price": 380000,
                     "firstImage": "/assets/images/collections/bracelet/products/penny-01.webp",
@@ -323,6 +354,7 @@
                 },
                 {
                     "id": 8,
+                    "collection": "bracelet",
                     "name": "Vòng tay Farrah",
                     "price": 330000,
                     "firstImage": "/assets/images/collections/bracelet/products/farrah-01.webp",
@@ -331,6 +363,7 @@
                 },
                 {
                     "id": 9,
+                    "collection": "bracelet",
                     "name": "Vòng tay Paloma",
                     "price": 295000,
                     "firstImage": "/assets/images/collections/bracelet/products/paloma-01.webp",
@@ -339,6 +372,7 @@
                 },
                 {
                     "id": 10,
+                    "collection": "bracelet",
                     "name": "Vòng tay Hani",
                     "price": 240000,
                     "firstImage": "/assets/images/collections/bracelet/products/hani-01.webp",
@@ -347,6 +381,7 @@
                 },
                 {
                     "id": 11,
+                    "collection": "bracelet",
                     "name": "Vòng tay Phoenix",
                     "price": 220000,
                     "firstImage": "/assets/images/collections/bracelet/products/phoenix-01.webp",
@@ -355,6 +390,7 @@
                 },
                 {
                     "id": 12,
+                    "collection": "bracelet",
                     "name": "Vòng tay Amira",
                     "price": 200000,
                     "firstImage": "/assets/images/collections/bracelet/products/amira-01.webp",
@@ -371,6 +407,7 @@
             "products": [
                 {
                     "id": 1,
+                    "collection": "ring",
                     "name": "Nhẫn Sense",
                     "price": 210000,
                     "firstImage": "/assets/images/collections/ring/products/sense-01.webp",
@@ -379,6 +416,7 @@
                 },
                 {
                     "id": 2,
+                    "collection": "ring",
                     "name": "Nhẫn Crossy",
                     "price": 210000,
                     "firstImage": "/assets/images/collections/ring/products/crossy-01.webp",
@@ -387,6 +425,7 @@
                 },
                 {
                     "id": 3,
+                    "collection": "ring",
                     "name": "Nhẫn Leaf",
                     "price": 195000,
                     "firstImage": "/assets/images/collections/ring/products/leaf-01.webp",
@@ -395,6 +434,7 @@
                 },
                 {
                     "id": 4,
+                    "collection": "ring",
                     "name": "Nhẫn Charlotte",
                     "price": 230000,
                     "firstImage": "/assets/images/collections/ring/products/charlotte-01.webp",
@@ -403,6 +443,7 @@
                 },
                 {
                     "id": 5,
+                    "collection": "ring",
                     "name": "Nhẫn Lola",
                     "price": 210000,
                     "firstImage": "/assets/images/collections/ring/products/lola-01.webp",
@@ -411,6 +452,7 @@
                 },
                 {
                     "id": 6,
+                    "collection": "ring",
                     "name": "Nhẫn Leona",
                     "price": 195000,
                     "firstImage": "/assets/images/collections/ring/products/leona-01.webp",
@@ -419,6 +461,7 @@
                 },
                 {
                     "id": 7,
+                    "collection": "ring",
                     "name": "Nhẫn Infinity",
                     "price": 230000,
                     "firstImage": "/assets/images/collections/ring/products/infinity-01.webp",
@@ -427,6 +470,7 @@
                 },
                 {
                     "id": 8,
+                    "collection": "ring",
                     "name": "Nhẫn Catlyn",
                     "price": 240000,
                     "firstImage": "/assets/images/collections/ring/products/catlyn-01.webp",
@@ -435,6 +479,7 @@
                 },
                 {
                     "id": 9,
+                    "collection": "ring",
                     "name": "Nhẫn Remi",
                     "price": 200000,
                     "firstImage": "/assets/images/collections/ring/products/remi-01.webp",
@@ -443,6 +488,7 @@
                 },
                 {
                     "id": 10,
+                    "collection": "ring",
                     "name": "Nhẫn Onina",
                     "price": 210000,
                     "firstImage": "/assets/images/collections/ring/products/onina-01.webp",
@@ -451,6 +497,7 @@
                 },
                 {
                     "id": 11,
+                    "collection": "ring",
                     "name": "Nhẫn Giselle",
                     "price": 195000,
                     "firstImage": "/assets/images/collections/ring/products/giselle-01.webp",
@@ -459,6 +506,7 @@
                 },
                 {
                     "id": 12,
+                    "collection": "ring",
                     "name": "Nhẫn Windy",
                     "price": 220000,
                     "firstImage": "/assets/images/collections/ring/products/windy-01.webp",
@@ -466,6 +514,171 @@
                     "outOfStock": true
                 }
             ]
+        }
+    ],
+    "earrings": [
+        {
+            "id": 1,
+            "name": "Bông tai Jane",
+            "price": 230000,
+            "images": [
+                "/assets/images/collections/earrings/products/jane-01.webp",
+                "/assets/images/collections/earrings/products/jane-02.webp"
+            ],
+            "type": "E-JANE-RG",
+            "ratings": 76,
+            "description": "Bông tai Jane đính ngọc trai nước ngọt, mang đến vẻ đẹp cao quý, trong sáng và thánh thiện. Sản phẩm được nhiều phái đẹp yêu thích là do nó vừa mang sự nhẹ nhàng, thanh nhã, nữ tính vừa mang nét mạnh mẽ, kiêu kỳ.\nBông tai Jane sẽ tôn vinh vẻ đẹp thân thiện, dịu dàng, từ đó dễ dàng lấy được thiện cảm từ những người xung quanh cho các cô gái.",
+            "using": "Được làm từ những chất liệu cao cấp và bền bỉ nhưng do đặc tính cơ bản của chất liệu, Junie khuyến khích khách hàng nên tuân theo các nguyên tắc bảo quản trang sức nói chung.\nNên tháo trang sức ra trước khi tiếp xúc với bất kỳ môi trường ẩm hoặc ma sát mạnh (vd: rửa tay, đi ngủ, tắm rửa,...) để đảm bảo và duy trì độ bóng của sản phẩm cũng như kéo dài tuổi thọ của sản phẩm.",
+            "outOfStock": false
+        },
+        {
+            "id": 2,
+            "name": "Bông tai Lumi",
+            "price": 195000,
+            "images": [
+                "/assets/images/collections/earrings/products/lumi-01.webp",
+                "/assets/images/collections/earrings/products/lumi-02.webp"
+            ],
+            "type": "E-LUMI-RG",
+            "description": "Thêm chút phong cách trang nhã cho đôi tai của bạn với đôi bông tai ôm sát đầy tinh tế của Junie.\nBông taI Lumi được chế tác tỉ mỉ từ bạc 925 cao cấp, phủ một lớp dày vàng 14K, kết hợp với đá Cubic Zirconia lấp lánh tạo nên một thiết kế hoàn mỹ, là điểm nhấn duyên dáng trên vành tai nhỏ xinh của nàng.\nThiết kế đơn giản, nhưng không kém phần tinh tế để nàng có thể kết hợp cùng nhiều loại trang phục trong các dịp khác nhau như đi làm, đi chơi, thậm chí cả những bữa tiệc nhẹ nhàng.",
+            "using": "Được làm từ những chất liệu cao cấp và bền bỉ nhưng do đặc tính cơ bản của chất liệu, Junie khuyến khích khách hàng nên tuân theo các nguyên tắc bảo quản trang sức nói chung.\nNên tháo trang sức ra trước khi tiếp xúc với bất kỳ môi trường ẩm hoặc ma sát mạnh (vd: rửa tay, đi ngủ, tắm rửa,...) để đảm bảo và duy trì độ bóng của sản phẩm cũng như kéo dài tuổi thọ của sản phẩm.",
+            "outOfStock": false
+        },
+        {
+            "id": 3,
+            "name": "Bông tai Lela",
+            "price": 175000,
+            "images": [
+                "/assets/images/collections/earrings/products/lela-01.webp",
+                "/assets/images/collections/earrings/products/lela-02.webp"
+            ],
+            "type": "E-LELA",
+            "ratings": 2,
+            "description": "Bông tai Lela được tạo hình vầng trăng khuyết, điểm xuyết thêm một viên đá Zirconia làm điểm nhấn. Đây là loại đá thiên nhiên có độ sáng rực rỡ, lấp lánh tựa như những vì sao.\nThiết kế giản dị, không quá cầu kỳ nhưng không kém phần xinh đẹp, cuốn hút, phù hợp cho nàng mix với nhiều kiểu trang phục, kiểu tóc, cho mọi hoàn cảnh, từ đi làm, đi học đến đi chơi.",
+            "using": "Được làm từ những chất liệu cao cấp và bền bỉ nhưng do đặc tính cơ bản của chất liệu, Junie khuyến khích khách hàng nên tuân theo các nguyên tắc bảo quản trang sức nói chung.\nNên tháo trang sức ra trước khi tiếp xúc với bất kỳ môi trường ẩm hoặc ma sát mạnh (vd: rửa tay, đi ngủ, tắm rửa,...) để đảm bảo và duy trì độ bóng của sản phẩm cũng như kéo dài tuổi thọ của sản phẩm.",
+            "outOfStock": false
+        },
+        {
+            "id": 4,
+            "name": "Bông tai Gracie",
+            "price": 220000,
+            "images": [
+                "/assets/images/collections/earrings/products/gracie-01.webp",
+                "/assets/images/collections/earrings/products/gracie-02.webp"
+            ],
+            "type": "E-GRACIE",
+            "description": "Nếu nàng đang tìm kiếm một mẫu khuyên tai lấp lánh để hợp với chiếc đầm dạ hội trong bữa tiệc tối nay những lại đủ nhẹ nhàng để đi chơi, cafe cùng hội bạn dịp cuối tuần, thì Gracie chính là mẫu bông tai ngọc trai bạn đang tìm kiếm.\nChế tác trên nền bạc S925 (Sterling Silver) phủ một lớp vàng 14K sang trọng, bền bỉ khiến cho Gracie sẽ trở thành trợ thủ đắc lực của nàng mỗi ngày. Điểm nhấn là thiết kế dài/ngắn làm nên sự khác biệt cùng ngọc trai nước ngọt lấp lánh mang lại vẻ đẹp hoàn hảo nhưng rất dịu dàng.",
+            "using": "Được làm từ những chất liệu cao cấp và bền bỉ nhưng do đặc tính cơ bản của chất liệu, Junie khuyến khích khách hàng nên tuân theo các nguyên tắc bảo quản trang sức nói chung.\nNên tháo trang sức ra trước khi tiếp xúc với bất kỳ môi trường ẩm hoặc ma sát mạnh (vd: rửa tay, đi ngủ, tắm rửa,...) để đảm bảo và duy trì độ bóng của sản phẩm cũng như kéo dài tuổi thọ của sản phẩm.",
+            "outOfStock": false
+        },
+        {
+            "id": 5,
+            "name": "Bông tai Cilicia",
+            "price": 190000,
+            "discount": 0.3,
+            "images": [
+                "/assets/images/collections/earrings/products/cilicia-01.webp",
+                "/assets/images/collections/earrings/products/cilicia-02.webp"
+            ],
+            "type": "E-CILICIA",
+            "ratings": 19,
+            "description": "Bông tai Cilicia được thiết kế như một cành hoa nhỏ đeo sát tai, với điểm nhấn là viên ngọc trai sáng bóng, mang lại nét đẹp tinh tế, dịu dàng và rạng rỡ cho các cô gái.\nHình chiếc lá nguyệt quế được chế tác tinh xảo bằng chất liệu bạc, phủ lên đó là lớp vàng 14K sang trọng. Hoàn thiện bằng đá CZ đính trên bề mặt lá giúp Cilicia trở nên lấp lánh và thu hút mọi ánh nhìn.",
+            "using": "Được làm từ những chất liệu cao cấp và bền bỉ nhưng do đặc tính cơ bản của chất liệu, Junie khuyến khích khách hàng nên tuân theo các nguyên tắc bảo quản trang sức nói chung.\nNên tháo trang sức ra trước khi tiếp xúc với bất kỳ môi trường ẩm hoặc ma sát mạnh (vd: rửa tay, đi ngủ, tắm rửa,...) để đảm bảo và duy trì độ bóng của sản phẩm cũng như kéo dài tuổi thọ của sản phẩm.",
+            "outOfStock": true
+        },
+        {
+            "id": 6,
+            "name": "Bông tai Fania",
+            "price": 175000,
+            "images": [
+                "/assets/images/collections/earrings/products/fania-01.webp",
+                "/assets/images/collections/earrings/products/fania-02.webp"
+            ],
+            "type": "E-FANIA",
+            "ratings": 2,
+            "description": "Bông tai Fania được chế tác từ bạc 925 phủ vàng 14K kết hợp với đá CZ cao cấp. Kiểu dáng nhỏ nhắn, tinh tế mang đến cho các cô gái sự thanh lịch, nhẹ nhàng, phù hợp trong mọi hoàn cảnh và mọi trang phục.",
+            "using": "Được làm từ những chất liệu cao cấp và bền bỉ nhưng do đặc tính cơ bản của chất liệu, Junie khuyến khích khách hàng nên tuân theo các nguyên tắc bảo quản trang sức nói chung.\nNên tháo trang sức ra trước khi tiếp xúc với bất kỳ môi trường ẩm hoặc ma sát mạnh (vd: rửa tay, đi ngủ, tắm rửa,...) để đảm bảo và duy trì độ bóng của sản phẩm cũng như kéo dài tuổi thọ của sản phẩm.",
+            "outOfStock": false
+        },
+        {
+            "id": 7,
+            "name": "Bông tai Sophia",
+            "price": 220000,
+            "images": [
+                "/assets/images/collections/earrings/products/sophia-01.webp",
+                "/assets/images/collections/earrings/products/sophia-02.webp"
+            ],
+            "type": "E-SOPHIA",
+            "description": "Lấp lánh cùng những hình khối xếp thành từ những viên đá quý Zirconia có độ cứng hoàn hảo tạo nên nét duyên dáng không kém phần nổi bật cho nàng. Bông tai được chế tác tinh xảo từ nền bạc 925 dát một lớp vàng 14K dày dặn, cuối cùng được hoàn thiện bằng rất nhiều viên đá Zirconia lánh lánh tinh khiết.",
+            "using": "Được làm từ những chất liệu cao cấp và bền bỉ nhưng do đặc tính cơ bản của chất liệu, Junie khuyến khích khách hàng nên tuân theo các nguyên tắc bảo quản trang sức nói chung.\nNên tháo trang sức ra trước khi tiếp xúc với bất kỳ môi trường ẩm hoặc ma sát mạnh (vd: rửa tay, đi ngủ, tắm rửa,...) để đảm bảo và duy trì độ bóng của sản phẩm cũng như kéo dài tuổi thọ của sản phẩm.",
+            "outOfStock": false
+        },
+        {
+            "id": 8,
+            "name": "Bông tai Liko",
+            "price": 180000,
+            "images": [
+                "/assets/images/collections/earrings/products/liko-01.webp",
+                "/assets/images/collections/earrings/products/liko-02.webp"
+            ],
+            "type": "E-LIKO",
+            "description": "Bông tai bạc 925 phủ vàng 14K được chế tác tinh xảo tạo nên một sản phẩm hoàn hảo. Với kiểu dáng nhỏ xinh, sản phẩm thích hợp cho những cô nàng theo phong cách dịu dàng, dễ thương.",
+            "using": "Được làm từ những chất liệu cao cấp và bền bỉ nhưng do đặc tính cơ bản của chất liệu, Junie khuyến khích khách hàng nên tuân theo các nguyên tắc bảo quản trang sức nói chung.\nNên tháo trang sức ra trước khi tiếp xúc với bất kỳ môi trường ẩm hoặc ma sát mạnh (vd: rửa tay, đi ngủ, tắm rửa,...) để đảm bảo và duy trì độ bóng của sản phẩm cũng như kéo dài tuổi thọ của sản phẩm.",
+            "outOfStock": false
+        },
+        {
+            "id": 9,
+            "name": "Bông tai Ava",
+            "price": 125000,
+            "images": [
+                "/assets/images/collections/earrings/products/ava-01.webp",
+                "/assets/images/collections/earrings/products/ava-02.webp"
+            ],
+            "type": "E-AVA-3",
+            "description": "Chẳng cần đường nét cầu kỳ, chỉ đôi chấm nhỏ điểm xuyết vành tai xinh cũng đủ chinh phục mọi ánh nhìn. Thiết kế tối giản của bông tai nụ Ava là lựa chọn hoàn hảo cho mọi trang phục, mọi hoàn cảnh, mọi hình dáng khuôn mặt.\nHãy để cách đeo Ava nói lên tính cách của nàng: 1 đôi cho nhẹ nhàng chốn công sở; 2 chiếc 1 bên cho chút tinh nghịch xuống phố; hay cả 2 đôi tạo nét cá tính nhưng đầy quyến rũ cho đêm tiệc lung linh.\nSắc vàng của bông tai Ava có thể kết hợp linh hoạt với sắc trắng ngọc trai của mẫu bông tai Hope, hay ánh chiếu long lanh của mẫu Ivory. Nàng càng thêm nhiều lựa chọn để mix & match với trang phục.",
+            "using": "Được làm từ những chất liệu cao cấp và bền bỉ nhưng do đặc tính cơ bản của chất liệu, Junie khuyến khích khách hàng nên tuân theo các nguyên tắc bảo quản trang sức nói chung.\nNên tháo trang sức ra trước khi tiếp xúc với bất kỳ môi trường ẩm hoặc ma sát mạnh (vd: rửa tay, đi ngủ, tắm rửa,...) để đảm bảo và duy trì độ bóng của sản phẩm cũng như kéo dài tuổi thọ của sản phẩm.",
+            "outOfStock": false
+        },
+        {
+            "id": 10,
+            "name": "Bông tai Faustine",
+            "price": 180000,
+            "images": [
+                "/assets/images/collections/earrings/products/faustine-01.webp",
+                "/assets/images/collections/earrings/products/faustine-02.webp"
+            ],
+            "type": "E-FAUSTINE",
+            "description": "Bông tai Faustine được chế tác đầy độc đáo và bắt mắt. Kiểu dáng giúp các cô gái tôn lên vẻ thời trang và đầy ấn tượng, phù hợp với mọi kiểu trang phục.",
+            "using": "Được làm từ những chất liệu cao cấp và bền bỉ nhưng do đặc tính cơ bản của chất liệu, Junie khuyến khích khách hàng nên tuân theo các nguyên tắc bảo quản trang sức nói chung.\nNên tháo trang sức ra trước khi tiếp xúc với bất kỳ môi trường ẩm hoặc ma sát mạnh (vd: rửa tay, đi ngủ, tắm rửa,...) để đảm bảo và duy trì độ bóng của sản phẩm cũng như kéo dài tuổi thọ của sản phẩm.",
+            "outOfStock": false
+        },
+        {
+            "id": 11,
+            "name": "Bông tai Noemi",
+            "price": 220000,
+            "discount": 0.5,
+            "images": [
+                "/assets/images/collections/earrings/products/noemi-01.webp",
+                "/assets/images/collections/earrings/products/noemi-02.webp"
+            ],
+            "type": "E-NOEMI",
+            "ratings": 3,
+            "description": "Bông tai hình nơ dễ thương với thiết kế tinh xảo mang đến một sản phẩm ấn tượng cho các cô gái.\nĐiểm nhấn của bông tai là chiếc nơ xinh xắn được gắn đá Cubic Zirconia, mang đến vẻ đẹp ngọt ngào và đáng yêu.",
+            "using": "Được làm từ những chất liệu cao cấp và bền bỉ nhưng do đặc tính cơ bản của chất liệu, Junie khuyến khích khách hàng nên tuân theo các nguyên tắc bảo quản trang sức nói chung.\nNên tháo trang sức ra trước khi tiếp xúc với bất kỳ môi trường ẩm hoặc ma sát mạnh (vd: rửa tay, đi ngủ, tắm rửa,...) để đảm bảo và duy trì độ bóng của sản phẩm cũng như kéo dài tuổi thọ của sản phẩm.",
+            "outOfStock": false
+        },
+        {
+            "id": 12,
+            "name": "Bông tai Quinn",
+            "price": 250000,
+            "images": [
+                "/assets/images/collections/earrings/products/quinn-01.webp",
+                "/assets/images/collections/earrings/products/quinn-02.webp"
+            ],
+            "type": "E-QUINN",
+            "description": "Bông tai Quinn của Junie như một dấu ấn của sự tinh tế và rực rỡ, một phiên bản tự tin và lộng lẫy hơn dành cho các quý cô hiện đại.\nĐược chế tác từ tinh hoa của tự nhiên - Đá Cubic Zirconia lấp lánh tựa kim cương treo lơ lửng dưới chiếc khuyên được làm từ Bạc 925 phủ vàng 14K, tất cả tạo nên một tác phẩm sang trọng và không kém phần kiêu sa.\nNhư tất cả những người phụ nữ trên thế giới này, nàng xứng đáng nhận được tôn vinh bằng những điều tốt đẹp nhất. Hãy dành tặng bản thân một đôi bông tai đẹp đầy mê hoặc như Quinn để trở nên thật kiều diễm và thanh lịch.",
+            "using": "Được làm từ những chất liệu cao cấp và bền bỉ nhưng do đặc tính cơ bản của chất liệu, Junie khuyến khích khách hàng nên tuân theo các nguyên tắc bảo quản trang sức nói chung.\nNên tháo trang sức ra trước khi tiếp xúc với bất kỳ môi trường ẩm hoặc ma sát mạnh (vd: rửa tay, đi ngủ, tắm rửa,...) để đảm bảo và duy trì độ bóng của sản phẩm cũng như kéo dài tuổi thọ của sản phẩm.",
+            "outOfStock": false
         }
     ]
 }

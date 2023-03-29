@@ -8,7 +8,7 @@ import placeholder from '@/assets/images/collections/bracelet/products/amira-01.
 
 export default function ProductItem({ data }) {
     return (
-        <Link href='/' className='group flex flex-col w-full text-center'>
+        <Link href={`/collections/${data.collection}/${data.id}`} className='group flex flex-col w-full text-center'>
             <div className='relative'>
                 {/* Start: Image */}
                 <Image src={placeholder} alt='placeholder-image' className='opacity-0' />

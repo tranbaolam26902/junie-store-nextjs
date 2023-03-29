@@ -2,13 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 
-const data = {
-    description:
-        'Chuỗi hạt ngọc trai mini này làm tăng nét cổ điển cho chiếc vòng cổ với một chút lấp lánh tinh tế trên mặt dây chuyền làm từ đá Cubic Zirconia.\nBộ dây chuyền layer này là sản phẩm mới nhất trong bộ sưu tập ngọc trai của Junie, mang đến cho nàng một lựa chọn hoàn hảo trong bất kỳ dịp nào cần sự nhẹ nhàng và dịu dàng như đi dự tiệc, hay đi chơi cùng bạn bè cuối tuần.\nHay, nếu bạn đang muốn tìm một mẫu vòng cổ ngọc trai mặc áo dài thì đây chắc chắn là một lựa chọn không thể bỏ qua.',
-    using: 'Được làm từ những chất liệu cao cấp và bền bỉ nhưng do đặc tính cơ bản của chất liệu, Junie khuyến khích khách hàng nên tuân theo các nguyên tắc bảo quản trang sức nói chung.\nNên tháo trang sức ra trước khi tiếp xúc với bất kỳ môi trường ẩm hoặc ma sát mạnh (vd: rửa tay, đi ngủ, tắm rửa,...) để đảm bảo và duy trì độ bóng của sản phẩm cũng như kéo dài tuổi thọ của sản phẩm.',
-};
-
-export default function ProductDescription() {
+export default function ProductDescription({ data }) {
     /**
      * Component's states
      */

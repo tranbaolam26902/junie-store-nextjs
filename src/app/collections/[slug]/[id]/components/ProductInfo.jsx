@@ -55,14 +55,14 @@ export default function ProductInfo({ data }) {
                 ) : null}
             </div>
             <div className='flex items-center justify-between'>
-                {data.rating ? (
+                {data.ratings ? (
                     <div className='flex gap-1'>
-                        <Image src={iconStar} width={16} alt='icon-star' />
-                        <Image src={iconStar} width={16} alt='icon-star' />
-                        <Image src={iconStar} width={16} alt='icon-star' />
-                        <Image src={iconStar} width={16} alt='icon-star' />
-                        <Image src={iconStar} width={16} alt='icon-star' />
-                        <span className='pt-1 pl-2'>{data.rating.total} đánh giá</span>
+                        <Image src={iconStar} width={16} height={16} alt='icon-star' />
+                        <Image src={iconStar} width={16} height={16} alt='icon-star' />
+                        <Image src={iconStar} width={16} height={16} alt='icon-star' />
+                        <Image src={iconStar} width={16} height={16} alt='icon-star' />
+                        <Image src={iconStar} width={16} height={16} alt='icon-star' />
+                        <span className='pt-1 pl-2'>{data.ratings} đánh giá</span>
                     </div>
                 ) : null}
                 <span className='pt-1 text-xs tracking-wider uppercase opacity-70'>SKU: {data.type}</span>
