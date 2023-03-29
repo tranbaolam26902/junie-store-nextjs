@@ -7,7 +7,7 @@ import { MIN_PRICE_FOR_FREE_DELIVERY_FEE, DELIVERY_FEE } from '~/app/utils/const
 import iconSearch from '@/assets/icons/search.svg';
 import iconCart from '@/assets/icons/cart.svg';
 import iconClose from '@/assets/icons/close.svg';
-import iconBag from '@/assets/icons/bag.svg';
+import iconBagTransparent from '@/assets/icons/bag-transparent.svg';
 import iconBagWhite from '@/assets/icons/bag-white.svg';
 import iconCod from '@/assets/icons/cod.svg';
 import iconBank from '@/assets/icons/bank.svg';
@@ -167,7 +167,7 @@ export default function UserActions() {
                                     {/* Start: Button checkout */}
                                     <Button
                                         leftIcon={iconBagWhite}
-                                        rightIcon={iconBag}
+                                        rightIcon={iconBagTransparent}
                                         iconSize={18}
                                         secondary
                                         className='flex justify-between mt-6 px-5 w-full'
