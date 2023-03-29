@@ -6,6 +6,15 @@ import Breadcrumb from './components/Breadcrumb';
 import ProductInfo from './components/ProductInfo';
 import ProductImages from './components/ProductImages';
 import ProductDescription from './components/ProductDescription';
+import getCollections from '~/app/utils/collections/getCollections';
+
+export async function generateMetadata({ params }) {
+    const product = await getProduct(params.slug, params.id);
+
+    return {
+        title: product.id ? product.name : '404 - Không tìm thấy trang',
+    };
+}
 
 export default async function Product({ params }) {
     const product = await getProduct(params.slug, params.id);
@@ -25,4 +34,20 @@ export default async function Product({ params }) {
             </div>
         </>
     );
+}
+
+export async function generateStaticParams() {
+    const collections = await getCollections();
+    const result = [];
+
+    collections.map((collection) => {
+        collection.products.map((product) => {
+            result.push({
+                slug: collection.id,
+                id: product.id.toString(),
+            });
+        });
+    });
+
+    return result;
 }
