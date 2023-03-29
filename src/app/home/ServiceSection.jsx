@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 import box from '@/assets/icons/box.svg';
 import phone from '@/assets/icons/phone.svg';
-import bag from '@/assets/icons/bag.svg';
+import bag from '@/assets/icons/bag-black.svg';
 import email from '@/assets/icons/email.svg';
 
 import ServiceItem from './ServiceItem';

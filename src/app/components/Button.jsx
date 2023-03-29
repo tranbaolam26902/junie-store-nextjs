@@ -10,6 +10,7 @@ function Button({
     iconSize,
     accent,
     secondary,
+    disable,
     text,
     full,
     className,
@@ -22,6 +23,8 @@ function Button({
         'px-9 font-bold text-center uppercase tracking-[2px] leading-8 bg-accent rounded transition ease-in-out duration-300 hover:bg-[#edd501]';
     const secondaryStyle =
         'px-9 font-bold text-white text-center uppercase tracking-[2px] leading-8 bg-black rounded transition ease-in-out duration-300 hover:bg-secondary';
+    const disableStyle =
+        'px-9 font-bold text-center uppercase tracking-[2px] leading-8 bg-gray rounded transition ease-in-out duration-300 cursor-auto';
     const textStyle = 'font-semibold uppercase tracking-wider';
     const iconStyle = 'flex items-center justify-center';
     const props = {
@@ -37,8 +40,10 @@ function Button({
     return (
         <Component
             className={`p-2 w-fit text-sm ${accent ? accentStyle : ''} ${secondary ? secondaryStyle : ''} ${
-                text ? textStyle : ''
-            } ${leftIcon || rightIcon ? iconStyle : ''} ${full ? 'w-full' : ''} ${className ? className : ''}`}
+                disable ? disableStyle : ''
+            } ${text ? textStyle : ''} ${leftIcon || rightIcon ? iconStyle : ''} ${full ? 'w-full' : ''} ${
+                className ? className : ''
+            }`}
             {...props}
         >
             {leftIcon ? <Image src={leftIcon} width={iconSize} height='auto' alt='icon-button' /> : null}
