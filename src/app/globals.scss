@@ -11,6 +11,13 @@
         --color-green: 6 95 70;
         --color-gray: 227 225 219;
     }
+    input[type='number']::-webkit-outer-spin-button,
+    input[type='number']::-webkit-inner-spin-button,
+    input[type='number'] {
+        -webkit-appearance: none;
+        margin: 0;
+        -moz-appearance: textfield !important;
+    }
 }
 @layer utilities {
     /* Chrome, Safari and Opera */

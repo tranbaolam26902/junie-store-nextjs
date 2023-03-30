@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 
 import { MIN_PRICE_FOR_FREE_DELIVERY_FEE, DELIVERY_FEE } from '~/app/utils/constants';
@@ -69,6 +70,7 @@ export default function UserActions() {
     const [showCart, setShowCart] = useState(false);
     const [showSearch, setShowSearch] = useState(false);
     const [isClosing, setIsClosing] = useState(false); // Use to toggle animations
+    const pathname = usePathname();
 
     /**
      * Component's event handlers
@@ -94,11 +96,13 @@ export default function UserActions() {
     return (
         <div className='flex flex-1 justify-end gap-x-2 mr-[-8px]'>
             <Button leftIcon={iconSearch} onClick={handleOpenSearch} />
-            <Button leftIcon={iconCart} className='relative' onClick={handleOpenCart}>
-                <div className='absolute top-0.5 right-[-6px] pt-px w-5 h-5 text-[12px] text-white bg-black rounded-full'>
-                    {products.length}
-                </div>
-            </Button>
+            {pathname !== '/checkout' && (
+                <Button leftIcon={iconCart} className='relative' onClick={handleOpenCart}>
+                    <div className='absolute top-0.5 right-[-6px] pt-px w-5 h-5 text-[12px] text-white bg-black rounded-full'>
+                        {products.length}
+                    </div>
+                </Button>
+            )}
             {showCart ? (
                 <>
                     {/* Start: Cart's overlay */}
@@ -166,11 +170,13 @@ export default function UserActions() {
                                     {/* End: Delivery fee */}
                                     {/* Start: Button checkout */}
                                     <Button
+                                        href='/checkout'
                                         leftIcon={iconBagWhite}
                                         rightIcon={iconBagTransparent}
                                         iconSize={18}
                                         secondary
                                         className='flex justify-between mt-6 px-5 w-full'
+                                        onClick={handleCloseCart}
                                     >
                                         <span className='text-[12px] md:text-[14px]'>Thanh toán</span>
                                         <span className='inline-block mx-2 md:mx-4 mb-0.5 w-1 h-1 bg-white'></span>
