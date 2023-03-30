@@ -170,11 +170,13 @@ export default function UserActions() {
                                     {/* End: Delivery fee */}
                                     {/* Start: Button checkout */}
                                     <Button
+                                        href='/checkout'
                                         leftIcon={iconBagWhite}
                                         rightIcon={iconBagTransparent}
                                         iconSize={18}
                                         secondary
                                         className='flex justify-between mt-6 px-5 w-full'
+                                        onClick={handleCloseCart}
                                     >
                                         <span className='text-[12px] md:text-[14px]'>Thanh toán</span>
                                         <span className='inline-block mx-2 md:mx-4 mb-0.5 w-1 h-1 bg-white'></span>
