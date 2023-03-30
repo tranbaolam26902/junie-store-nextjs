@@ -58,6 +58,7 @@ export default function CartSection() {
                 <input type='text' placeholder='Mã giảm giá' className='flex-1 px-4 border border-gray rounded' />
                 <Button disable>Áp dụng</Button>
             </div>
+            <span className='text-red'></span>
             <hr className='text-secondary/10 my-2' />
             <div className='flex flex-col gap-4 text-secondary/70'>
                 <div className='flex justify-between'>

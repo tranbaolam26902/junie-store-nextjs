@@ -28,6 +28,7 @@ export default function FormSection() {
                         placeholder='+84 792 815 452'
                         className='px-4 pt-3 pb-2.5 text-lg border border-gray rounded'
                     />
+                    <span className='text-red'></span>
                 </div>
                 <div className='flex flex-col'>
                     <label htmlFor='email-address' className='cursor-pointer'>
@@ -39,6 +40,7 @@ export default function FormSection() {
                         placeholder='junie-store@gmail.com.vn'
                         className='px-4 pt-3 pb-2.5 text-lg border border-gray rounded'
                     />
+                    <span className='text-red'></span>
                 </div>
                 <div className='flex flex-col'>
                     <label htmlFor='name' className='cursor-pointer'>
@@ -50,6 +52,7 @@ export default function FormSection() {
                         placeholder='Du Phong Linh'
                         className='px-4 pt-3 pb-2.5 text-lg border border-gray rounded'
                     />
+                    <span className='text-red'></span>
                 </div>
                 <div className='flex flex-col'>
                     <label htmlFor='address' className='cursor-pointer'>
@@ -61,6 +64,7 @@ export default function FormSection() {
                         placeholder='01 Phù Đổng Thiên Vương, Phường 8, TP. Đà Lạt'
                         className='px-4 pt-3 pb-2.5 text-lg border border-gray rounded'
                     />
+                    <span className='text-red'></span>
                 </div>
                 <div className='flex flex-col'>
                     <label htmlFor='address-detail' className='cursor-pointer'>
