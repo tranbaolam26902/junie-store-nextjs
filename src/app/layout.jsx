@@ -2,6 +2,7 @@ import localFont from 'next/font/local';
 
 import './globals.scss';
 
+import StoreProvider from '~/redux/StoreProvider';
 import Footer from './components/layout/Footer';
 import Header from './components/layout/Header';
 
@@ -64,9 +65,11 @@ export default function RootLayout({ children }) {
     return (
         <html lang='en'>
             <body className={`${myriad.variable} font-sans text-secondary bg-primary`}>
-                <Header />
-                <main className='mt-[var(--header-height)]'>{children}</main>
-                <Footer />
+                <StoreProvider>
+                    <Header />
+                    <main className='mt-[var(--header-height)]'>{children}</main>
+                    <Footer />
+                </StoreProvider>
             </body>
         </html>
     );
