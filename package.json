@@ -10,12 +10,15 @@
   },
   "dependencies": {
     "@plaiceholder/next": "^2.5.0",
+    "@reduxjs/toolkit": "^1.9.3",
     "eslint": "8.35.0",
     "eslint-config-next": "13.2.1",
     "next": "13.2.1",
     "plaiceholder": "^2.5.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-redux": "^8.0.5",
+    "redux": "^4.2.1",
     "sass": "^1.58.3",
     "sharp": "^0.32.0"
   },
