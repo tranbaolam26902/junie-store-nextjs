@@ -1,11 +1,12 @@
 'use client';
 
 // Third-party libs
+import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { useDispatch, useSelector } from 'react-redux';
 
 // App's features
-import { setShowCart, setIsClosing as setIsClosingCart, selectCart } from '~/redux/features/cartSlice';
+import { setShowCart, setIsClosing as setIsClosingCart, selectCart, setProducts } from '~/redux/features/cartSlice';
 import { setShowSearch, setIsClosing as setIsClosingSearch, selectSearch } from '~/redux/features/searchSlice';
 
 // Asset files
@@ -33,6 +34,12 @@ export default function UserActions() {
         dispatch(setIsClosingCart(false));
         dispatch(setShowCart(true));
     };
+
+    useEffect(() => {
+        // Get user cart products on first load
+        const products = JSON.parse(localStorage.getItem('cart-products'));
+        if (products) dispatch(setProducts(products));
+    }, []);
 
     return (
         <div className='flex flex-1 justify-end gap-x-2 mr-[-8px]'>
