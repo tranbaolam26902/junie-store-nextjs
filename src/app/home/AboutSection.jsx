@@ -1,17 +1,18 @@
 'use client';
 
+// Third-party libs
 import { useState } from 'react';
 import Image from 'next/image';
 
+// Asset files
 import aboutFirst from '@/assets/images/home/about-first.webp';
 import aboutSecond from '@/assets/images/home/about-second.webp';
 
+// App's components
 import Button from '../components/Button';
 
 export default function AboutSection() {
-    /**
-     * Component's states
-     */
+    // Component's states
     const [isActive, setIsActive] = useState(true);
     const [isClosing, setIsClosing] = useState(false);
 

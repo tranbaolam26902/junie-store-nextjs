@@ -1,5 +1,7 @@
+import { API_URL } from '../constants';
+
 export default async function getFeaturedPosts() {
-    const res = await fetch('https://junie-store-fake-api.vercel.app/featured-posts');
+    const res = await fetch(`${API_URL}/featured-posts`);
 
     return res.json();
 }

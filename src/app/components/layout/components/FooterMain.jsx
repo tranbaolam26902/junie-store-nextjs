@@ -1,9 +1,12 @@
+// Third-party libs
 import Link from 'next/link';
 
+// Assets files
 import iconFacebook from '@/assets/icons/facebook.svg';
 import iconInstagram from '@/assets/icons/instagram.svg';
 import iconTiktok from '@/assets/icons/tiktok.svg';
 
+// App's components
 import Button from '../../Button';
 
 export default function FooterMain() {

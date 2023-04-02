@@ -1,11 +1,14 @@
 'use client';
 
+// Third-party libs
 import { useState } from 'react';
 import Image from 'next/image';
 
 export default function ProductImages({ data }) {
+    // Component's states
     const [currentIndex, setCurrentIndex] = useState(0);
 
+    // Component's event handlers
     const handleChangeImage = (index) => {
         setCurrentIndex(index);
     };

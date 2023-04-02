@@ -1,3 +1,4 @@
+// Third-party libs
 import Image from 'next/image';
 import Link from 'next/link';
 import { getPlaiceholder } from 'plaiceholder';

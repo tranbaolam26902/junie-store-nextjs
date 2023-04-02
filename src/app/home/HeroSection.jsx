@@ -1,8 +1,11 @@
+// Third-party libs
 import Image from 'next/image';
 
+// Asset files
 import bannerLeft from '@/assets/images/home/banner-left.webp';
 import bannerRight from '@/assets/images/home/banner-right.webp';
 
+// App's components
 import Button from '../components/Button';
 
 export default function HeroSection() {

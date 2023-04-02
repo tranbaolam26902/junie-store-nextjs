@@ -1,5 +1,7 @@
+// Third-party libs
 import Image from 'next/image';
 
+// Asset files
 import iconCod from '@/assets/icons/cod.svg';
 import iconBank from '@/assets/icons/bank.svg';
 import iconMomo from '@/assets/icons/momo.svg';
@@ -7,6 +9,7 @@ import iconAmex from '@/assets/icons/amex.svg';
 import iconMasterCard from '@/assets/icons/mastercard.svg';
 import iconVisa from '@/assets/icons/visa.svg';
 
+// App's components
 import Button from '../../Button';
 
 export default function FooterAside() {

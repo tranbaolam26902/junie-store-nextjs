@@ -1,3 +1,4 @@
+// Third-party libs
 import Image from 'next/image';
 
 export default function ServiceItem({ service }) {

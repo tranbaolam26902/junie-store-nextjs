@@ -1,3 +1,4 @@
+// App's components
 import AboutSection from './home/AboutSection';
 import CategorySection from './home/CategorySection';
 import HeroSection from './home/HeroSection';

@@ -1,6 +1,13 @@
-import Image from 'next/image';
+'use client';
 
-import { MIN_PRICE_FOR_FREE_DELIVERY_FEE } from '~/app/utils/constants';
+// Third-party libs
+import Image from 'next/image';
+import { useDispatch, useSelector } from 'react-redux';
+
+// App's features
+import { addProduct, selectCart, setIsClosing, setProductQuantity, setShowCart } from '~/redux/features/cartSlice';
+
+// Asset files
 import iconTruck from '@/assets/icons/truck.svg';
 import iconStar from '@/assets/icons/star.svg';
 import iconCod from '@/assets/icons/cod.svg';
@@ -14,9 +21,33 @@ import iconMaterial from '@/assets/icons/material.svg';
 import iconHeart from '@/assets/icons/heart.svg';
 import iconWarranty from '@/assets/icons/warranty.svg';
 
+// App's components
 import Button from '~/app/components/Button';
 
 export default function ProductInfo({ data }) {
+    // Hooks
+    const cart = useSelector(selectCart);
+    const dispatch = useDispatch();
+
+    // Component's event handlers
+    const handleAddToCart = () => {
+        const currentProduct = cart.products.find((product) => product.id === data.id);
+        if (!currentProduct)
+            dispatch(
+                addProduct({
+                    id: data.id,
+                    name: data.name,
+                    price: data.price,
+                    discount: data.discount,
+                    quantity: 1,
+                    image: data.images[0],
+                }),
+            );
+        else dispatch(setProductQuantity({ id: currentProduct.id, quantity: currentProduct.quantity + 1 }));
+        dispatch(setIsClosing(false));
+        dispatch(setShowCart(true));
+    };
+
     return (
         <div>
             <p className='mb-6 text-2xl md:text-3xl lg:text-4xl font-bold'>{data.name}</p>
@@ -42,8 +73,8 @@ export default function ProductInfo({ data }) {
                     <span className='inline-block px-[5px] pt-[3px] text-xs tracking-wider text-white font-bold uppercase bg-[#6f719b] rounded-sm'>
                         Hết hàng
                     </span>
-                ) : (data.discount && data.price * (1 - data.discount) >= MIN_PRICE_FOR_FREE_DELIVERY_FEE) ||
-                  data.price >= MIN_PRICE_FOR_FREE_DELIVERY_FEE ? (
+                ) : (data.discount && data.price * (1 - data.discount) >= cart.MIN_PRICE_FOR_FREE_DELIVERY_FEE) ||
+                  data.price >= cart.MIN_PRICE_FOR_FREE_DELIVERY_FEE ? (
                     <span className='flex px-[5px] pt-[3px] w-fit text-xs tracking-wider text-white font-bold uppercase bg-green rounded-sm'>
                         <Image src={iconTruck} width={14} height={14} alt='freeship-icon' className='mb-0.5 mr-1' />
                         <span>Freeship</span>
@@ -75,7 +106,7 @@ export default function ProductInfo({ data }) {
             ) : (
                 <>
                     <p className='mb-8 text-[#2e9e7b]'>Còn hàng, dự kiến giao tới trong 1-3 ngày</p>
-                    <Button secondary full>
+                    <Button secondary full onClick={handleAddToCart}>
                         Thêm vào giỏ
                     </Button>
                 </>

@@ -1,3 +1,4 @@
+// App's components
 import FooterAside from './components/FooterAside';
 import FooterMain from './components/FooterMain';
 

@@ -1,28 +1,25 @@
 'use client';
 
+// Third-party libs
 import { useEffect, useState } from 'react';
 
+// Asset files
 import iconClose from '@/assets/icons/close.svg';
 import iconMenu from '@/assets/icons/menu.svg';
 
+// App's components
 import Button from '../../Button';
 
 export default function Navbar() {
-    /**
-     * Component's constants
-     */
+    // Component's constants
     const NAVIGATION_BUTTON_ANIMATION =
         'relative after:absolute after:bottom-0.5 after:left-0 after:w-full after:h-px after:bg-current after:scale-x-0 after:origin-right after:transition-transform after:ease-in-out after:duration-300 hover:after:scale-x-100 hover:after:origin-left';
 
-    /**
-     * Component's states
-     */
+    // Component's states
     const [showMobileNavbar, setShowMobileNavbar] = useState(false);
     const [isClosing, setIsClosing] = useState(false); // Use to toggle animations
 
-    /**
-     * Component's event handlers
-     */
+    // Component's event handlers
     const handleOpenMobileNavbar = () => {
         setIsClosing(false);
         setShowMobileNavbar(true);
@@ -33,9 +30,7 @@ export default function Navbar() {
     };
 
     useEffect(() => {
-        /**
-         * Close mobile navigation when screen width >= 1280
-         */
+        // Close mobile navigation when screen width >= 1280
         window.onresize = () => {
             if (window.innerWidth >= 1280) handleCloseMobileNavbar();
         };

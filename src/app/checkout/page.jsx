@@ -1,3 +1,4 @@
+// App's components
 import CartSection from './components/CartSection';
 import FormSection from './components/FormSection';
 
