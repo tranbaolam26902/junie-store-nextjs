@@ -1,14 +1,17 @@
+// Third-party libs
 import localFont from 'next/font/local';
 
+// App's features
+import StoreProvider from '~/redux/StoreProvider';
+
+// Styles
 import './globals.scss';
 
-import StoreProvider from '~/redux/StoreProvider';
+// App's components
 import Footer from './components/layout/Footer';
 import Header from './components/layout/Header';
 
-/**
- * Font config
- */
+// Local font config
 const myriad = localFont({
     src: [
         {
@@ -51,9 +54,7 @@ const myriad = localFont({
     variable: '--font-myriad-pro',
 });
 
-/**
- * Config title template
- */
+// Config metadata
 export const metadata = {
     title: {
         default: 'Junie | Thương Hiệu Phụ Kiện Thời Trang Bông Tai, Dây Chuyền Nữ',

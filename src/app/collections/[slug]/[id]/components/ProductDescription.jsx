@@ -1,15 +1,16 @@
 'use client';
 
+// Third-party libs
 import { useEffect, useRef, useState } from 'react';
 
 export default function ProductDescription({ data }) {
-    /**
-     * Component's states
-     */
+    // Component's states
     const [offsetLeft, setOffsetLeft] = useState(0);
     const [offsetWidth, setOffsetWidth] = useState(0);
     const [isActive, setIsActive] = useState(true);
     const [isClosing, setIsClosing] = useState(false);
+
+    // Hooks
     const firstTabRef = useRef();
 
     useEffect(() => {

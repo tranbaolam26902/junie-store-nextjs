@@ -1,18 +1,24 @@
 'use client';
 
+// Third-party libs
 import { useDispatch } from 'react-redux';
 import Image from 'next/image';
 
+// App's features
 import { removeProduct, setProductQuantity } from '~/redux/features/cartSlice';
 
+// Asset files
 import iconPlus from '@/assets/icons/plus.svg';
 import iconMinus from '@/assets/icons/minus.svg';
 
+// App's components
 import Button from '../../Button';
 
 export default function CartItem({ data }) {
+    // Hooks
     const dispatch = useDispatch();
 
+    // Component's event handlers
     const handleIncrease = () => {
         dispatch(setProductQuantity({ id: data.id, quantity: data.quantity + 1 }));
     };

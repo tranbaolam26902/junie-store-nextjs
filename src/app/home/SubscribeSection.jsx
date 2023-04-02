@@ -1,7 +1,10 @@
+// Third-party libs
 import Image from 'next/image';
 
+// Asset files
 import subscribeImage from '@/assets/images/home/subscribe.webp';
 
+// App's components
 import Button from '../components/Button';
 
 export default function SubscribeSection() {

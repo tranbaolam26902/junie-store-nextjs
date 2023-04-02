@@ -1,4 +1,7 @@
+// Third-party libs
 import Image from 'next/image';
+
+// App's components
 import Button from '../../Button';
 
 export default function Search() {

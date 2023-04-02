@@ -1,9 +1,12 @@
+// Third-party libs
 import Image from 'next/image';
 import Link from 'next/link';
 
+// Asset files
 import blogPlaceholder from '@/assets/images/home/blog-01.webp';
 import arrowRight from '@/assets/icons/arrow-right.svg';
 
+// App's components
 import Button from '../components/Button';
 
 export default function BlogItem({ data }) {

@@ -1,11 +1,15 @@
+// Third-party libs
 import { notFound } from 'next/navigation';
 
+// App's features
 import getCollection from '~/app/utils/collections/getCollection';
 import getCollections from '~/app/utils/collections/getCollections';
 
+// App's components
 import HeroSection from './components/HeroSection';
 import ProductsSection from './components/ProductsSection';
 
+// Dynamic metadata
 export async function generateMetadata({ params }) {
     const collection = await getCollection(params.slug);
 
@@ -26,6 +30,7 @@ export default async function Collection({ params }) {
     );
 }
 
+// Static params to generate static pages
 export async function generateStaticParams() {
     const collections = await getCollections();
 

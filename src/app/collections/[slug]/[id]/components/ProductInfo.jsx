@@ -1,5 +1,7 @@
+// Third-party libs
 import Image from 'next/image';
 
+// Asset files
 import { MIN_PRICE_FOR_FREE_DELIVERY_FEE } from '~/app/utils/constants';
 import iconTruck from '@/assets/icons/truck.svg';
 import iconStar from '@/assets/icons/star.svg';
@@ -14,6 +16,7 @@ import iconMaterial from '@/assets/icons/material.svg';
 import iconHeart from '@/assets/icons/heart.svg';
 import iconWarranty from '@/assets/icons/warranty.svg';
 
+// App's components
 import Button from '~/app/components/Button';
 
 export default function ProductInfo({ data }) {

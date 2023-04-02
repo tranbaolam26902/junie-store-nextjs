@@ -1,12 +1,15 @@
 'use client';
 
+// Third-party libs
 import { useState } from 'react';
 
+// Asset files
 import box from '@/assets/icons/box.svg';
 import phone from '@/assets/icons/phone.svg';
 import bag from '@/assets/icons/bag-black.svg';
 import email from '@/assets/icons/email.svg';
 
+// App's components
 import ServiceItem from './ServiceItem';
 
 const services = [
@@ -33,6 +36,7 @@ const services = [
 ];
 
 export default function ServiceSection() {
+    // Component's states
     const [currentIndex, setCurrentIndex] = useState(0);
 
     return (

@@ -1,3 +1,4 @@
+// App's components
 import ProductItem from './ProductItem';
 
 export default function ProductsSection({ data }) {

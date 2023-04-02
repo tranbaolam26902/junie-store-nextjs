@@ -1,15 +1,19 @@
 'use client';
 
-import Image from 'next/image';
-
-import arrowLeft from '@/assets/icons/arrow-left.svg';
-
-import Button from '~/app/components/Button';
+// Third-party libs
 import { useRouter } from 'next/navigation';
 
+// Asset files
+import arrowLeft from '@/assets/icons/arrow-left.svg';
+
+// App's components
+import Button from '~/app/components/Button';
+
 export default function FormSection() {
+    // Hooks
     const router = useRouter();
 
+    // Component's event handlers
     const handleSubmitForm = (e) => {
         e.preventDefault();
     };

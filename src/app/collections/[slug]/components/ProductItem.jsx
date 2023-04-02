@@ -1,8 +1,11 @@
+// Third-party libs
 import Image from 'next/image';
 import Link from 'next/link';
 
+// App's features
 import { MIN_PRICE_FOR_FREE_DELIVERY_FEE } from '~/app/utils/constants';
 
+// Asset files
 import truck from '@/assets/icons/truck.svg';
 import placeholder from '@/assets/images/collections/bracelet/products/amira-01.webp';
 

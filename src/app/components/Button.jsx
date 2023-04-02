@@ -1,5 +1,6 @@
 'use client';
 
+// Third-party libs
 import Image from 'next/image';
 import Link from 'next/link';
 

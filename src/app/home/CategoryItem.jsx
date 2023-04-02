@@ -1,6 +1,8 @@
+// Third-party libs
 import Link from 'next/link';
 import Image from 'next/image';
 
+// Asset files
 import earrings from '@/assets/images/home/earrings.webp';
 
 export default function CategoryItem({ data }) {

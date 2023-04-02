@@ -1,5 +1,4 @@
-import CartItem from '~/app/components/layout/components/CartItem';
-
+// Asset files
 import { DELIVERY_FEE, MIN_PRICE_FOR_FREE_DELIVERY_FEE } from '~/app/utils/constants';
 import product1 from '@/assets/images/cart-items/product-01.webp';
 import product2 from '@/assets/images/cart-items/product-02.webp';
@@ -7,6 +6,8 @@ import product3 from '@/assets/images/cart-items/product-03.webp';
 import product4 from '@/assets/images/cart-items/product-04.webp';
 import product5 from '@/assets/images/cart-items/product-05.webp';
 
+// App's components
+import CartItem from '~/app/components/layout/components/CartItem';
 import Button from '~/app/components/Button';
 
 const products = [

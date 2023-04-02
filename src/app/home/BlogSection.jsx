@@ -1,5 +1,7 @@
+// App's features
 import getFeaturedPosts from '../utils/home/getFeaturedPosts';
 
+// App's components
 import SectionHeader from './SectionHeader';
 import BlogItem from './BlogItem';
 

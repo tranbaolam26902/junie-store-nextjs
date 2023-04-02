@@ -1,13 +1,17 @@
+// Third-party libs
 import { notFound } from 'next/navigation';
 
+// App's features
 import getProduct from '~/app/utils/products/getProduct';
+import getCollections from '~/app/utils/collections/getCollections';
 
+// App's components
 import Breadcrumb from './components/Breadcrumb';
 import ProductInfo from './components/ProductInfo';
 import ProductImages from './components/ProductImages';
 import ProductDescription from './components/ProductDescription';
-import getCollections from '~/app/utils/collections/getCollections';
 
+// Dynamic metadata
 export async function generateMetadata({ params }) {
     const product = await getProduct(params.slug, params.id);
 
@@ -36,6 +40,7 @@ export default async function Product({ params }) {
     );
 }
 
+// Static params to generate static pages
 export async function generateStaticParams() {
     const collections = await getCollections();
     const result = [];

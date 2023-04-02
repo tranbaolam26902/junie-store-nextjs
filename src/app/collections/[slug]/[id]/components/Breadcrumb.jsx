@@ -1,3 +1,4 @@
+// Third-party libs
 import Link from 'next/link';
 
 export default function Breadcrumb({ name }) {

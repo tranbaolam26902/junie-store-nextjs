@@ -1,5 +1,7 @@
+// App's features
 import getCategories from '../utils/home/getCategories';
 
+// App's components
 import CategoryItem from './CategoryItem';
 import SectionHeader from './SectionHeader';
 
