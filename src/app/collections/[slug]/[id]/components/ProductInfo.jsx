@@ -1,8 +1,13 @@
+'use client';
+
 // Third-party libs
 import Image from 'next/image';
+import { useSelector } from 'react-redux';
+
+// App's features
+import { selectCart } from '~/redux/features/cartSlice';
 
 // Asset files
-import { MIN_PRICE_FOR_FREE_DELIVERY_FEE } from '~/app/utils/constants';
 import iconTruck from '@/assets/icons/truck.svg';
 import iconStar from '@/assets/icons/star.svg';
 import iconCod from '@/assets/icons/cod.svg';
@@ -20,6 +25,8 @@ import iconWarranty from '@/assets/icons/warranty.svg';
 import Button from '~/app/components/Button';
 
 export default function ProductInfo({ data }) {
+    const cart = useSelector(selectCart);
+
     return (
         <div>
             <p className='mb-6 text-2xl md:text-3xl lg:text-4xl font-bold'>{data.name}</p>
@@ -45,8 +52,8 @@ export default function ProductInfo({ data }) {
                     <span className='inline-block px-[5px] pt-[3px] text-xs tracking-wider text-white font-bold uppercase bg-[#6f719b] rounded-sm'>
                         Hết hàng
                     </span>
-                ) : (data.discount && data.price * (1 - data.discount) >= MIN_PRICE_FOR_FREE_DELIVERY_FEE) ||
-                  data.price >= MIN_PRICE_FOR_FREE_DELIVERY_FEE ? (
+                ) : (data.discount && data.price * (1 - data.discount) >= cart.MIN_PRICE_FOR_FREE_DELIVERY_FEE) ||
+                  data.price >= cart.MIN_PRICE_FOR_FREE_DELIVERY_FEE ? (
                     <span className='flex px-[5px] pt-[3px] w-fit text-xs tracking-wider text-white font-bold uppercase bg-green rounded-sm'>
                         <Image src={iconTruck} width={14} height={14} alt='freeship-icon' className='mb-0.5 mr-1' />
                         <span>Freeship</span>

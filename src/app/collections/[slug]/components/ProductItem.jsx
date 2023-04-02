@@ -1,15 +1,21 @@
+'use client';
+
 // Third-party libs
 import Image from 'next/image';
 import Link from 'next/link';
+import { useSelector } from 'react-redux';
 
 // App's features
-import { MIN_PRICE_FOR_FREE_DELIVERY_FEE } from '~/app/utils/constants';
+import { selectCart } from '~/redux/features/cartSlice';
 
 // Asset files
 import truck from '@/assets/icons/truck.svg';
 import placeholder from '@/assets/images/collections/bracelet/products/amira-01.webp';
 
 export default function ProductItem({ data }) {
+    // Hooks
+    const cart = useSelector(selectCart);
+
     return (
         <Link href={`/collections/${data.collection}/${data.id}`} className='group flex flex-col w-full text-center'>
             <div className='relative'>
@@ -37,8 +43,8 @@ export default function ProductItem({ data }) {
                     <span className='absolute top-2.5 left-2.5 inline-block px-[5px] pt-[3px] text-xs tracking-wider text-white font-bold uppercase bg-[#6f719b] rounded-sm'>
                         Hết hàng
                     </span>
-                ) : (data.discount && data.price * (1 - data.discount) >= MIN_PRICE_FOR_FREE_DELIVERY_FEE) ||
-                  data.price >= MIN_PRICE_FOR_FREE_DELIVERY_FEE ? (
+                ) : (data.discount && data.price * (1 - data.discount) >= cart.MIN_PRICE_FOR_FREE_DELIVERY_FEE) ||
+                  data.price >= cart.MIN_PRICE_FOR_FREE_DELIVERY_FEE ? (
                     <span className='absolute top-2.5 left-2.5 flex px-[5px] pt-[3px] text-xs tracking-wider text-white font-bold uppercase bg-green rounded-sm'>
                         <Image src={truck} width={14} height={14} alt='freeship-icon' className='mb-0.5 mr-1' />
                         <span>Freeship</span>

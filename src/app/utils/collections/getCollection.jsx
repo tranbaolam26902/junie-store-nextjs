@@ -1,5 +1,7 @@
+import { API_URL } from '../constants';
+
 export default async function getCollection(slug) {
-    const res = await fetch(`https://junie-store-fake-api.vercel.app/collections/${slug}`);
+    const res = await fetch(`${API_URL}/collections/${slug}`);
 
     return res.json();
 }

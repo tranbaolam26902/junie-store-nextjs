@@ -84,7 +84,7 @@ export default function Cart() {
                         {/* Start: Products */}
                         <div className='flex flex-col flex-1 overflow-y-auto no-scrollbar overscroll-contain gap-6 px-6 md:px-10 py-6'>
                             {cart.products.map((product, index) => (
-                                <CartItem key={index} data={product} setTotalPrice={setTotalPrice} />
+                                <CartItem key={index} data={product} />
                             ))}
                         </div>
                         {/* End: Products */}
