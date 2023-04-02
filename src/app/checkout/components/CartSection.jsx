@@ -7,6 +7,9 @@ import { useSelector } from 'react-redux';
 // App's features
 import { selectCart } from '~/redux/features/cartSlice';
 
+// styles
+import styles from '~/app/loading.module.scss';
+
 // App's components
 import CartItem from '~/app/components/layout/components/CartItem';
 import Button from '~/app/components/Button';
@@ -17,6 +20,7 @@ export default function CartSection() {
 
     // Component's states
     const [totalPrice, setTotalPrice] = useState(0);
+    const [hasMounted, setHasMounted] = useState(false);
 
     // Component's functions
     const countTotalPrice = () =>
@@ -27,9 +31,27 @@ export default function CartSection() {
         }, 0);
 
     useEffect(() => {
+        setHasMounted(true);
+    }, []);
+
+    useEffect(() => {
         setTotalPrice(countTotalPrice());
         // eslint-disable-next-line
     }, [cart.products]);
+
+    if (!hasMounted)
+        return (
+            <div className='flex items-center justify-center w-full h-full'>
+                <div className={styles['loadingio-spinner-dual-ring-qo59o73r0tl']}>
+                    <div className={styles['ldio-0m5i1demrio']}>
+                        <div></div>
+                        <div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
 
     return (
         <div className='relative z-10 flex flex-col gap-4'>
@@ -61,10 +83,10 @@ export default function CartSection() {
                         {totalPrice >= cart.MIN_PRICE_FOR_FREE_DELIVERY_FEE ? (
                             <span>Miễn phí</span>
                         ) : (
-                            <span>
+                            <div>
                                 <span>{new Intl.NumberFormat('vi-VN').format(cart.DELIVERY_FEE)}</span>
                                 <sup>đ</sup>
-                            </span>
+                            </div>
                         )}
                     </div>
                 )}
