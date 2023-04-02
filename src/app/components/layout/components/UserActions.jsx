@@ -39,6 +39,7 @@ export default function UserActions() {
         // Get user cart products on first load
         const products = JSON.parse(localStorage.getItem('cart-products'));
         if (products) dispatch(setProducts(products));
+        // eslint-disable-next-line
     }, []);
 
     return (
