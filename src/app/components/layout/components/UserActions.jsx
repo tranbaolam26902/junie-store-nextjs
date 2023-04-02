@@ -5,7 +5,8 @@ import { usePathname } from 'next/navigation';
 import { useDispatch, useSelector } from 'react-redux';
 
 // App's features
-import { setShowCart, setIsClosing, selectCart } from '~/redux/features/cartSlice';
+import { setShowCart, setIsClosing as setIsClosingCart, selectCart } from '~/redux/features/cartSlice';
+import { setShowSearch, setIsClosing as setIsClosingSearch, selectSearch } from '~/redux/features/searchSlice';
 
 // Asset files
 import iconSearch from '@/assets/icons/search.svg';
@@ -14,22 +15,28 @@ import iconCart from '@/assets/icons/cart.svg';
 // App's components
 import Button from '../../Button';
 import Cart from './Cart';
+import Search from './Search';
 
 export default function UserActions() {
     // Hooks
     const pathname = usePathname();
+    const search = useSelector(selectSearch);
     const cart = useSelector(selectCart);
     const dispatch = useDispatch();
 
     // Component's event handlers
+    const handleShowSearch = () => {
+        dispatch(setIsClosingSearch(false));
+        dispatch(setShowSearch(true));
+    };
     const handleShowCart = () => {
-        dispatch(setIsClosing(false));
+        dispatch(setIsClosingCart(false));
         dispatch(setShowCart(true));
     };
 
     return (
         <div className='flex flex-1 justify-end gap-x-2 mr-[-8px]'>
-            <Button leftIcon={iconSearch} />
+            <Button leftIcon={iconSearch} onClick={handleShowSearch} />
             {pathname !== '/checkout' && (
                 <Button leftIcon={iconCart} className='relative' onClick={handleShowCart}>
                     {cart.products.length > 0 && (
@@ -40,6 +47,7 @@ export default function UserActions() {
                 </Button>
             )}
             {cart.showCart && <Cart />}
+            {search.showSearch && <Search />}
         </div>
     );
 }

@@ -1,16 +1,37 @@
+'use client';
+
 // Third-party libs
+import { useDispatch, useSelector } from 'react-redux';
 import Image from 'next/image';
+
+// App's features
+import { selectSearch, setIsClosing, setShowSearch } from '~/redux/features/searchSlice';
+
+import iconSearch from '@/assets/icons/search.svg';
+import iconClose from '@/assets/icons/close.svg';
 
 // App's components
 import Button from '../../Button';
 
 export default function Search() {
+    // Hooks
+    const search = useSelector(selectSearch);
+    const dispatch = useDispatch();
+
+    // Component's event handlers
+    const handleCloseSearch = () => {
+        dispatch(setIsClosing(true));
+        setTimeout(() => {
+            dispatch(setShowSearch(false));
+        }, 200);
+    };
+
     return (
         <>
             {/* Start: Search's overlay */}
             <div
                 className={`fixed top-0 left-0 z-40 w-screen h-screen bg-black/[.3] transition-all ${
-                    isClosing ? 'animate-fade-out' : 'animate-fade-in'
+                    search.isClosing ? 'animate-fade-out' : 'animate-fade-in'
                 }`}
                 onClick={handleCloseSearch}
             ></div>
@@ -18,7 +39,7 @@ export default function Search() {
             {/* Start: Search */}
             <div
                 className={`fixed top-0 right-0 bottom-0 z-50 overflow-y-auto no-scrollbar overscroll-contain flex flex-col w-[90vw] max-w-[500px] h-screen bg-white ${
-                    isClosing ? 'animate-slide-out-right' : 'animate-slide-in-right'
+                    search.isClosing ? 'animate-slide-out-right' : 'animate-slide-in-right'
                 } `}
             >
                 {/* Start: Search header */}
