@@ -2,10 +2,10 @@
 
 // Third-party libs
 import Image from 'next/image';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 // App's features
-import { selectCart } from '~/redux/features/cartSlice';
+import { addProduct, selectCart, setIsClosing, setProductQuantity, setShowCart } from '~/redux/features/cartSlice';
 
 // Asset files
 import iconTruck from '@/assets/icons/truck.svg';
@@ -25,7 +25,28 @@ import iconWarranty from '@/assets/icons/warranty.svg';
 import Button from '~/app/components/Button';
 
 export default function ProductInfo({ data }) {
+    // Hooks
     const cart = useSelector(selectCart);
+    const dispatch = useDispatch();
+
+    // Component's event handlers
+    const handleAddToCart = () => {
+        const currentProduct = cart.products.find((product) => product.id === data.id);
+        if (!currentProduct)
+            dispatch(
+                addProduct({
+                    id: data.id,
+                    name: data.name,
+                    price: data.price,
+                    discount: data.discount,
+                    quantity: 1,
+                    image: data.images[0],
+                }),
+            );
+        else dispatch(setProductQuantity({ id: currentProduct.id, quantity: currentProduct.quantity + 1 }));
+        dispatch(setIsClosing(false));
+        dispatch(setShowCart(true));
+    };
 
     return (
         <div>
@@ -85,7 +106,7 @@ export default function ProductInfo({ data }) {
             ) : (
                 <>
                     <p className='mb-8 text-[#2e9e7b]'>Còn hàng, dự kiến giao tới trong 1-3 ngày</p>
-                    <Button secondary full>
+                    <Button secondary full onClick={handleAddToCart}>
                         Thêm vào giỏ
                     </Button>
                 </>

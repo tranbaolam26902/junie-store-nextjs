@@ -2,6 +2,10 @@
 
 // Third-party libs
 import { useRouter } from 'next/navigation';
+import { useSelector } from 'react-redux';
+
+// App's features
+import { selectCart } from '~/redux/features/cartSlice';
 
 // Asset files
 import arrowLeft from '@/assets/icons/arrow-left.svg';
@@ -12,6 +16,7 @@ import Button from '~/app/components/Button';
 export default function FormSection() {
     // Hooks
     const router = useRouter();
+    const cart = useSelector(selectCart);
 
     // Component's event handlers
     const handleSubmitForm = (e) => {
@@ -104,9 +109,13 @@ export default function FormSection() {
                 >
                     Quay lại
                 </Button>
-                <Button secondary type='submit'>
-                    Xác nhận
-                </Button>
+                {cart.products.length > 0 ? (
+                    <Button secondary type='submit'>
+                        Xác nhận
+                    </Button>
+                ) : (
+                    <Button disable>Xác nhận</Button>
+                )}
             </div>
         </form>
     );

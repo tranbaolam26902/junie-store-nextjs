@@ -51,20 +51,23 @@ export default function CartSection() {
                         <sup>đ</sup>
                     </span>
                 </div>
-                <div
-                    className={`flex justify-between ${
-                        totalPrice >= cart.MIN_PRICE_FOR_FREE_DELIVERY_FEE ? 'text-green' : 'text-red'
-                    }`}
-                >
-                    <span>Vận chuyển</span>
-                    {totalPrice >= cart.MIN_PRICE_FOR_FREE_DELIVERY_FEE ? (
-                        <span>Miễn phí</span>
-                    ) : (
-                        <span>
-                            +30.000<sup>đ</sup>
-                        </span>
-                    )}
-                </div>
+                {totalPrice > 0 && (
+                    <div
+                        className={`flex justify-between ${
+                            totalPrice >= cart.MIN_PRICE_FOR_FREE_DELIVERY_FEE ? 'text-green' : 'text-red'
+                        }`}
+                    >
+                        <span>Vận chuyển</span>
+                        {totalPrice >= cart.MIN_PRICE_FOR_FREE_DELIVERY_FEE ? (
+                            <span>Miễn phí</span>
+                        ) : (
+                            <span>
+                                <span>{new Intl.NumberFormat('vi-VN').format(cart.DELIVERY_FEE)}</span>
+                                <sup>đ</sup>
+                            </span>
+                        )}
+                    </div>
+                )}
                 {/* <div className='flex justify-between text-green'>
                     <span>Mã giảm giá</span>
                     <span>
@@ -79,7 +82,9 @@ export default function CartSection() {
                     {new Intl.NumberFormat('vi-VN').format(
                         totalPrice >= cart.MIN_PRICE_FOR_FREE_DELIVERY_FEE
                             ? totalPrice
-                            : totalPrice + cart.DELIVERY_FEE,
+                            : totalPrice > 0
+                            ? totalPrice + cart.DELIVERY_FEE
+                            : 0,
                     )}
                     <sup>đ</sup>
                 </span>
