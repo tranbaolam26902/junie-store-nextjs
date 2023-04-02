@@ -1,9 +1,10 @@
-import React from 'react';
+import Image from 'next/image';
+import Button from '../../Button';
 
 export default function Search() {
     return (
         <>
-            Start: Search's overlay
+            {/* Start: Search's overlay */}
             <div
                 className={`fixed top-0 left-0 z-40 w-screen h-screen bg-black/[.3] transition-all ${
                     isClosing ? 'animate-fade-out' : 'animate-fade-in'

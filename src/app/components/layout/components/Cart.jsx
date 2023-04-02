@@ -46,6 +46,7 @@ export default function Cart() {
 
     useEffect(() => {
         setTotalPrice(countTotalPrice());
+        // eslint-disable-next-line
     }, [cart.products]);
 
     return (
