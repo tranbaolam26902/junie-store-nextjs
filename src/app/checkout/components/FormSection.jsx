@@ -47,7 +47,7 @@ export default function FormSection() {
         };
 
         const response = await axios.post('https://localhost:7106/api/orders', orderData);
-        if (response.status === 200) window.alert('Gửi thành công!');
+        if (response.status === 200) router.push('/purchased');
         else window.alert('Gửi thất bại, vui lòng thử lại!');
     };
 
