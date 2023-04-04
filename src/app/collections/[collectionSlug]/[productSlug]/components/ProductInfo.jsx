@@ -31,7 +31,7 @@ export default function ProductInfo({ product }) {
 
     // Component's event handlers
     const handleAddToCart = () => {
-        const currentProduct = cart.products.find((product) => product.id === product.id);
+        const currentProduct = cart.products.find((p) => p.id === product.id);
         if (!currentProduct)
             dispatch(
                 addProduct({
@@ -44,6 +44,7 @@ export default function ProductInfo({ product }) {
                 }),
             );
         else dispatch(setProductQuantity({ id: currentProduct.id, quantity: currentProduct.quantity + 1 }));
+
         dispatch(setIsClosing(false));
         dispatch(setShowCart(true));
     };
