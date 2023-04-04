@@ -5,13 +5,16 @@ import Image from 'next/image';
 // Asset files
 import earrings from '@/assets/images/home/earrings.webp';
 
-export default function CategoryItem({ data }) {
+export default function CategoryItem({ category }) {
+    // Component's props
+    const { slug, image, name } = category;
+
     return (
-        <Link href={data.slug} className='group'>
+        <Link href={slug} className='group'>
             <div className='relative overflow-hidden rounded-lg'>
                 <Image src={earrings} alt='category-image' className='invisible' />
                 <Image
-                    src={data.image}
+                    src={image}
                     fill
                     sizes='40vw
                     (max-width: 768px) 30vw
@@ -22,7 +25,7 @@ export default function CategoryItem({ data }) {
                 />
             </div>
             <p className='mt-6 mx-auto w-fit text-sm font-bold uppercase border-b border-gray transition duration-500 group-hover:border-current'>
-                {data.name}
+                {name}
             </p>
         </Link>
     );

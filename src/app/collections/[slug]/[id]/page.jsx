@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 
 // App's features
 import getProduct from '~/app/utils/products/getProduct';
-import getCollections from '~/app/utils/collections/getCollections';
+import getProducts from '~/app/utils/products/getProducts';
 
 // App's components
 import Breadcrumb from './components/Breadcrumb';
@@ -13,27 +13,28 @@ import ProductDescription from './components/ProductDescription';
 
 // Dynamic metadata
 export async function generateMetadata({ params }) {
-    const product = await getProduct(params.slug, params.id);
+    const product = await getProduct(params.id);
 
     return {
-        title: product.id ? product.name : '404 - Không tìm thấy trang',
+        title: product ? product.name : '404 - Không tìm thấy trang',
     };
 }
 
 export default async function Product({ params }) {
-    const product = await getProduct(params.slug, params.id);
-    if (!product.id) return notFound();
+    // Get data
+    const product = await getProduct(params.id);
+    if (!product) return notFound();
 
     return (
         <>
             <div className='mx-auto px-6 md:px-10 max-w-screen-2xl'>
                 <Breadcrumb name={product.name} />
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-y-6 lg:gap-x-20 2xl:gap-x-40'>
-                    <ProductImages data={product.images} />
-                    <ProductInfo data={product} />
+                    <ProductImages images={product.images} />
+                    <ProductInfo product={product} />
                 </div>
                 <div className='grid lg:grid-cols-6'>
-                    <ProductDescription data={product} />
+                    <ProductDescription product={product} />
                 </div>
             </div>
         </>
@@ -42,17 +43,10 @@ export default async function Product({ params }) {
 
 // Static params to generate static pages
 export async function generateStaticParams() {
-    const collections = await getCollections();
-    const result = [];
+    const products = await getProducts();
 
-    collections.map((collection) => {
-        collection.products.map((product) => {
-            result.push({
-                slug: collection.id,
-                id: product.id.toString(),
-            });
-        });
-    });
-
-    return result;
+    return products.map((product) => ({
+        slug: product.collection.slug,
+        id: product.slug,
+    }));
 }

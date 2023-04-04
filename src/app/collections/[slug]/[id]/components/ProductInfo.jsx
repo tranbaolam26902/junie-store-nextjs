@@ -24,23 +24,23 @@ import iconWarranty from '@/assets/icons/warranty.svg';
 // App's components
 import Button from '~/app/components/Button';
 
-export default function ProductInfo({ data }) {
+export default function ProductInfo({ product }) {
     // Hooks
     const cart = useSelector(selectCart);
     const dispatch = useDispatch();
 
     // Component's event handlers
     const handleAddToCart = () => {
-        const currentProduct = cart.products.find((product) => product.id === data.id);
+        const currentProduct = cart.products.find((product) => product.id === product.id);
         if (!currentProduct)
             dispatch(
                 addProduct({
-                    id: data.id,
-                    name: data.name,
-                    price: data.price,
-                    discount: data.discount,
+                    id: product.id,
+                    name: product.name,
+                    price: product.price,
+                    discount: product.discount,
                     quantity: 1,
-                    image: data.images[0],
+                    image: product.images[0].path,
                 }),
             );
         else dispatch(setProductQuantity({ id: currentProduct.id, quantity: currentProduct.quantity + 1 }));
@@ -50,56 +50,57 @@ export default function ProductInfo({ data }) {
 
     return (
         <div>
-            <p className='mb-6 text-2xl md:text-3xl lg:text-4xl font-bold'>{data.name}</p>
+            <p className='mb-6 text-2xl md:text-3xl lg:text-4xl font-bold'>{product.name}</p>
             <div className='flex items-center gap-x-3 mb-4'>
-                {data.discount ? (
+                {product.discount ? (
                     <>
                         <span className='text-2xl text-red'>
-                            {new Intl.NumberFormat('vi-VN').format(data.price * (1 - data.discount))}
+                            {new Intl.NumberFormat('vi-VN').format(product.price * (1 - product.discount))}
                             <sup className='underline'>đ</sup>
                         </span>
                         <span className='line-through opacity-70'>
-                            {new Intl.NumberFormat('vi-VN').format(data.price)}
+                            {new Intl.NumberFormat('vi-VN').format(product.price)}
                             <sup className='underline'>đ</sup>
                         </span>
                     </>
                 ) : (
                     <span className='text-2xl'>
-                        {new Intl.NumberFormat('vi-VN').format(data.price)}
+                        {new Intl.NumberFormat('vi-VN').format(product.price)}
                         <sup className='underline'>đ</sup>
                     </span>
                 )}
-                {data.outOfStock ? (
+                {product.quantity === 0 ? (
                     <span className='inline-block px-[5px] pt-[3px] text-xs tracking-wider text-white font-bold uppercase bg-[#6f719b] rounded-sm'>
                         Hết hàng
                     </span>
-                ) : (data.discount && data.price * (1 - data.discount) >= cart.MIN_PRICE_FOR_FREE_DELIVERY_FEE) ||
-                  data.price >= cart.MIN_PRICE_FOR_FREE_DELIVERY_FEE ? (
+                ) : (product.discount &&
+                      product.price * (1 - product.discount) >= cart.MIN_PRICE_FOR_FREE_DELIVERY_FEE) ||
+                  product.price >= cart.MIN_PRICE_FOR_FREE_DELIVERY_FEE ? (
                     <span className='flex px-[5px] pt-[3px] w-fit text-xs tracking-wider text-white font-bold uppercase bg-green rounded-sm'>
                         <Image src={iconTruck} width={14} height={14} alt='freeship-icon' className='mb-0.5 mr-1' />
                         <span>Freeship</span>
                     </span>
-                ) : data.discount ? (
+                ) : product.discount ? (
                     <span className='inline-block px-[5px] pt-[3px] text-xs tracking-wider text-white font-bold uppercase bg-red rounded-sm'>
-                        Tiết kiệm <span className='text-[13px]'>{data.discount * 100}%</span>
+                        Tiết kiệm <span className='text-[13px]'>{product.discount * 100}%</span>
                     </span>
                 ) : null}
             </div>
             <div className='flex items-center justify-between'>
-                {data.ratings ? (
+                {product.ratings > 0 && (
                     <div className='flex gap-1'>
                         <Image src={iconStar} width={16} height={16} alt='icon-star' />
                         <Image src={iconStar} width={16} height={16} alt='icon-star' />
                         <Image src={iconStar} width={16} height={16} alt='icon-star' />
                         <Image src={iconStar} width={16} height={16} alt='icon-star' />
                         <Image src={iconStar} width={16} height={16} alt='icon-star' />
-                        <span className='pt-1 pl-2'>{data.ratings} đánh giá</span>
+                        <span className='pt-1 pl-2'>{product.ratings} đánh giá</span>
                     </div>
-                ) : null}
-                <span className='pt-1 text-xs tracking-wider uppercase opacity-70'>SKU: {data.type}</span>
+                )}
+                <span className='pt-1 text-xs tracking-wider uppercase opacity-70'>SKU: {product.type}</span>
             </div>
             <hr className='mt-4 mb-8 text-gray' />
-            {data.outOfStock ? (
+            {product.quantity === 0 ? (
                 <Button disable full>
                     Hết hàng
                 </Button>

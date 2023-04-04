@@ -9,13 +9,13 @@ import arrowRight from '@/assets/icons/arrow-right.svg';
 // App's components
 import Button from '../components/Button';
 
-export default function BlogItem({ data }) {
+export default function BlogItem({ post }) {
     return (
-        <Link href={data.slug} className='group w-full'>
+        <Link href={post.slug} className='group w-full'>
             <div className='relative overflow-hidden rounded'>
                 <Image src={blogPlaceholder} alt='blog-image' className='invisible' />
                 <Image
-                    src={data.image}
+                    src={post.image}
                     fill
                     sizes='80vw
                     (max-width: 768px) 60vw
@@ -29,8 +29,8 @@ export default function BlogItem({ data }) {
                     className='absolute right-6 bottom-6 min-w-[40px] h-10 bg-primary rounded-sm transition-transform scale-0 group-hover:scale-100 duration-300'
                 />
             </div>
-            <span className='inline-block mt-6 text-xs font-bold tracking-wider uppercase opacity-70'>{data.tag}</span>
-            <p className='mt-2 text-xl md:text-2xl font-bold capitalize'>{data.title}</p>
+            <span className='inline-block mt-6 text-xs font-bold tracking-wider uppercase opacity-70'>{post.tag}</span>
+            <p className='mt-2 text-xl md:text-2xl font-bold capitalize'>{post.title}</p>
         </Link>
     );
 }

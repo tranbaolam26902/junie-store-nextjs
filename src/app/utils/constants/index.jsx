@@ -1,1 +1,1 @@
-export const API_URL = 'https://junie-store-fake-api.vercel.app';
+export const API_URL = 'https://localhost:7106/api';
