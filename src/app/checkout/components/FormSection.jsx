@@ -3,10 +3,10 @@
 // Third-party libs
 import { useRef } from 'react';
 import { useRouter } from 'next/navigation';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 // App's features
-import { selectCart } from '~/redux/features/cartSlice';
+import { clearProducts, selectCart } from '~/redux/features/cartSlice';
 
 // Asset files
 import arrowLeft from '@/assets/icons/arrow-left.svg';
@@ -19,6 +19,7 @@ export default function FormSection() {
     // Hooks
     const router = useRouter();
     const cart = useSelector(selectCart);
+    const dispatch = useDispatch();
 
     // Component's refs
     const phoneNumberRef = useRef();
@@ -47,8 +48,10 @@ export default function FormSection() {
         };
 
         const response = await axios.post('https://localhost:7106/api/orders', orderData);
-        if (response.status === 200) router.push('/purchased');
-        else window.alert('Gửi thất bại, vui lòng thử lại!');
+        if (response.status === 200) {
+            dispatch(clearProducts());
+            router.push('/purchased');
+        } else window.alert('Gửi thất bại, vui lòng thử lại!');
     };
 
     return (
