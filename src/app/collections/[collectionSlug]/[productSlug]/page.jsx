@@ -2,8 +2,8 @@
 import { notFound } from 'next/navigation';
 
 // App's features
-import getProduct from '~/app/utils/products/getProduct';
-import getProducts from '~/app/utils/products/getProducts';
+import getProduct from '~/app/services/products/getProduct';
+import getProducts from '~/app/services/products/getProducts';
 
 // App's components
 import Breadcrumb from './components/Breadcrumb';
@@ -13,7 +13,7 @@ import ProductDescription from './components/ProductDescription';
 
 // Dynamic metadata
 export async function generateMetadata({ params }) {
-    const product = await getProduct(params.id);
+    const product = await getProduct(params.productSlug);
 
     return {
         title: product ? product.name : '404 - Không tìm thấy trang',
@@ -22,7 +22,7 @@ export async function generateMetadata({ params }) {
 
 export default async function Product({ params }) {
     // Get data
-    const product = await getProduct(params.id);
+    const product = await getProduct(params.productSlug);
     if (!product) return notFound();
 
     return (
@@ -46,7 +46,7 @@ export async function generateStaticParams() {
     const products = await getProducts();
 
     return products.map((product) => ({
-        slug: product.collection.slug,
-        id: product.slug,
+        collectionSlug: product.collection.slug,
+        productSlug: product.slug,
     }));
 }
