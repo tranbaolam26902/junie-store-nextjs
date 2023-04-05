@@ -2,9 +2,7 @@
 import { notFound } from 'next/navigation';
 
 // App's features
-import getCollection from '~/app/services/collections/getCollection';
-import getCollections from '~/app/services/collections/getCollections';
-import getProducts from '~/app/services/products/getProducts';
+import { getCollection, getCollections, getProducts } from '~/app/services';
 
 // App's components
 import HeroSection from './components/HeroSection';

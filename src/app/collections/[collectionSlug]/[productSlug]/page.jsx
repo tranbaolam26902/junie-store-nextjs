@@ -2,8 +2,7 @@
 import { notFound } from 'next/navigation';
 
 // App's features
-import getProduct from '~/app/services/products/getProduct';
-import getProducts from '~/app/services/products/getProducts';
+import { getProduct, getProducts } from '~/app/services';
 
 // App's components
 import Breadcrumb from './components/Breadcrumb';
