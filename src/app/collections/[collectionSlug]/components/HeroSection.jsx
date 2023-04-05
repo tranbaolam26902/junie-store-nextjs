@@ -3,8 +3,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getPlaiceholder } from 'plaiceholder';
 
-export default async function HeroSection({ title, description, image }) {
-    const { base64, img } = await getPlaiceholder(image);
+export default async function HeroSection({ collection }) {
+    // Component's props
+    const { title, description, imagePath } = collection;
+
+    // Get placeholder blur base64
+    const { base64, img } = await getPlaiceholder(imagePath);
 
     return (
         <div className='relative overflow-hidden w-full h-[250px] md:h-[400px]'>

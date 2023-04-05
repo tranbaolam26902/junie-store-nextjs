@@ -3,7 +3,10 @@
 // Third-party libs
 import { useEffect, useRef, useState } from 'react';
 
-export default function ProductDescription({ data }) {
+export default function ProductDescription({ product }) {
+    // Component's props
+    const { description, userManual } = product;
+
     // Component's states
     const [offsetLeft, setOffsetLeft] = useState(0);
     const [offsetWidth, setOffsetWidth] = useState(0);
@@ -71,7 +74,7 @@ export default function ProductDescription({ data }) {
                                 : 'animate-[fade-in_400ms_ease-in-out_300ms_both]'
                         } flex flex-col gap-4 pt-10`}
                     >
-                        {data.description.split('\n').map((paragraph, index) => (
+                        {description.split('\n').map((paragraph, index) => (
                             <p key={index}>{paragraph}</p>
                         ))}
                     </div>
@@ -83,7 +86,7 @@ export default function ProductDescription({ data }) {
                                 : 'animate-[fade-in_400ms_ease-in-out_300ms_both]'
                         } flex flex-col gap-4 pt-10`}
                     >
-                        {data.using.split('\n').map((paragraph, index) => (
+                        {userManual.split('\n').map((paragraph, index) => (
                             <p key={index}>{paragraph}</p>
                         ))}
                     </div>

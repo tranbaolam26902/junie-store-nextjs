@@ -4,7 +4,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 
-export default function ProductImages({ data }) {
+export default function ProductImages({ images }) {
     // Component's states
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -20,16 +20,16 @@ export default function ProductImages({ data }) {
                 width={1000}
                 height={1000}
                 sizes='100vw (max-width: 1024px) 50vw'
-                src={data[currentIndex]}
+                src={images[currentIndex].path}
                 alt='product-image'
                 className='-mx-6 md:-mx-10 lg:mx-0 min-w-[100vw] lg:min-w-full w-full lg:rounded'
             />
             <div className='relative'>
                 <div className='flex gap-x-4 pl-1 pr-8 py-1 overflow-x-auto no-scrollbar'>
-                    {data.map((image, index) => (
+                    {images.map((image, index) => (
                         <Image
-                            key={index}
-                            src={image}
+                            key={image.id}
+                            src={image.path}
                             width={64}
                             height={64}
                             alt='product-image'
