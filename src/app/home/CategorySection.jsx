@@ -1,6 +1,6 @@
 // App's components
 import CategoryItem from './CategoryItem';
-import SectionHeader from './SectionHeader';
+import SectionHeader from '../components/SectionHeader';
 
 const categories = [
     {

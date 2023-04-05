@@ -1,5 +1,5 @@
 // App's components
-import SectionHeader from './SectionHeader';
+import SectionHeader from '../components/SectionHeader';
 import BlogItem from './BlogItem';
 
 const posts = [
