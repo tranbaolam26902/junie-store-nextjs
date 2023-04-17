@@ -147,7 +147,9 @@ export default function Cart() {
                         {/* Start: Empty cart */}
                         <div className='flex flex-col gap-10 items-center justify-center w-full h-full'>
                             <span className='opacity-70'>Giỏ hàng của bạn đang trống</span>
-                            <Button secondary>Bắt đầu mua sắm</Button>
+                            <Button href='/collections/sale-outlet' secondary>
+                                Bắt đầu mua sắm
+                            </Button>
                         </div>
                         {/* End: Empty cart */}
                     </>
