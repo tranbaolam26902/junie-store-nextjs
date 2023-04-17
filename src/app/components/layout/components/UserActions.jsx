@@ -41,6 +41,9 @@ export default function UserActions() {
         if (products) dispatch(setProducts(products));
         // eslint-disable-next-line
     }, []);
+    useEffect(() => {
+        document.body.style.overflow = cart.showCart || search.showSearch ? 'hidden' : 'overlay';
+    }, [cart.showCart, search.showSearch]);
 
     return (
         <div className='flex flex-1 justify-end gap-x-2 mr-[-8px]'>

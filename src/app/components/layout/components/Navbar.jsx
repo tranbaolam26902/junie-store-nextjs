@@ -35,6 +35,9 @@ export default function Navbar() {
             if (window.innerWidth >= 1280) handleCloseMobileNavbar();
         };
     }, []);
+    useEffect(() => {
+        document.body.style.overflow = showMobileNavbar ? 'hidden' : 'overlay';
+    }, [showMobileNavbar]);
 
     return (
         <>
