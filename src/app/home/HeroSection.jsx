@@ -38,14 +38,14 @@ export default function HeroSection() {
                 </p>
                 <div className='flex gap-6 text-black'>
                     <Button
-                        href='/'
+                        href='/collections/best-selling'
                         accent
                         className='px-4 py-1.5 md:py-2 w-[128px] md:min-w-[152px] animate-[slide-in-bottom_400ms_ease-in-out_500ms_both]'
                     >
                         Bán chạy
                     </Button>
                     <Button
-                        href='/'
+                        href='/collections/sale-outlet'
                         accent
                         className='px-4 py-1.5 md:py-2 min-w-[128px] md:min-w-[152px] animate-[slide-in-bottom_400ms_ease-in-out_500ms_both]'
                     >
