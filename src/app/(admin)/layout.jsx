@@ -8,8 +8,7 @@ import StoreProvider from '~/redux/StoreProvider';
 import '~/app/globals.scss';
 
 // App's components
-// import Header from '~/app/components/layout/Header';
-// import Footer from '~/app/components/layout/Footer';
+import Header from '~/app/(admin)/admin/components/layout/Header';
 
 // Local font config
 const myriad = localFont({
@@ -67,9 +66,8 @@ export default function RootLayout({ children }) {
         <html lang='en'>
             <body className={`${myriad.variable} font-sans text-secondary bg-primary`}>
                 <StoreProvider>
-                    {/* <Header /> */}
+                    <Header />
                     <main className='mt-[var(--header-height)]'>{children}</main>
-                    {/* <Footer /> */}
                 </StoreProvider>
             </body>
         </html>
