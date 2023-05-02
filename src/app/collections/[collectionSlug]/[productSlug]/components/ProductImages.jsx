@@ -31,9 +31,9 @@ export default function ProductImages({ images }) {
                             key={image.id}
                             src={image.path}
                             width={64}
-                            height={64}
+                            height={80}
                             alt='product-image'
-                            className={`${
+                            className={`w-16 h-20 ${
                                 index === currentIndex ? 'outline' : ''
                             } outline-2 outline-offset-2 outline-black rounded-[1px] cursor-pointer`}
                             onClick={() => handleChangeImage(index)}

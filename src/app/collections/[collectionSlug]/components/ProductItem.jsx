@@ -30,7 +30,7 @@ export default function ProductItem({ product }) {
                     sizes='50vw
                     (max-width: 1280px) 25vw'
                     alt='product-image'
-                    className='w-full rounded opacity-100 group-hover:opacity-0 transition duration-500'
+                    className='absolute top-0 left-0 right-0 bottom-0 object-cover object-center rounded opacity-100 group-hover:opacity-0 transition duration-500'
                 />
                 <Image
                     src={product.images[1].path}
@@ -38,7 +38,7 @@ export default function ProductItem({ product }) {
                     sizes='50vw
                     (max-width: 1280px) 25vw'
                     alt='product-image'
-                    className='absolute top-0 left-0 right-0 bottom-0 w-full rounded-md opacity-0 group-hover:opacity-100 transition duration-500'
+                    className='absolute top-0 left-0 right-0 bottom-0 object-cover object-center rounded-md opacity-0 group-hover:opacity-100 transition duration-500'
                 />
                 {/* End: Image */}
                 {/* Start: Tag */}
