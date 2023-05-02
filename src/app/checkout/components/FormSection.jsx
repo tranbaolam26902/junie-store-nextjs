@@ -1,7 +1,7 @@
 'use client';
 
 // Third-party libs
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -13,13 +13,24 @@ import arrowLeft from '@/assets/icons/arrow-left.svg';
 
 // App's components
 import Button from '~/app/components/Button';
-import axios from 'axios';
+import Input from '~/app/components/Input';
+import createOrder from '~/app/services/orders/createOrder';
+
+const EMAIL_REGEX = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
 export default function FormSection() {
     // Hooks
     const router = useRouter();
     const cart = useSelector(selectCart);
     const dispatch = useDispatch();
+
+    // Component's states
+    const [isValid, setIsValid] = useState(false);
+    const [phoneNumberMessage, setPhoneNumberMessage] = useState('');
+    const [emailMessage, setEmailMessage] = useState('');
+    const [nameMessage, setNameMessage] = useState('');
+    const [addressMessage, setAddressMessage] = useState('');
+    const [addressDescriptionMessage, setAddressDescriptionMessage] = useState('');
 
     // Component's refs
     const phoneNumberRef = useRef();
@@ -29,97 +40,139 @@ export default function FormSection() {
     const addressDescriptionRef = useRef();
     const notesRef = useRef();
 
+    // Component's functions
+    const validateOrder = () => {
+        if (phoneNumberRef.current.value === '') setPhoneNumberMessage('Vui lòng nhập số điện thoại!');
+        if (phoneNumberRef.current.value.length > 16)
+            setPhoneNumberMessage('Số điện thoại không được vượt quá 16 chữ số!');
+        if (emailRef.current.value !== '' && !EMAIL_REGEX.test(emailRef.current.value))
+            setEmailMessage('Vui lòng nhập địa chỉ email hợp lệ!');
+        if (emailRef.current.value.length > 64) setEmailMessage('Email không được vượt quá 64 ký tự!');
+        if (nameRef.current.value === '') setNameMessage('Vui lòng nhập tên người nhận!');
+        if (nameRef.current.value.length > 64) setNameMessage('Tên người nhận không được vượt quá 64 ký tự!');
+        if (addressRef.current.value === '') setAddressMessage('Vui lòng nhập địa chỉ nhận hàng!');
+        if (addressRef.current.value.length > 512)
+            setAddressMessage('Địa chỉ nhận hàng không được vượt quá 512 ký tự!');
+        if (addressDescriptionRef.current.value.length > 512)
+            setAddressDescriptionMessage('Mô tả địa chỉ không được vượt quá 512 ký tự!');
+
+        if (
+            phoneNumberRef.current.value === '' ||
+            phoneNumberRef.current.value.length > 16 ||
+            (emailRef.current.value !== '' && !EMAIL_REGEX.test(emailRef.current.value)) ||
+            emailRef.current.value.length > 64 ||
+            nameRef.current.value === '' ||
+            nameRef.current.value.length > 64 ||
+            addressRef.current.value === '' ||
+            addressRef.current.value.length > 512 ||
+            addressDescriptionRef.current.value.length > 512
+        )
+            return false;
+        return true;
+    };
+
     // Component's event handlers
     const handleSubmitForm = async (e) => {
         e.preventDefault();
+        if (!validateOrder()) return;
 
-        const orderData = {
+        const order = {
             phoneNumber: phoneNumberRef.current.value,
-            email: emailRef.current.value ?? null,
+            email: emailRef.current.value,
             name: nameRef.current.value,
             address: addressRef.current.value,
-            addressDescription: addressDescriptionRef.current.value ?? null,
-            notes: notesRef.current.value ?? null,
+            addressDescription: addressDescriptionRef.current.value,
+            notes: notesRef.current.value,
             orderProducts: cart.products.map((product) => ({
                 productId: product.id,
                 quantity: product.quantity,
                 price: product.discount ? product.price * (1 - product.discount) : product.price,
             })),
         };
+        const data = await createOrder(order);
 
-        const response = await axios.post('https://localhost:7106/api/orders', orderData);
-        if (response.status === 200) {
+        if (data.isSuccess) {
             dispatch(clearProducts());
             router.push('/purchased');
         } else window.alert('Gửi thất bại, vui lòng thử lại!');
     };
+
+    useEffect(() => {
+        if (cart.products.length > 0) setIsValid(true);
+        else setIsValid(false);
+        // eslint-disable-next-line
+    }, [cart.products]);
 
     return (
         <form onSubmit={handleSubmitForm}>
             <p className='text-2xl mb-8'>Thông tin đơn hàng</p>
             <div className='flex flex-col gap-4'>
                 <div className='flex flex-col'>
-                    <label htmlFor='phone-number' className='cursor-pointer'>
-                        Số điện thoại
-                    </label>
-                    <input
+                    <Input
                         ref={phoneNumberRef}
                         id='phone-number'
+                        name='phone-number'
                         type='number'
+                        label='Số điện thoại'
                         placeholder='+84 792 815 452'
-                        className='px-4 pt-3 pb-2.5 text-lg border border-gray rounded'
+                        message={phoneNumberMessage}
+                        onChange={() => {
+                            setPhoneNumberMessage('');
+                        }}
                     />
-                    <span className='text-red'></span>
                 </div>
                 <div className='flex flex-col'>
-                    <label htmlFor='email-address' className='cursor-pointer'>
-                        Email<span className='ml-2 italic text-secondary/70'>(không bắt buộc)</span>
-                    </label>
-                    <input
-                        ref={emailRef}
-                        id='email-address'
-                        type='text'
-                        placeholder='junie-store@gmail.com.vn'
-                        className='px-4 pt-3 pb-2.5 text-lg border border-gray rounded'
-                    />
-                    <span className='text-red'></span>
-                </div>
-                <div className='flex flex-col'>
-                    <label htmlFor='name' className='cursor-pointer'>
-                        Tên
-                    </label>
-                    <input
+                    <Input
                         ref={nameRef}
                         id='name'
-                        type='text'
+                        name='name'
+                        label='Tên'
                         placeholder='Du Phong Linh'
-                        className='px-4 pt-3 pb-2.5 text-lg border border-gray rounded'
+                        message={nameMessage}
+                        onChange={() => {
+                            setNameMessage('');
+                        }}
                     />
-                    <span className='text-red'></span>
                 </div>
                 <div className='flex flex-col'>
-                    <label htmlFor='address' className='cursor-pointer'>
-                        Địa chỉ
-                    </label>
-                    <input
+                    <Input
                         ref={addressRef}
                         id='address'
-                        type='text'
+                        name='address'
+                        label='Địa chỉ nhận hàng'
                         placeholder='01 Phù Đổng Thiên Vương, Phường 8, TP. Đà Lạt'
-                        className='px-4 pt-3 pb-2.5 text-lg border border-gray rounded'
+                        message={addressMessage}
+                        onChange={() => {
+                            setAddressMessage('');
+                        }}
                     />
-                    <span className='text-red'></span>
                 </div>
                 <div className='flex flex-col'>
-                    <label htmlFor='address-detail' className='cursor-pointer'>
-                        Căn hộ, phòng, v.v.<span className='ml-2 italic text-secondary/70'>(không bắt buộc)</span>
-                    </label>
-                    <input
+                    <Input
                         ref={addressDescriptionRef}
-                        id='address-detail'
-                        type='text'
-                        placeholder='Tầng 01 tòa nhà A27'
-                        className='px-4 pt-3 pb-2.5 text-lg border border-gray rounded'
+                        id='address-description'
+                        name='address-description'
+                        label='Căn hộ, phòng, v.v.'
+                        placeholder='Tầng 01 tòa nhà A7'
+                        optional
+                        message={addressDescriptionMessage}
+                        onChange={() => {
+                            setAddressDescriptionMessage('');
+                        }}
+                    />
+                </div>
+                <div className='flex flex-col'>
+                    <Input
+                        ref={emailRef}
+                        id='email'
+                        name='email'
+                        label='Email'
+                        placeholder='duphonglinh@gmail.com'
+                        optional
+                        message={emailMessage}
+                        onChange={() => {
+                            setEmailMessage('');
+                        }}
                     />
                 </div>
                 <div className='flex flex-col'>
@@ -147,7 +200,7 @@ export default function FormSection() {
                 >
                     Quay lại
                 </Button>
-                {cart.products.length > 0 ? (
+                {isValid ? (
                     <Button secondary type='submit'>
                         Xác nhận
                     </Button>

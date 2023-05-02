@@ -30,12 +30,25 @@ function Button({
     const iconStyle = 'flex items-center justify-center';
     const props = {
         onClick,
+        type: 'button',
         ...passProps,
     };
 
     if (href) {
         props.href = href;
         Component = Link;
+        delete props.type;
+    }
+
+    if (disable) {
+        Object.keys(props).forEach((key) => {
+            if (key.startsWith('on') && typeof props[key] === 'function') {
+                delete props[key];
+            }
+        });
+        delete props.to;
+        delete props.href;
+        Component = 'div';
     }
 
     return (
