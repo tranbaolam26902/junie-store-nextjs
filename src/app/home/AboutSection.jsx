@@ -18,7 +18,7 @@ export default function AboutSection() {
 
     return (
         <div className='relative mt-16'>
-            <div className='relative z-10 mx-auto px-6 md:px-10 max-w-screen-2xl'>
+            <div className='relative z-10 mx-auto px-6 md:px-10 max-w-screen-2xl overflow-x-hidden'>
                 <div className='md:px-16 py-8 md:py-12 lg:py-16 grid gap-x-16 gap-y-8 sm:gap-y-12 xl:gap-x-32 lg:grid-cols-2'>
                     <div className='relative flex items-center'>
                         <div className='absolute -top-8 md:-top-12 lg:-top-16 left-[-1000vw] right-0 bottom-16 md:-bottom-20 lg:-bottom-16 translate-x-32 lg:-translate-x-32 bg-[#f9f5f1]'></div>

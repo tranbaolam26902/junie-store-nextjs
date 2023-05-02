@@ -10,9 +10,11 @@ import ServiceSection from './home/ServiceSection';
 import SubscribeSection from './home/SubscribeSection';
 import ProductsCarousel from './components/ProductsCarousel';
 
+const NUMBER_OF_PRODUCTS = 18;
+
 export default async function Home() {
     // Get data
-    const products = await getBestSellingProducts(18);
+    const products = await getBestSellingProducts(NUMBER_OF_PRODUCTS);
 
     return (
         <>

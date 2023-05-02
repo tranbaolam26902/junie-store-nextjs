@@ -20,7 +20,7 @@ export default async function HeroSection({ collection }) {
                     priority
                     placeholder='blur'
                     blurDataURL={base64}
-                    className='absolute left-0 w-full h-full object-cover object-center'
+                    className='absolute left-0 w-full h-auto object-cover object-center'
                     alt='banner-image'
                 />
                 <div className='absolute top-0 z-20 py-6 hidden md:block text-sm'>

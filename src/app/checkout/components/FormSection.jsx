@@ -138,6 +138,7 @@ export default function FormSection() {
             </div>
             <div className='flex items-center justify-between mt-10'>
                 <Button
+                    type='button'
                     leftIcon={arrowLeft}
                     className='flex gap-2 text-base'
                     onClick={() => {
