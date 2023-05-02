@@ -15,8 +15,8 @@ import createOrder from '~/services/orders/createOrder';
 import arrowLeft from '@/assets/icons/arrow-left.svg';
 
 // App's components
-import Button from '~/app/(client)/components/Button';
-import Input from '~/app/(client)/components/Input';
+import Button from '~/app/components/Button';
+import Input from '~/app/components/Input';
 
 const EMAIL_REGEX = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 

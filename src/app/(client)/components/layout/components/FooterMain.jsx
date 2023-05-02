@@ -7,7 +7,7 @@ import iconInstagram from '@/assets/icons/instagram.svg';
 import iconTiktok from '@/assets/icons/tiktok.svg';
 
 // App's components
-import Button from '../../Button';
+import Button from '~/app/components/Button';
 
 export default function FooterMain() {
     return (

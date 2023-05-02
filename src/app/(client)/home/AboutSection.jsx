@@ -9,7 +9,7 @@ import aboutFirst from '@/assets/images/home/about-first.webp';
 import aboutSecond from '@/assets/images/home/about-second.webp';
 
 // App's components
-import Button from '~/app/(client)/components/Button';
+import Button from '~/app/components/Button';
 
 export default function AboutSection() {
     // Component's states

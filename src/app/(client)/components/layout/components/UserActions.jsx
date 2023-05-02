@@ -14,7 +14,7 @@ import iconSearch from '@/assets/icons/search.svg';
 import iconCart from '@/assets/icons/cart.svg';
 
 // App's components
-import Button from '../../Button';
+import Button from '~/app/components/Button';
 import Cart from './Cart';
 import Search from './Search';
 

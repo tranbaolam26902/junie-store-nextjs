@@ -8,7 +8,7 @@ import iconClose from '@/assets/icons/close.svg';
 import iconMenu from '@/assets/icons/menu.svg';
 
 // App's components
-import Button from '../../Button';
+import Button from '~/app/components/Button';
 
 export default function Navbar() {
     // Component's constants

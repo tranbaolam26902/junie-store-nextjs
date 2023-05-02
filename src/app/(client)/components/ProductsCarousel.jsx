@@ -11,8 +11,8 @@ import iconArrowLeft from '@/assets/icons/arrow-left.svg';
 import iconArrowRight from '@/assets/icons/arrow-right.svg';
 
 // App's components
+import Button from '~/app/components/Button';
 import SectionHeader from '~/app/(client)/components/SectionHeader';
-import Button from '~/app/(client)/components/Button';
 import ProductItem from '../collections/[collectionSlug]/components/ProductItem';
 
 export default function ProductsCarousel({

@@ -11,7 +11,7 @@ import { selectCart } from '~/redux/features/cartSlice';
 import styles from '~/app/loading.module.scss';
 
 // App's components
-import Button from '~/app/(client)/components/Button';
+import Button from '~/app/components/Button';
 import CartItem from '~/app/(client)/components/layout/components/CartItem';
 
 export default function CartSection() {

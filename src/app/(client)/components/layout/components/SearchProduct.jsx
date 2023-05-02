@@ -1,11 +1,13 @@
 // Third-party libs
 import Image from 'next/image';
 import Link from 'next/link';
+import { useDispatch } from 'react-redux';
+
+// App's features
+import { setIsClosing, setShowSearch } from '~/redux/features/searchSlice';
 
 // Assets files
 import iconArrow from '@/assets/icons/arrow-right.svg';
-import { useDispatch } from 'react-redux';
-import { setIsClosing, setShowSearch } from '~/redux/features/searchSlice';
 
 export default function SearchProduct({ product }) {
     // Hooks

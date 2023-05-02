@@ -5,7 +5,7 @@ import Image from 'next/image';
 import subscribeImage from '@/assets/images/home/subscribe.webp';
 
 // App's components
-import Button from '~/app/(client)/components/Button';
+import Button from '~/app/components/Button';
 
 export default function SubscribeSection() {
     return (

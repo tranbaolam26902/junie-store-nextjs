@@ -19,7 +19,7 @@ import iconMasterCard from '@/assets/icons/mastercard.svg';
 import iconVisa from '@/assets/icons/visa.svg';
 
 // App's components
-import Button from '../../Button';
+import Button from '~/app/components/Button';
 import CartItem from './CartItem';
 
 export default function Cart() {

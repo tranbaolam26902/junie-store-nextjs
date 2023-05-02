@@ -12,7 +12,7 @@ import iconPlus from '@/assets/icons/plus.svg';
 import iconMinus from '@/assets/icons/minus.svg';
 
 // App's components
-import Button from '../../Button';
+import Button from '~/app/components/Button';
 
 export default function CartItem({ data }) {
     // Hooks

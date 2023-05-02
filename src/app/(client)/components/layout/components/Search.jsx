@@ -22,7 +22,7 @@ import iconSearch from '@/assets/icons/search.svg';
 import iconClose from '@/assets/icons/close.svg';
 
 // App's components
-import Button from '../../Button';
+import Button from '~/app/components/Button';
 import SearchProduct from './SearchProduct';
 
 export default function Search() {

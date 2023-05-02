@@ -6,7 +6,7 @@ import bannerLeft from '@/assets/images/home/banner-left.webp';
 import bannerRight from '@/assets/images/home/banner-right.webp';
 
 // App's components
-import Button from '~/app/(client)/components/Button';
+import Button from '~/app/components/Button';
 
 export default function HeroSection() {
     return (

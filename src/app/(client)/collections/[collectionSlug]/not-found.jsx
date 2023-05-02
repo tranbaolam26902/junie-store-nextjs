@@ -1,5 +1,5 @@
 // App's components
-import Button from '~/app/(client)/components/Button';
+import Button from '~/app/components/Button';
 
 export default function NotFound() {
     return (

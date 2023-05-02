@@ -22,7 +22,7 @@ import iconHeart from '@/assets/icons/heart.svg';
 import iconWarranty from '@/assets/icons/warranty.svg';
 
 // App's components
-import Button from '~/app/(client)/components/Button';
+import Button from '~/app/components/Button';
 
 export default function ProductInfo({ product }) {
     // Hooks
