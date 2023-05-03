@@ -25,7 +25,7 @@ export default function ProductItem({ product }) {
                 {/* Start: Image */}
                 <Image src={placeholder} alt='placeholder-image' className='opacity-0' />
                 <Image
-                    src={product.images[0].path}
+                    src={`${process.env.NEXT_PUBLIC_API_ENDPOINT_URL}/${product?.images[0]?.path}`}
                     fill
                     sizes='50vw
                     (max-width: 1280px) 25vw'
@@ -33,7 +33,7 @@ export default function ProductItem({ product }) {
                     className='absolute top-0 left-0 right-0 bottom-0 object-cover object-center rounded opacity-100 group-hover:opacity-0 transition duration-500'
                 />
                 <Image
-                    src={product.images[1].path}
+                    src={`${process.env.NEXT_PUBLIC_API_ENDPOINT_URL}/${product?.images[1]?.path}`}
                     fill
                     sizes='50vw
                     (max-width: 1280px) 25vw'

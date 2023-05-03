@@ -9,7 +9,7 @@ export default function ProductItem({ product }) {
         <div className='w-[944px] lg:w-full grid grid-cols-12 p-4 items-center'>
             <div className='col-span-5 flex gap-4 items-center'>
                 <Image
-                    src={product.images[0].path}
+                    src={`${process.env.NEXT_PUBLIC_API_ENDPOINT_URL}/${product?.images[0]?.path}`}
                     alt='product-image'
                     width={64}
                     height={80}
