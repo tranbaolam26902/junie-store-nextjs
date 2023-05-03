@@ -49,7 +49,7 @@ export default function Navbar() {
                         }`}
                         onClick={handleCloseMobileNavbar}
                     ></div>
-                    <div
+                    <nav
                         className={`fixed top-0 left-0 bottom-0 z-50 overflow-y-auto no-scrollbar flex flex-col px-6 py-4 md:px-10 w-[80vw] max-w-[400px] h-screen bg-white ${
                             isClosing ? 'animate-slide-out-left' : 'animate-slide-in-left'
                         } `}
@@ -114,11 +114,11 @@ export default function Navbar() {
                         >
                             Sale
                         </Button>
-                    </div>
+                    </nav>
                 </>
             ) : null}
             <>
-                <div className='hidden xl:flex flex-1 gap-x-4 ml-[-8px]'>
+                <nav className='hidden xl:flex flex-1 gap-x-4 ml-[-8px]'>
                     <Button href='/collections/new-in' text className={`${NAVIGATION_BUTTON_ANIMATION} text-green`}>
                         Mới
                     </Button>
@@ -137,7 +137,7 @@ export default function Navbar() {
                     <Button href='/collections/sale-outlet' text className={`${NAVIGATION_BUTTON_ANIMATION} text-red`}>
                         Sale
                     </Button>
-                </div>
+                </nav>
                 {/* Mobile hamburger button */}
                 <div className='flex xl:hidden flex-1 gap-x-4 ml-[-8px]'>
                     <Button leftIcon={iconMenu} onClick={handleOpenMobileNavbar} />

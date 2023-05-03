@@ -14,7 +14,7 @@ export default function ProductImages({ images }) {
     };
 
     return (
-        <div className='flex flex-col gap-y-6'>
+        <section className='flex flex-col gap-y-6'>
             <Image
                 priority
                 width={1000}
@@ -42,6 +42,6 @@ export default function ProductImages({ images }) {
                 </div>
                 <div className='before:absolute before:top-0 before:bottom-0 before:-right-1 before:w-8 before:h-full before:bg-gradient-to-l before:from-white before:to-white/5'></div>
             </div>
-        </div>
+        </section>
     );
 }

@@ -17,7 +17,7 @@ export default function AboutSection() {
     const [isClosing, setIsClosing] = useState(false);
 
     return (
-        <div className='relative mt-16'>
+        <section className='relative mt-16'>
             <div className='relative z-10 mx-auto px-6 md:px-10 max-w-screen-2xl overflow-x-hidden'>
                 <div className='md:px-16 py-8 md:py-12 lg:py-16 grid gap-x-16 gap-y-8 sm:gap-y-12 xl:gap-x-32 lg:grid-cols-2'>
                     <div className='relative flex items-center'>
@@ -172,6 +172,6 @@ export default function AboutSection() {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }

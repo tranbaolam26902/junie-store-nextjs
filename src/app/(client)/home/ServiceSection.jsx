@@ -40,7 +40,7 @@ export default function ServiceSection() {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     return (
-        <div className='mx-auto mt-16 px-6 md:px-10 max-w-screen-2xl group'>
+        <section className='mx-auto mt-16 px-6 md:px-10 max-w-screen-2xl group'>
             <hr className='mb-10 text-gray' />
             <div className='lg:hidden relative'>
                 <div className='opacity-0 py-4'>
@@ -67,6 +67,6 @@ export default function ServiceSection() {
                     <ServiceItem key={index} service={service} />
                 ))}
             </div>
-        </div>
+        </section>
     );
 }

@@ -14,7 +14,7 @@ import Button from '~/app/components/Button';
 
 export default function FooterAside() {
     return (
-        <div className='grid grid-cols-1 xl:grid-cols-2 gap-y-8 mt-12'>
+        <aside className='grid grid-cols-1 xl:grid-cols-2 gap-y-8 mt-12'>
             <div>
                 <div className='ml-[-8px]'>
                     <Button text className='inline-block text-xs'>
@@ -49,6 +49,6 @@ export default function FooterAside() {
                     <Image src={iconVisa} alt='payment-method-icon' />
                 </div>
             </div>
-        </div>
+        </aside>
     );
 }

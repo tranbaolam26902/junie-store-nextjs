@@ -21,7 +21,7 @@ export default function ProductDescription({ product }) {
     }, []);
 
     return (
-        <div className='lg:col-start-2 lg:col-span-4 my-16'>
+        <section className='lg:col-start-2 lg:col-span-4 my-16'>
             <div className='relative flex gap-x-10 border-b-2 border-gray'>
                 <button
                     ref={firstTabRef}
@@ -92,6 +92,6 @@ export default function ProductDescription({ product }) {
                     </div>
                 )}
             </div>
-        </div>
+        </section>
     );
 }

@@ -49,10 +49,10 @@ export default function ProductItem({ product }) {
                 ) : (product.discount &&
                       product.price * (1 - product.discount) >= cart.MIN_PRICE_FOR_FREE_DELIVERY_FEE) ||
                   product.price >= cart.MIN_PRICE_FOR_FREE_DELIVERY_FEE ? (
-                    <span className='absolute top-2.5 left-2.5 flex px-[5px] pt-[3px] text-xs tracking-wider text-white font-bold uppercase bg-green rounded-sm'>
+                    <div className='absolute top-2.5 left-2.5 flex px-[5px] pt-[3px] text-xs tracking-wider text-white font-bold uppercase bg-green rounded-sm'>
                         <Image src={truck} width={14} height={14} alt='freeship-icon' className='mb-0.5 mr-1' />
                         <span>Freeship</span>
-                    </span>
+                    </div>
                 ) : product.discount ? (
                     <span className='absolute top-2.5 left-2.5 inline-block px-[5px] pt-[3px] text-xs tracking-wider text-white font-bold uppercase bg-red rounded-sm'>
                         Tiết kiệm <span className='text-[13px]'>{product.discount * 100}%</span>

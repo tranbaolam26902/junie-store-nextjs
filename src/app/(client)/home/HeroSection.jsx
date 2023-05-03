@@ -10,7 +10,7 @@ import Button from '~/app/components/Button';
 
 export default function HeroSection() {
     return (
-        <div className='relative flex min-h-[120vw] md:min-h-[70vw] lg:min-h-[38vw]'>
+        <section className='relative flex min-h-[120vw] md:min-h-[70vw] lg:min-h-[38vw]'>
             <div className='absolute hidden lg:block w-6/12 h-full'>
                 <Image
                     src={bannerLeft}
@@ -54,6 +54,6 @@ export default function HeroSection() {
                 </div>
             </div>
             <div className='absolute w-full h-full bg-white animate-[slide-out-left_300ms_ease-in-out_forwards]'></div>
-        </div>
+        </section>
     );
 }
