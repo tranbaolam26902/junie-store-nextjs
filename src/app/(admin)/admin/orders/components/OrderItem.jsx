@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 // Third-party libs
 import { useState } from 'react';
 
@@ -27,19 +28,28 @@ export default function OrderItem({ order }) {
             <div className='col-span-4 flex flex-col gap-4 px-4'>
                 <div className='flex flex-col'>
                     <span className='text-sm font-semibold'>Products:</span>
-                    {order.orderProducts.map((product, index) => (
-                        <div key={index} className='flex gap-2'>
-                            <span>{index + 1}.</span>
-                            <div className='flex flex-col'>
-                                <span>{product.productName}</span>
-                                <div className='flex gap-1 text-sm text-secondary/80'>
-                                    <span>{product.quantity}</span>
-                                    <span>x</span>
-                                    <span>{new Intl.NumberFormat('vi-VN').format(product.price)}</span>
+                    <div className='flex flex-col gap-2'>
+                        {order.orderProducts.map((product, index) => (
+                            <div key={index} className='flex gap-2'>
+                                <span>{index + 1}.</span>
+                                <Image
+                                    src={`${process.env.NEXT_PUBLIC_API_ENDPOINT_URL}/${product.imageUrl}`}
+                                    width={48}
+                                    height={64}
+                                    alt='product-image'
+                                    className='rounded shadow'
+                                />
+                                <div className='flex flex-col'>
+                                    <span>{product.productName}</span>
+                                    <div className='flex gap-1 text-sm text-secondary/80'>
+                                        <span>{product.quantity}</span>
+                                        <span>x</span>
+                                        <span>{new Intl.NumberFormat('vi-VN').format(product.price)}</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
                 <div className='flex flex-col'>
                     <span className='text-sm font-semibold'>Address:</span>
