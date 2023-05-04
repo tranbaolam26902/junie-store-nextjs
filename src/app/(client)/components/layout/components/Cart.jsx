@@ -68,9 +68,7 @@ export default function Cart() {
                 {/* Start: Cart header */}
                 <div className='flex items-center justify-between px-6 md:px-10 py-4 border-b border-gray'>
                     <div className='flex items-center gap-2'>
-                        <span>
-                            <Image src={iconCart} alt='icon-cart' />
-                        </span>
+                        <Image src={iconCart} alt='icon-cart' />
                         <span className='inline-block pt-1 text-lg font-bold tracking-wider'>
                             {cart.products.length !== 0 ? `${cart.products.length} sản phẩm` : 'Giỏ hàng'}
                         </span>

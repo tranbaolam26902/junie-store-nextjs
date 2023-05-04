@@ -5,4 +5,7 @@ module.exports = withPlaiceholder({
     experimental: {
         appDir: true,
     },
+    images: {
+        domains: ['localhost'],
+    },
 });

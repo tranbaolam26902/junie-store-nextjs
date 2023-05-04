@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { clearProducts, selectCart } from '~/redux/features/cartSlice';
 
 // App's services
-import createOrder from '~/services/orders/createOrder';
+import { createOrder } from '~/services';
 
 // Asset files
 import arrowLeft from '@/assets/icons/arrow-left.svg';

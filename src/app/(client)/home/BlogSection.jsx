@@ -28,7 +28,7 @@ const posts = [
 
 export default async function BlogSection() {
     return (
-        <div className='mx-auto px-6 md:px-10 max-w-screen-2xl'>
+        <section className='mx-auto px-6 md:px-10 max-w-screen-2xl'>
             <SectionHeader subtitle='Bắt kịp xu hướng' title="Junie's Blog" />
             <div className='overflow-x-auto no-scrollbar mt-12'>
                 <div className='flex justify-center gap-4 md:gap-10 w-[240vw] md:w-[180vw] lg:w-full mx-auto'>
@@ -37,6 +37,6 @@ export default async function BlogSection() {
                     ))}
                 </div>
             </div>
-        </div>
+        </section>
     );
 }

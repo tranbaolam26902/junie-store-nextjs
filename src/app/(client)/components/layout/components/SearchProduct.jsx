@@ -24,7 +24,13 @@ export default function SearchProduct({ product }) {
                 }, 200);
             }}
         >
-            <Image src={product.images[0].path} alt='product-image' width={92} height={115} className='rounded' />
+            <Image
+                src={`${process.env.NEXT_PUBLIC_API_ENDPOINT_URL}/${product.images[0].path}`}
+                alt='product-image'
+                width={92}
+                height={115}
+                className='rounded'
+            />
             <div className='flex-1 flex flex-col gap-1'>
                 <span>{product.name}</span>
                 {product.discount ? (

@@ -16,8 +16,8 @@ const navItems = [
         path: '/admin/dashboard',
     },
     {
-        name: 'Categories',
-        path: '/admin/categories',
+        name: 'Collections',
+        path: '/admin/collections',
     },
     {
         name: 'Products',
@@ -72,7 +72,7 @@ export default function Navbar() {
                         }`}
                         onClick={handleCloseMobileNavbar}
                     ></div>
-                    <div
+                    <nav
                         className={`fixed top-0 left-0 bottom-0 z-50 overflow-y-auto no-scrollbar flex flex-col px-6 py-4 md:px-10 w-[80vw] max-w-[400px] h-screen bg-white ${
                             isClosing ? 'animate-slide-out-left' : 'animate-slide-in-left'
                         } `}
@@ -95,10 +95,10 @@ export default function Navbar() {
                                 {navItem.name}
                             </Button>
                         ))}
-                    </div>
+                    </nav>
                 </>
             ) : null}
-            <div>
+            <nav>
                 <div className='hidden lg:flex flex-1 gap-x-4 ml-[-8px]'>
                     {navItems.map((navItem, index) => (
                         <Button
@@ -115,7 +115,7 @@ export default function Navbar() {
                 <div className='flex lg:hidden xl:flex-1 gap-x-4 ml-[-8px]'>
                     <Button leftIcon={iconMenu} onClick={handleOpenMobileNavbar} />
                 </div>
-            </div>
+            </nav>
         </div>
     );
 }

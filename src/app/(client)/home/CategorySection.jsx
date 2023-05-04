@@ -31,7 +31,7 @@ const categories = [
 
 export default async function CategorySection() {
     return (
-        <div className='mx-auto px-6 md:px-10 max-w-screen-2xl'>
+        <section className='mx-auto px-6 md:px-10 max-w-screen-2xl'>
             <SectionHeader subtitle='Tham khảo' title='Danh mục' />
             <p className='mb-12 text-center'>Từ đôi bàn tay của nghệ nhân mang tới cho nàng sự lựa chọn đa dạng.</p>
             <div className='overflow-x-auto no-scrollbar'>
@@ -41,6 +41,6 @@ export default async function CategorySection() {
                     ))}
                 </div>
             </div>
-        </div>
+        </section>
     );
 }

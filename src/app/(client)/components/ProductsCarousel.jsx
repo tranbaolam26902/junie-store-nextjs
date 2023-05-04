@@ -60,7 +60,7 @@ export default function ProductsCarousel({
     }, [itemsPerSlide]);
 
     return (
-        <div className='relative group/random'>
+        <section className='relative group/random'>
             <SectionHeader title={title} subtitle={subtitle} small={small} />
             {hasMounted ? (
                 <div className='overflow-x-auto lg:overflow-x-hidden no-scrollbar'>
@@ -107,6 +107,6 @@ export default function ProductsCarousel({
                     className='hidden lg:flex absolute top-1/2 -right-2 p-4 w-10 bg-white border border-secondary rounded-sm transition duration-300 scale-0 group-hover/random:scale-100'
                 />
             )}
-        </div>
+        </section>
     );
 }

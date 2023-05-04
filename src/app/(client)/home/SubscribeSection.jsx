@@ -10,7 +10,7 @@ import Button from '~/app/components/Button';
 export default function SubscribeSection() {
     return (
         <>
-            <div className='relative mt-10 min-h-[360px] md:min-h-[400px]'>
+            <section className='relative mt-10 min-h-[360px] md:min-h-[400px]'>
                 <Image
                     src={subscribeImage}
                     className='absolute top-0 left-0 w-full h-full object-cover object-center'
@@ -34,7 +34,7 @@ export default function SubscribeSection() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </>
     );
 }

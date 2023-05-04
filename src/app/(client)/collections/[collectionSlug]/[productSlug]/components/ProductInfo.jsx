@@ -50,7 +50,7 @@ export default function ProductInfo({ product }) {
     };
 
     return (
-        <div>
+        <section>
             <p className='mb-6 text-2xl md:text-3xl lg:text-4xl font-bold'>{product.name}</p>
             <div className='flex items-center gap-x-3 mb-4'>
                 {product.discount ? (
@@ -150,6 +150,6 @@ export default function ProductInfo({ product }) {
                     </p>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }

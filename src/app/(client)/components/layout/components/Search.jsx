@@ -88,9 +88,7 @@ export default function Search() {
                 {/* Start: Search header */}
                 <div className='flex items-center justify-between px-6 md:px-10 py-4 border-b border-gray'>
                     <div className='flex flex-1 items-center gap-2'>
-                        <span>
-                            <Image src={iconSearch} alt='icon-search' />
-                        </span>
+                        <Image src={iconSearch} alt='icon-search' />
                         <input
                             value={keyword}
                             type='text'

@@ -54,7 +54,7 @@ export default function CartSection() {
         );
 
     return (
-        <div className='relative z-10 flex flex-col gap-4'>
+        <section className='relative z-10 flex flex-col gap-4'>
             {cart.products.map((product, index) => (
                 <CartItem key={index} data={product} />
             ))}
@@ -111,6 +111,6 @@ export default function CartSection() {
                     <sup>đ</sup>
                 </span>
             </div>
-        </div>
+        </section>
     );
 }

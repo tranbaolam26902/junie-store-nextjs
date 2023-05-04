@@ -11,7 +11,7 @@ import Button from '~/app/components/Button';
 
 export default function FooterMain() {
     return (
-        <div className='grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-10'>
+        <main className='grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-10'>
             <div>
                 <p className='mb-5 text-sm font-bold tracking-wide uppercase'>Khám phá</p>
                 <div className='flex flex-col gap-y-2'>
@@ -100,6 +100,6 @@ export default function FooterMain() {
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
     );
 }

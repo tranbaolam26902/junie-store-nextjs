@@ -14,13 +14,13 @@ export default function ProductImages({ images }) {
     };
 
     return (
-        <div className='flex flex-col gap-y-6'>
+        <section className='flex flex-col gap-y-6'>
             <Image
                 priority
                 width={1000}
                 height={1000}
                 sizes='100vw (max-width: 1024px) 50vw'
-                src={images[currentIndex].path}
+                src={`${process.env.NEXT_PUBLIC_API_ENDPOINT_URL}/${images[currentIndex]?.path}`}
                 alt='product-image'
                 className='-mx-6 md:-mx-10 lg:mx-0 min-w-[100vw] lg:min-w-full w-full lg:rounded'
             />
@@ -29,7 +29,7 @@ export default function ProductImages({ images }) {
                     {images.map((image, index) => (
                         <Image
                             key={image.id}
-                            src={image.path}
+                            src={`${process.env.NEXT_PUBLIC_API_ENDPOINT_URL}/${image.path}`}
                             width={64}
                             height={80}
                             alt='product-image'
@@ -42,6 +42,6 @@ export default function ProductImages({ images }) {
                 </div>
                 <div className='before:absolute before:top-0 before:bottom-0 before:-right-1 before:w-8 before:h-full before:bg-gradient-to-l before:from-white before:to-white/5'></div>
             </div>
-        </div>
+        </section>
     );
 }

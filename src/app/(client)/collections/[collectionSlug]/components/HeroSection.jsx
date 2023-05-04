@@ -11,7 +11,7 @@ export default async function HeroSection({ collection }) {
     const { base64, img } = await getPlaiceholder(imagePath);
 
     return (
-        <div className='relative overflow-hidden w-full h-[250px] md:h-[400px]'>
+        <section className='relative overflow-hidden w-full h-[250px] md:h-[400px]'>
             <div className='mx-auto px-6 md:px-10 max-w-screen-2xl text-white'>
                 <Image
                     src={img}
@@ -39,6 +39,6 @@ export default async function HeroSection({ collection }) {
                     </p>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
