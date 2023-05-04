@@ -10,7 +10,7 @@ import { selectCart } from '~/redux/features/cartSlice';
 
 // Asset files
 import truck from '@/assets/icons/truck.svg';
-import placeholder from '@/assets/images/collections/bracelet/products/amira-01.webp';
+import placeholder from '@/assets/images/placeholder.png';
 
 export default function ProductItem({ product }) {
     // Hooks
