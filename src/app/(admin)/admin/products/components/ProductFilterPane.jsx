@@ -109,7 +109,9 @@ export default function ProductFilterPane() {
                 <Button secondary onClick={handleClearFilter}>
                     Clear
                 </Button>
-                <Button accent>Add</Button>
+                <Button href='/admin/products/create' accent>
+                    Add
+                </Button>
             </div>
         </section>
     );
