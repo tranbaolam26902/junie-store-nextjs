@@ -14,7 +14,7 @@ export default function OrderTable({ orders }) {
                     <div className='col-span-1 text-center'>Confirmed</div>
                 </div>
                 {orders.map((order, index) => (
-                    <OrderItem key={index} order={order} />
+                    <OrderItem key={order.id} order={order} />
                 ))}
             </div>
         </section>
