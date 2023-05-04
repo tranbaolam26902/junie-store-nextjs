@@ -1,3 +1,4 @@
+// App's components
 import ProductManagement from './components/ProductManagement';
 
 // Metadata

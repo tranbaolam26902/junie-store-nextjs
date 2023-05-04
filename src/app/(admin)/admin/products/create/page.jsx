@@ -1,3 +1,4 @@
+// App's components
 import CreateProduct from './components/CreateProduct';
 
 // Metadata
