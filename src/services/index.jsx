@@ -7,3 +7,4 @@ export { default as getProduct } from './products/getProduct';
 export { default as getProducts } from './products/getProducts';
 export { default as getProductsByQueries } from './products/getProductsByQueries';
 export { default as getRandomProducts } from './products/getRandomProducts';
+export { default as updateProduct } from './products/updateProduct';
