@@ -9,6 +9,7 @@ const initialState = {
         pageSize: 10,
         pageNumber: 1,
     },
+    isChange: false,
 };
 
 export const productSlice = createSlice({
@@ -36,6 +37,9 @@ export const productSlice = createSlice({
         decreasePageNumber: (state) => {
             state.queries.pageNumber = --state.queries.pageNumber;
         },
+        setIsChange: (state, action) => {
+            state.isChange = action.payload;
+        },
     },
 });
 
@@ -47,6 +51,7 @@ export const {
     setPageNumber,
     increasePageNumber,
     decreasePageNumber,
+    setIsChange,
 } = productSlice.actions;
 export const selectProduct = (state) => state.product;
 export default productSlice.reducer;

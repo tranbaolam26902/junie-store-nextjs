@@ -1,11 +1,32 @@
 // Third-party libs
 import Image from 'next/image';
 import Link from 'next/link';
+import { useDispatch, useSelector } from 'react-redux';
+
+// App's features
+import { selectProduct, setIsChange } from '~/redux/features/productSlice';
+
+// App's services
+import deleteProductBySlug from '~/services/products/deleteProductBySlug';
 
 // App's components
 import Button from '~/app/components/Button';
 
 export default function ProductItem({ product }) {
+    // Hooks
+    const dispatch = useDispatch();
+
+    // Global states
+    const productState = useSelector(selectProduct);
+
+    // Component's event handlers
+    const handleDeleteProduct = async () => {
+        if (window.confirm('Confirm delete product?')) {
+            await deleteProductBySlug(product.slug);
+            dispatch(setIsChange(!productState.isChange));
+        }
+    };
+
     return (
         <div className='w-[944px] lg:w-full grid grid-cols-12 p-4 items-center'>
             <Link href={`/admin/products/${product.slug}`} className='group col-span-5 flex gap-4 items-center'>
@@ -34,7 +55,11 @@ export default function ProductItem({ product }) {
                 </Button>
             </div>
             <div className='col-span-1 text-center'>
-                <Button text className='text-red transition duration-200 hover:opacity-70'>
+                <Button
+                    text
+                    className='text-red transition duration-200 hover:opacity-70'
+                    onClick={handleDeleteProduct}
+                >
                     Delete
                 </Button>
             </div>

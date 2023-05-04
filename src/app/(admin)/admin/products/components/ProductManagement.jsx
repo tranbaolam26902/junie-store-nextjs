@@ -41,7 +41,7 @@ export default function ProductManagement() {
             setProducts(response.items);
             setMetadata(response.metadata);
         }
-    }, [product.queries]);
+    }, [product.queries, product.isChange]);
 
     return (
         <div className='flex flex-col gap-6 mx-auto px-6 md:px-10 py-6 max-w-screen-2xl'>
