@@ -8,7 +8,7 @@ import { useSelector } from 'react-redux';
 import { selectProduct } from '~/redux/features/productSlice';
 
 // App's services
-import { getProductsByQueries } from '~/services/products/getProductsByQueries';
+import { getProductsByQueries } from '~/services';
 
 // App's component's
 import Pagination from '../components/Pagination';
