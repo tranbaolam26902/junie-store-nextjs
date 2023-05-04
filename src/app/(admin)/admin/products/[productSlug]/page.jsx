@@ -1,7 +1,7 @@
 import { getProduct, getProductsByQueries } from '~/services';
 
 // App's components
-import EditProduct from './EditProduct';
+import EditProduct from './components/EditProduct';
 
 // Dynamic metadata
 export async function generateMetadata({ params }) {

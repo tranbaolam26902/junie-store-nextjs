@@ -2,6 +2,13 @@
 import CartSection from './components/CartSection';
 import FormSection from './components/FormSection';
 
+// Metadata
+export async function generateMetadata() {
+    return {
+        title: 'Đặt hàng',
+    };
+}
+
 export default function Checkout() {
     return (
         <div className='grid grid-cols-1 xl:grid-cols-2 mx-auto px-6 md:px-10 max-w-screen-2xl'>

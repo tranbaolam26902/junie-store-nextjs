@@ -1,6 +1,13 @@
 // App's components
 import Button from '~/app/components/Button';
 
+// Metadata
+export async function generateMetadata() {
+    return {
+        title: 'Cảm ơn',
+    };
+}
+
 export default function Purchased() {
     return (
         <div className='flex flex-col items-center justify-center mt-48 md:mt-60 mb-40 mx-auto px-6 md:px-10 max-w-screen-2xl'>

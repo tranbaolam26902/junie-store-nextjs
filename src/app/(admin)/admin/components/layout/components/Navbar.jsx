@@ -16,8 +16,8 @@ const navItems = [
         path: '/admin/dashboard',
     },
     {
-        name: 'Categories',
-        path: '/admin/categories',
+        name: 'Collections',
+        path: '/admin/collections',
     },
     {
         name: 'Products',
