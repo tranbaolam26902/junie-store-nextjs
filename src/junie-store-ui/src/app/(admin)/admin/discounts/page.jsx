@@ -6,5 +6,5 @@ export async function generateMetadata() {
 }
 
 export default function Discount() {
-    return <div>Discount</div>;
+    return <div></div>;
 }

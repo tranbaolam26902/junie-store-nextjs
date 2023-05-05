@@ -6,5 +6,5 @@ export async function generateMetadata() {
 }
 
 export default function Collections() {
-    return <div>Collections</div>;
+    return <div></div>;
 }

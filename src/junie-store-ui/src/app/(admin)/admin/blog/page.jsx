@@ -6,5 +6,5 @@ export async function generateMetadata() {
 }
 
 export default function Blog() {
-    return <div>Blog</div>;
+    return <div></div>;
 }
