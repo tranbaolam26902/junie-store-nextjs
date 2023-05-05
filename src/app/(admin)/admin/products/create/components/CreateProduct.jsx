@@ -111,8 +111,16 @@ export default function CreateProduct() {
         } else setErrorMessages(data.errors);
     };
     const handleUploadFile = (e) => {
-        setImages(Array.from(e.target.files).map((file) => ({ imageUrl: URL.createObjectURL(file), name: file.name })));
-        setFiles(Array.from(e.target.files));
+        console.log([
+            ...images,
+            ...Array.from(e.target.files).map((file) => ({ imageUrl: URL.createObjectURL(file), name: file.name })),
+        ]);
+        console.log([...files, Array.from(e.target.files)]);
+        setImages([
+            ...images,
+            ...Array.from(e.target.files).map((file) => ({ imageUrl: URL.createObjectURL(file), name: file.name })),
+        ]);
+        setFiles([...files, Array.from(e.target.files)]);
         setImageMessage('');
     };
 
