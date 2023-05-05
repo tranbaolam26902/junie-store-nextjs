@@ -17,7 +17,7 @@ export default function Checkout() {
                     <FormSection />
                 </div>
                 <div className='order-1 xl:order-2 relative xl:pl-16 py-10 xl:py-16 xl:border-l border-gray'>
-                    <div className='absolute top-0 -left-6 md:-left-10 xl:left-0 bottom-0 z-0 w-[50vw] bg-gray/30'></div>
+                    <div className='absolute top-0 -left-6 md:-left-10 xl:left-0 bottom-0 z-0 w-screen bg-gray/30'></div>
                     <CartSection />
                 </div>
             </div>
