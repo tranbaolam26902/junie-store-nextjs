@@ -36,8 +36,8 @@ export default async function Collection({ params }) {
 }
 
 // Static params to generate static pages
-// export async function generateStaticParams() {
-//     const collections = await getCollections();
+export async function generateStaticParams() {
+    const collections = await getCollections();
 
-//     return collections.map((collection) => ({ collectionSlug: collection.slug }));
-// }
+    return collections.map((collection) => ({ collectionSlug: collection.slug }));
+}

@@ -1,7 +1,13 @@
 import axios from '~/services/api/axios';
 
 export default async function getCollections() {
-    const { data } = await axios.get('/api/collections');
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT_URL}/api/collections`, {
+        next: {
+            revalidate: 1,
+        },
+    });
 
-    return data.isSuccess ? data.result : null;
+    const response = await res.json();
+
+    return response.isSuccess ? response.result : null;
 }
