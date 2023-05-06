@@ -115,7 +115,7 @@ export default function CreateProduct() {
             ...images,
             ...Array.from(e.target.files).map((file) => ({ imageUrl: URL.createObjectURL(file), name: file.name })),
         ]);
-        setFiles([...files, Array.from(e.target.files)]);
+        setFiles([...files, ...Array.from(e.target.files)]);
         setImageMessage('');
     };
 
