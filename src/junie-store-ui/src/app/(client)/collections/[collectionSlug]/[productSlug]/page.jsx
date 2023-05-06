@@ -55,11 +55,11 @@ export default async function Product({ params }) {
 }
 
 // Static params to generate static pages
-export async function generateStaticParams() {
-    const products = await getProducts();
+// export async function generateStaticParams() {
+//     const products = await getProducts();
 
-    return products.map((product) => ({
-        collectionSlug: product.collection.slug,
-        productSlug: product.slug,
-    }));
-}
+//     return products.map((product) => ({
+//         collectionSlug: product.collection.slug,
+//         productSlug: product.slug,
+//     }));
+// }
