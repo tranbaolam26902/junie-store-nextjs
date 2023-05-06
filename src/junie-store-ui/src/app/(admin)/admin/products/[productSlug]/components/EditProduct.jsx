@@ -55,7 +55,7 @@ export default function EditProduct({ params }) {
         if (Number.parseInt(discount) < 0 || Number.parseInt(discount) > 100)
             setDiscountMessage('Please enter a valid discount percent!');
         if (quantity.trim() === '') setQuantityMessage('This field is required!');
-        if (Number.parseInt(quantity) <= 0) setQuantityMessage('Please enter a valid quantity!');
+        if (Number.parseInt(quantity) < 0) setQuantityMessage('Please enter a valid quantity!');
         if (type.trim() === '') setTypeMessage('This field is required!');
         if (description.trim() === '') setDescriptionMessage('This field is required!');
         if (userManual.trim() === '') setUserManualMessage('This field is required!');
@@ -168,6 +168,7 @@ export default function EditProduct({ params }) {
                     });
             });
         }
+        // eslint-disable-next-line
     }, []);
 
     return (
