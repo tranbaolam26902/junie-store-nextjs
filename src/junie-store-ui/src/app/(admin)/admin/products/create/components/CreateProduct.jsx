@@ -84,6 +84,9 @@ export default function CreateProduct() {
     };
 
     // Component's event handlers
+    const handleCancelAdd = () => {
+        router.back();
+    };
     const handleAddProduct = async (e) => {
         e.preventDefault();
         if (!validateProductData()) return;
@@ -339,7 +342,7 @@ export default function CreateProduct() {
                     )}
                 </div>
                 <div className='flex gap-6'>
-                    <Button text className='transition duration-200 hover:opacity-80'>
+                    <Button text className='transition duration-200 hover:opacity-80' onClick={handleCancelAdd}>
                         Cancel
                     </Button>
                     <Button type='submit' accent>

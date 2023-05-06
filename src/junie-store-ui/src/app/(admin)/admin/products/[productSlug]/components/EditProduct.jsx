@@ -80,6 +80,9 @@ export default function EditProduct({ params }) {
     };
 
     // Component's event handlers
+    const handleCancelEdit = () => {
+        router.back();
+    };
     const handleAddProduct = async (e) => {
         e.preventDefault();
         if (!validateProductData()) return;
@@ -368,7 +371,7 @@ export default function EditProduct({ params }) {
                     )}
                 </div>
                 <div className='flex gap-6'>
-                    <Button text className='transition duration-200 hover:opacity-80'>
+                    <Button text className='transition duration-200 hover:opacity-80' onClick={handleCancelEdit}>
                         Cancel
                     </Button>
                     <Button type='submit' accent>
