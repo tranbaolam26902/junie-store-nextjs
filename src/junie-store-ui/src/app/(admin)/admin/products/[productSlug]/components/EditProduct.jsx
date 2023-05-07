@@ -136,7 +136,7 @@ export default function EditProduct({ params }) {
         function getProductData() {
             getProduct(params.productSlug).then((data) => {
                 setName(data.name);
-                setDiscount(data.discount.toString());
+                setDiscount(Number.parseFloat(data.discount) * 100);
                 setPrice(data.price.toString());
                 setQuantity(data.quantity.toString());
                 setType(data.type);
