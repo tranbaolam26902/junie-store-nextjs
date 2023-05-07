@@ -177,6 +177,9 @@ export default function CreateProduct() {
                             className={`px-4 py-3 rounded outline outline-1 outline-gray focus:outline-2 focus:outline-black appearance-none ${
                                 collectionMessage ? 'outline-red' : ''
                             }`}
+                            onChange={() => {
+                                setCollectionMessage('');
+                            }}
                         >
                             <option value=''>-- Select collection --</option>
                             {collections.map((collection, index) => (
