@@ -152,9 +152,7 @@ export default function EditProduct({ params }) {
             product.images.forEach((image, index) => {
                 const fileName = image.path.substring(image.path.lastIndexOf('/') + 1, image.path.lastIndexOf('.'));
                 const fileExt = image.path.substring(image.path.lastIndexOf('.'));
-                fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT_URL}/${image.path}`, {
-                    mode: 'no-cors',
-                })
+                fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT_URL}/${image.path}`)
                     .then((response) => response.blob())
                     .then((blob) => {
                         const file = new File([blob], fileName + fileExt, { type: blob.type });
